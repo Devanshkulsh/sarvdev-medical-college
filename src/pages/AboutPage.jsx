@@ -1,50 +1,46 @@
-import React from "react";
 import Banner from "../components/shared/Banner";
-import AboutContent from "../components/about/AboutContent";
+import AboutIntro from "../components/about/AboutIntro";
 import MissionVision from "../components/about/MissionVission";
 import AyurvedaHeritage from "../components/about/AyurvedaHeritage";
 import LeadershipSidebar from "../components/about/LeadershipSidebar";
+import AffiliationCard from "../components/about/AffiliationCard";
+import RulesRegulations from "../components/about/RulesRegulations";
 
-const AboutPage = () => {
+export default function About() {
   return (
     <>
-      {/* HERO / BANNER */}
+      {/* Top Banner */}
       <Banner
         title="About Us"
-        subtitle="Discover our history, mission and values"
-        image="/images/about-hero.jpg"
+        subtitle="Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us" },
         ]}
       />
 
-      {/* MAIN CONTENT */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div
-            className="
-              grid grid-cols-1 lg:grid-cols-[2.2fr_1fr]
-              gap-10 lg:gap-14
-              items-start
-            "
-          >
-            {/* LEFT COLUMN */}
-            <div className="space-y-10">
-              <AboutContent />
+      {/* Main Content */}
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+
+            {/* LEFT: Content */}
+            <div className="lg:col-span-2 space-y-10">
+              <AboutIntro />
               <MissionVision />
               <AyurvedaHeritage />
             </div>
 
-            {/* RIGHT COLUMN */}
-            <aside className="lg:sticky lg:top-28">
+            {/* RIGHT: Sidebar */}
+            <div className="lg:col-span-1 -mt-5 space-y-6">
               <LeadershipSidebar />
-            </aside>
+              <AffiliationCard />
+            </div>
+
           </div>
         </div>
+        <RulesRegulations />
       </section>
     </>
   );
-};
-
-export default AboutPage;
+}

@@ -10,7 +10,7 @@ export function TopBar() {
   const permissionUrl = "/permission-letter";
 
   return (
-    <div className="sticky top-0 z-40 bg-[hsl(152_59%_30%)] text-white">
+    <div className="sticky top-0 z-40 bg-[#8B1E1E] text-white">
       <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <div
           className="
@@ -34,7 +34,7 @@ export function TopBar() {
               href={`tel:${phoneNumber}`}
               className="
                 flex items-center gap-1.5
-                hover:text-[hsl(44_91%_63%)]
+                hover:text-[#F2B705]
                 transition-colors
                 whitespace-nowrap
               "
@@ -48,7 +48,7 @@ export function TopBar() {
               href={`mailto:${emailAddress}`}
               className="
                 flex items-center gap-1.5
-                hover:text-[hsl(44_91%_63%)]
+                hover:text-[#F2B705]
                 transition-colors
                 whitespace-nowrap
               "
@@ -64,7 +64,7 @@ export function TopBar() {
               rel="noopener noreferrer"
               className="
                 flex items-center gap-1.5
-                hover:text-[hsl(44_91%_63%)]
+                hover:text-[#F2B705]
                 transition-colors
                 whitespace-nowrap
               "
@@ -80,12 +80,12 @@ export function TopBar() {
             className="
               mt-1 sm:mt-0
               rounded-full
-              bg-white text-[hsl(152_59%_30%)]
+              bg-white text-[#8B1E1E]
               px-4 py-1.5
               text-xs sm:text-sm
               font-semibold
-              hover:bg-[hsl(44_91%_63%)]
-              hover:text-black
+              hover:bg-[#F2B705]
+              hover:text-[#2A1E1A]
               transition-colors
             "
           >

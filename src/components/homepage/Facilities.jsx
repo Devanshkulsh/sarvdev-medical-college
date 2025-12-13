@@ -4,7 +4,8 @@ import facilities from "../../data/facilities";
 
 function PillBadge({ children }) {
   return (
-    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200 text-emerald-700 bg-emerald-50">
+    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold 
+                     border border-[#8B1E1E]/30 text-[#8B1E1E] bg-[#FDF1E8]">
       {children}
     </span>
   );
@@ -12,7 +13,11 @@ function PillBadge({ children }) {
 
 function FeatureChip({ children }) {
   return (
-    <span className="inline-block text-xs font-medium bg-emerald-600 text-white px-3 py-1 rounded-full shadow-sm transition-colors duration-200 hover:bg-emerald-500">
+    <span
+      className="inline-block text-xs font-medium 
+                 bg-[#8B1E1E] text-white px-3 py-1 rounded-full shadow-sm 
+                 transition-colors duration-200 hover:bg-[#7A1A1A]"
+    >
       {children}
     </span>
   );
@@ -21,25 +26,30 @@ function FeatureChip({ children }) {
 function FacilityCard({ facility }) {
   if (!facility) return null;
 
-  // dynamic lucide icon (fallback Building2)
   const Icon = LucideIcons[facility.icon] || LucideIcons.Building2;
 
   return (
-    // use `group` so children can respond to hover
-    <article className="group bg-white rounded-xl border border-transparent hover:border-emerald-100 shadow-sm hover:shadow-md transition-transform transform-gpu hover:-translate-y-1 p-6 h-full flex flex-col">
+    <article
+      className="group bg-white rounded-xl border border-transparent 
+                 hover:border-[#8B1E1E]/20 shadow-sm hover:shadow-md 
+                 transition-transform transform-gpu hover:-translate-y-1 
+                 p-6 h-full flex flex-col"
+    >
       <div className="flex items-start gap-4">
         <div className="flex-none">
-          {/* icon container changes to solid green on card hover */}
-          <div className="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center transition-colors duration-200 group-hover:bg-emerald-700">
-            <Icon className="w-5 h-5 text-emerald-700 group-hover:text-white transition-colors duration-200" />
+          <div
+            className="w-10 h-10 rounded-lg bg-[#FDF1E8] flex items-center justify-center 
+                       transition-colors duration-200 group-hover:bg-[#8B1E1E]"
+          >
+            <Icon className="w-5 h-5 text-[#8B1E1E] group-hover:text-white transition-colors duration-200" />
           </div>
         </div>
 
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <h3 className="text-lg font-semibold text-[#2A1E1A] mb-2">
             {facility.name}
           </h3>
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-sm text-[#6B5A52] leading-relaxed">
             {facility.description}
           </p>
         </div>
@@ -47,7 +57,9 @@ function FacilityCard({ facility }) {
 
       <div className="mt-4 pt-4 flex flex-wrap gap-3">
         {Array.isArray(facility.features) &&
-          facility.features.map((f) => <FeatureChip key={f}>{f}</FeatureChip>)}
+          facility.features.map((f) => (
+            <FeatureChip key={f}>{f}</FeatureChip>
+          ))}
       </div>
     </article>
   );
@@ -56,20 +68,19 @@ function FacilityCard({ facility }) {
 export default function FacilitiesSection() {
   return (
     <section className="bg-white py-12">
-      {/* narrower content width so the section doesn't look 'zoomed out' */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <PillBadge>
-            <LucideIcons.Building2 className="w-3 h-3 text-emerald-700" />
+            <LucideIcons.Building2 className="w-3 h-3 text-[#8B1E1E]" />
             Infrastructure
           </PillBadge>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[#2A1E1A]">
             World-Class Facilities
           </h2>
 
-          <p className="mt-3 text-gray-600">
+          <p className="mt-3 text-[#6B5A52]">
             Modern infrastructure combined with traditional Ayurvedic practices.
           </p>
         </div>

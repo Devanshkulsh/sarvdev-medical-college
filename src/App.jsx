@@ -6,10 +6,12 @@ import { Navbar } from "./components/Navbar";
 import Homepage from "./pages/Homepage";
 import { Footer } from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <TopBar />
       <Navbar />
       <Routes>

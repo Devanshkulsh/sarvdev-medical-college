@@ -1,19 +1,6 @@
-// src/components/common/Banner.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
-/**
- * Reusable Banner component
- *
- * Props:
- *  - title (string) required
- *  - subtitle (string) optional
- *  - image (string) background image url, optional (defaults to /hero.jpg)
- *  - breadcrumbs (Array<{label: string, href?: string}>) optional
- *  - heightClass (string) optional tailwind height classes (default: "h-56 sm:h-72 md:h-96")
- *  - children (ReactNode) optional slot for CTA/buttons (shown top-right on md+ and under text on sm)
- *  - backgroundPosition (string) CSS background-position, default "center"
- */
 export default function Banner({
   title,
   subtitle = "",
@@ -43,27 +30,27 @@ export default function Banner({
         }}
       />
 
-      {/* Overlay: project green gradient (keeps text readable) */}
+      {/* Overlay: Ayurvedic brand gradient */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(17,94,78,0.78) 0%, rgba(17,94,78,0.54) 40%, rgba(17,94,78,0.36) 100%)",
+            "linear-gradient(90deg, rgba(139,30,30,0.82) 0%, rgba(122,26,26,0.62) 45%, rgba(139,30,30,0.42) 100%)",
         }}
         aria-hidden="true"
       />
 
-      {/* CTA slot top-right on md+ (absolute so center content is not pushed) */}
+      {/* CTA slot (md+) */}
       {children && (
         <div className="hidden md:flex absolute top-4 right-4 z-30">
           {children}
         </div>
       )}
 
-      {/* Content container (centered) */}
+      {/* Content */}
       <div className="relative z-20 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center justify-center py-6 sm:py-10">
-          {/* Breadcrumb (centered) */}
+          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="text-sm">
             <ol className="inline-flex items-center gap-2 text-white/90">
               {crumbs.length === 0 ? (
@@ -124,7 +111,7 @@ export default function Banner({
             )}
           </div>
 
-          {/* Small-screen children (stacked under text) */}
+          {/* Small-screen children */}
           {children && <div className="mt-4 md:hidden">{children}</div>}
         </div>
       </div>
