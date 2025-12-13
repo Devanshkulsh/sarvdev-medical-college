@@ -1,0 +1,98 @@
+import React from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+export function TopBar() {
+  const phoneNumber = "+91 9415257492, +91-9198762108";
+  const emailAddress = "sdayurvedamh@gmail.com";
+  const address = "Azamgarh-276128, Uttar Pradesh";
+
+  const mapsUrl = "https://maps.app.goo.gl/XDmB1E7Tv1nbp52j9";
+  const permissionUrl = "/permission-letter";
+
+  return (
+    <div className="sticky top-0 z-40 bg-[hsl(152_59%_30%)] text-white">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+        <div
+          className="
+            flex flex-col sm:flex-row
+            items-center sm:justify-between
+            gap-2 sm:gap-6
+            py-2
+          "
+        >
+          {/* CONTACT INFO */}
+          <div
+            className="
+              flex flex-wrap items-center justify-center
+              gap-x-3 gap-y-1
+              text-center
+              text-xs sm:text-sm
+            "
+          >
+            {/* Phone */}
+            <a
+              href={`tel:${phoneNumber}`}
+              className="
+                flex items-center gap-1.5
+                hover:text-[hsl(44_91%_63%)]
+                transition-colors
+                whitespace-nowrap
+              "
+            >
+              <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span>{phoneNumber}</span>
+            </a>
+
+            {/* Email */}
+            <a
+              href={`mailto:${emailAddress}`}
+              className="
+                flex items-center gap-1.5
+                hover:text-[hsl(44_91%_63%)]
+                transition-colors
+                whitespace-nowrap
+              "
+            >
+              <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span>{emailAddress}</span>
+            </a>
+
+            {/* Address */}
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex items-center gap-1.5
+                hover:text-[hsl(44_91%_63%)]
+                transition-colors
+                whitespace-nowrap
+              "
+            >
+              <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span>{address}</span>
+            </a>
+          </div>
+
+          {/* PERMISSION BUTTON */}
+          <a
+            href={permissionUrl}
+            className="
+              mt-1 sm:mt-0
+              rounded-full
+              bg-white text-[hsl(152_59%_30%)]
+              px-4 py-1.5
+              text-xs sm:text-sm
+              font-semibold
+              hover:bg-[hsl(44_91%_63%)]
+              hover:text-black
+              transition-colors
+            "
+          >
+            Permission Letter
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
