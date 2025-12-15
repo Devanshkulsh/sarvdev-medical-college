@@ -5,6 +5,7 @@ import AyurvedaHeritage from "../components/about/AyurvedaHeritage";
 import LeadershipSidebar from "../components/about/LeadershipSidebar";
 import AffiliationCard from "../components/about/AffiliationCard";
 import RulesRegulations from "../components/about/RulesRegulations";
+import CollegeCouncil from "../components/about/CollegeCouncil";
 
 export default function About() {
   return (
@@ -39,6 +40,7 @@ export default function About() {
 
           </div>
         </div>
+        <CollegeCouncil />
         <RulesRegulations />
       </section>
     </>

@@ -2,7 +2,8 @@ import React from "react";
 
 const AffiliationCard = () => {
   return (
-    <div className="card-ayurvedic bg-[hsl(40_35%_94%)] rounded-lg border shadow-sm p-5 space-y-4">
+    <div className="card-ayurvedic bg-[#8B1E1E]/5
+            border border-[#8B1E1E]/20 rounded-lg shadow-sm p-5 space-y-4">
       <h4 className="text-sm font-semibold text-foreground tracking-wide">
         Affiliation
       </h4>

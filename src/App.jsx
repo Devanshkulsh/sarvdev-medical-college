@@ -7,6 +7,11 @@ import Homepage from "./pages/Homepage";
 import { Footer } from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 import ScrollToTop from "./components/shared/ScrollToTop";
+import DepartmentWiseList from "./pages/faculty/teachingStaff/DepartmentWiseList";
+import MonthlyAttendance from "./pages/faculty/teachingStaff/MonthlyAttendance";
+import NTDepartmentWiseList from "./pages/faculty/nonTeachingStaff/NTDepartmentWiseList";
+import NTMonthlyAttendance from "./pages/faculty/nonTeachingStaff/NTMonthlyAttendance";
+import HSDepartmentWiseList from "./pages/faculty/hospitalStaff/HSDepartmentWiseList";
 
 function App() {
   return (
@@ -17,6 +22,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/faculty/teachingStaff/department-wise-list" element={<DepartmentWiseList />}/>
+        <Route path="/faculty/teachingStaff/monthly-attendance" element={<MonthlyAttendance />}/>
+        <Route path="/faculty/non-teaching/department-wise-list" element={<NTDepartmentWiseList />}/>
+        <Route path="/faculty/non-teaching/monthly-attendance" element={<NTMonthlyAttendance />}/>
+        <Route path="/faculty/hospital-staff/department-wise-list" element={<HSDepartmentWiseList />}/>
       </Routes>
       <ContactSticky />
       <Footer />

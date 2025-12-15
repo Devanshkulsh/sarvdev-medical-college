@@ -2,7 +2,8 @@ import React from "react";
 
 const AyurvedaHeritage = () => {
   return (
-    <div className="card-ayurvedic bg-[hsl(40_35%_94%)] rounded-lg border border-black/5 shadow-sm p-6 space-y-4">
+    <div className="card-ayurvedic bg-[#8B1E1E]/5
+            border border-[#8B1E1E]/20 rounded-lg shadow-sm p-6 space-y-4">
       <h3 className="text-xl font-bold text-foreground">
         The Heritage of Ayurveda
       </h3>
