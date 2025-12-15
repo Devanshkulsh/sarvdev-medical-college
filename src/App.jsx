@@ -12,6 +12,8 @@ import MonthlyAttendance from "./pages/faculty/teachingStaff/MonthlyAttendance";
 import NTDepartmentWiseList from "./pages/faculty/nonTeachingStaff/NTDepartmentWiseList";
 import NTMonthlyAttendance from "./pages/faculty/nonTeachingStaff/NTMonthlyAttendance";
 import HSDepartmentWiseList from "./pages/faculty/hospitalStaff/HSDepartmentWiseList";
+import HSMonthlyAttendance from "./pages/faculty/hospitalStaff/HSMonthlyAttendance";
+import { OrganizationChart } from "./pages/faculty/OrganizationChart";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/faculty/non-teaching/department-wise-list" element={<NTDepartmentWiseList />}/>
         <Route path="/faculty/non-teaching/monthly-attendance" element={<NTMonthlyAttendance />}/>
         <Route path="/faculty/hospital-staff/department-wise-list" element={<HSDepartmentWiseList />}/>
+        <Route path="/faculty/hospital-staff/monthly-attendance" element={<HSMonthlyAttendance />}/>
+        <Route path="/faculty/org-chart" element={<OrganizationChart />}/>
       </Routes>
       <ContactSticky />
       <Footer />
