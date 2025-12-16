@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export function TopBar() {
@@ -7,7 +8,7 @@ export function TopBar() {
   const address = "Azamgarh-276128, Uttar Pradesh";
 
   const mapsUrl = "https://maps.app.goo.gl/XDmB1E7Tv1nbp52j9";
-  const permissionUrl = "/permission-letter";
+  const permissionUrl = "/ncism";
 
   return (
     <div className="sticky top-0 z-40 bg-[#8B1E1E] text-white">
@@ -75,22 +76,22 @@ export function TopBar() {
           </div>
 
           {/* PERMISSION BUTTON */}
-          <a
-            href={permissionUrl}
+          <Link
+            to="/ncism"
             className="
-              mt-1 sm:mt-0
-              rounded-full
-              bg-white text-[#8B1E1E]
-              px-4 py-1.5
-              text-xs sm:text-sm
-              font-semibold
-              hover:bg-[#F2B705]
-              hover:text-[#2A1E1A]
-              transition-colors
-            "
+    mt-1 sm:mt-0
+    rounded-full
+    bg-white text-[#8B1E1E]
+    px-4 py-1.5
+    text-xs sm:text-sm
+    font-semibold
+    hover:bg-[#F2B705]
+    hover:text-[#2A1E1A]
+    transition-colors
+  "
           >
             Permission Letter
-          </a>
+          </Link>
         </div>
       </div>
     </div>

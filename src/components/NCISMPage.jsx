@@ -1,28 +1,7 @@
 import React from "react";
 import Banner from "../components/shared/Banner";
 import { Eye } from "lucide-react";
-
-/* ===== NCISM DOCUMENTS DATA ===== */
-const ncismDocuments = [
-  {
-    title: "State NOC",
-    description:
-      "No Objection Certificate issued by the State Government for establishment and operation of the college.",
-    url: "/ncism/state-noc.pdf", // pdf / image / external link
-  },
-  {
-    title: "University Affiliation",
-    description:
-      "Affiliation letter granted by Mahayogi Guru Gorakhnath AYUSH University.",
-    url: "/ncism/university-affiliation.pdf",
-  },
-  {
-    title: "Permission Letter by Government of India",
-    description:
-      "Permission letter issued by the Ministry of AYUSH, Government of India.",
-    url: "https://www.ayush.gov.in", // external link example
-  },
-];
+import { ncismData } from "../data/ncism";
 
 const NCISMPage = () => {
   return (
@@ -48,13 +27,13 @@ const NCISMPage = () => {
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Official approvals, affiliations, and permissions issued by
-              regulatory authorities as per NCISM and Government norms.
+              regulatory authorities as per NCISM and Government of India norms.
             </p>
           </div>
 
           {/* CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ncismDocuments.map((doc, index) => (
+            {ncismData.map((doc, index) => (
               <div
                 key={index}
                 className="
@@ -74,24 +53,27 @@ const NCISMPage = () => {
                   </p>
                 </div>
 
-                {/* ACTION */}
-                <div className="pt-5">
-                  <a
-                    href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      inline-flex items-center gap-2
-                      rounded-md px-4 py-2
-                      bg-[#8B1E1E]/10 text-[#8B1E1E]
-                      text-sm font-semibold
-                      hover:bg-[#8B1E1E]/20
-                      transition
-                    "
-                  >
-                    <Eye className="w-4 h-4" />
-                    View Document
-                  </a>
+                {/* ACTIONS */}
+                <div className="pt-5 flex flex-col gap-2">
+                  {doc.documents.map((file, i) => (
+                    <a
+                      key={i}
+                      href={file.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-flex items-center gap-2
+                        rounded-md px-4 py-2
+                        bg-[#8B1E1E]/10 text-[#8B1E1E]
+                        text-sm font-semibold
+                        hover:bg-[#8B1E1E]/20
+                        transition
+                      "
+                    >
+                      <Eye className="w-4 h-4" />
+                      {file.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             ))}

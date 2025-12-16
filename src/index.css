@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+/* ===== GLOBAL IMAGE LOADER ===== */
+img {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Skeleton shimmer */
+img:not([data-loaded]) {
+  position: relative;
+  overflow: hidden;
+}
+
+img:not([data-loaded])::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* When image is loaded */
+img[data-loaded]::after {
+  display: none;
+}
