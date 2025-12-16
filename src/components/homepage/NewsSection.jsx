@@ -98,7 +98,7 @@ export default function NewsSection() {
         {/* View All */}
         <div className="mt-10 flex justify-center">
           <Link
-            to="/news"
+            to="/news/all"
             className="inline-flex items-center gap-2 rounded-full px-6 py-2
                        border border-[#2A1E1A]/10 text-[#2A1E1A]
                        bg-white shadow-sm hover:shadow-md transition"

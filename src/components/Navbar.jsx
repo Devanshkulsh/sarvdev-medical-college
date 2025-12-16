@@ -63,25 +63,30 @@ export function Navbar() {
       children: [
         { label: "Introduction", href: "/college/introduction" },
         { label: "College Infrastructure", href: "/college/infrastructure" },
-        { label: "Hostel Infrastructure", href: "/college/hostel" },
-        { label: "Facilities", href: "/college/facilities" },
+        { label: "Courses", href: "/college/courses" },
       ],
     },
     {
       label: "Hospital",
       children: [
-        { label: "Introduction", href: "/hospital/introduction" },
+        {
+          label: "Introduction with Infrastructure",
+          href: "/hospital/introduction",
+        },
         { label: "Charges", href: "/hospital/charges" },
         {
-          label: "Clinical Materials & Facilities",
-          href: "/hospital/clinical",
+          label: "Department Wise Clinical Materials & Facilities",
+          href: "/hospital/department-wise-clinical-materials-and-facilities",
         },
         {
           label: "Monthly Patient Attendance",
           children: [
             { label: "OPD", href: "/hospital/attendance/opd" },
             { label: "IPD", href: "/hospital/attendance/ipd" },
-            { label: "Panchakarma", href: "/hospital/attendance/panchakarma" },
+            {
+              label: "Panchakarma",
+              href: "/hospital/attendance/patient-monthly-attendance",
+            },
             { label: "Ksharsutra", href: "/hospital/attendance/ksharsutra" },
             { label: "Operation Theater", href: "/hospital/attendance/ot" },
             { label: "Pathology", href: "/hospital/attendance/pathology" },

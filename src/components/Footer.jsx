@@ -11,10 +11,12 @@ import {
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Courses", href: "/courses" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Hospital", href: "/hospital" },
-  { label: "Facilities", href: "/facilities" },
+  { label: "Courses", href: "/college/courses" },
+  { label: "NCISM", href: "/ncism" },
+  { label: "Faculty", href: "/faculty/teachingStaff/department-wise-list" },
+  { label: "College", href: "/college/introduction" },
+  { label: "Hospital", href: "/hospital/introduction" },
+  { label: "Student's Corner", href: "students/list/2024-25" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];

@@ -28,7 +28,6 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 container-custom px-4 sm:px-8 lg:px-12 py-16 md:py-28">
         <div className="max-w-3xl space-y-4 md:space-y-8 animate-fade-in">
-
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#F2B705]/20 text-[#F2B705] border border-[#F2B705]/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#F2B705] rounded-full animate-pulse" />
@@ -52,8 +51,8 @@ export function Hero() {
             A premier institution for Ayurvedic education affiliated with{" "}
             <strong className="text-white">
               Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh
-            </strong>.{" "}
-            Committed to excellence in ancient healing wisdom.
+            </strong>
+            . Committed to excellence in ancient healing wisdom.
           </p>
 
           {/* CTA Buttons */}
@@ -66,16 +65,16 @@ export function Hero() {
               Apply for Admission
             </Link>
 
-            <Link
-              to="/contact"
+            <a
+              href="tel:+919415257492"
               className="inline-flex items-center justify-center gap-2 rounded-md px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg font-medium transition-colors
-                         bg-white text-[#8B1E1E] border border-transparent
-                         sm:bg-white/20 sm:text-white sm:border-white/40 sm:backdrop-blur
-                         hover:sm:bg-[#F2B705] hover:sm:text-[#2A1E1A]"
+             bg-white text-[#8B1E1E] border border-transparent
+             sm:bg-white/20 sm:text-white sm:border-white/40 sm:backdrop-blur
+             hover:sm:bg-[#F2B705] hover:sm:text-[#2A1E1A]"
             >
               <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -84,31 +83,37 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-inner">
         <div className="container-custom px-3 sm:px-6 lg:px-12 py-3 sm:py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
-
             <StatItem
-              icon={<Building2 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />}
+              icon={
+                <Building2 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />
+              }
               value="Est. 2018"
               label="Year Established"
             />
 
             <StatItem
-              icon={<Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />}
+              icon={
+                <Users className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />
+              }
               value="60+"
               label="Hospital Beds"
             />
 
             <StatItem
-              icon={<GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />}
+              icon={
+                <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />
+              }
               value="BAMS"
               label="Course Offered"
             />
 
             <StatItem
-              icon={<ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />}
+              icon={
+                <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-[#8B1E1E]" />
+              }
               value="24/7"
               label="Emergency Services"
             />
-
           </div>
         </div>
       </div>
@@ -119,17 +124,13 @@ export function Hero() {
 function StatItem({ icon, value, label }) {
   return (
     <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-      <div className="shrink-0 flex items-center justify-center">
-        {icon}
-      </div>
+      <div className="shrink-0 flex items-center justify-center">{icon}</div>
 
       <div className="leading-tight flex flex-col justify-center">
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-[#2A1E1A]">
           {value}
         </p>
-        <p className="text-xs sm:text-sm text-[#6B5A52]">
-          {label}
-        </p>
+        <p className="text-xs sm:text-sm text-[#6B5A52]">{label}</p>
       </div>
     </div>
   );
