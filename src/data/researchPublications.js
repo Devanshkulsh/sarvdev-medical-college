@@ -9,16 +9,14 @@ const researchPublications = [
   },
   {
     id: 2,
-    title:
-      "Review Article on Applied Anatomy in Ancient Indian History",
+    title: "Review Article on Applied Anatomy in Ancient Indian History",
     authors: ["Dr. Pramod Kumar", "Dr. Eknath P. Jadhav"],
     publisher: "World Journal of Pharmaceutical and Medical Research",
     fileUrl: "https://sarvdevayurveda.in/otheractivity/WJPMR%208106.pdf",
   },
   {
     id: 3,
-    title:
-      "Management of Health through Yoga and Naturopathy",
+    title: "Management of Health through Yoga and Naturopathy",
     authors: [
       "Prof. (Dr.) Rudramani Deepak",
       "Dr. Vinod Kashyap",
@@ -38,8 +36,7 @@ const researchPublications = [
       "Dr. Rudramani Deepak",
       "Dr. Upendra Nath",
     ],
-    publisher:
-      "World Journal of Pharmacy and Pharmaceutical Sciences",
+    publisher: "World Journal of Pharmacy and Pharmaceutical Sciences",
     fileUrl: "https://sarvdevayurveda.in/otheractivity/aodp.pdf",
   },
 ];

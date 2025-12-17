@@ -106,8 +106,7 @@ export function AboutSection() {
               <span
                 className="bg-clip-text text-transparent"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(135deg, #8B1E1E, #F2B705)",
+                  backgroundImage: "linear-gradient(135deg, #8B1E1E, #F2B705)",
                 }}
               >
                 Education & Healthcare
@@ -115,14 +114,14 @@ export function AboutSection() {
             </h2>
 
             <p className="text-[#6B5A52] leading-relaxed">
-              Maha Mrityunjay hospital is the pioneer in the field of Ayurveda in
-              the world. The Hospital offers treatment for every ailment and is
-              affordable. The Hospital has is successfully running Out patient
-              departments in Kayachikitsa, Kaumarbhritya, Panchkarma, Prasuti &
-              Stri Roga, Shalakya tantra, Shalya tantra, Swasthavritta, and
-              Physiotherapy. The Hospital prides itself in providing a
-              well-equipped, hygienically maintained panchkarma therapy rooms to
-              suit the need and affordability of one and all.
+              Maha Mrityunjay hospital is the pioneer in the field of Ayurveda
+              in the world. The Hospital offers treatment for every ailment and
+              is affordable. The Hospital has is successfully running Out
+              patient departments in Kayachikitsa, Kaumarbhritya, Panchkarma,
+              Prasuti & Stri Roga, Shalakya tantra, Shalya tantra,
+              Swasthavritta, and Physiotherapy. The Hospital prides itself in
+              providing a well-equipped, hygienically maintained panchkarma
+              therapy rooms to suit the need and affordability of one and all.
             </p>
 
             {/* Features */}

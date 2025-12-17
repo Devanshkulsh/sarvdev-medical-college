@@ -4,9 +4,7 @@ import facultyData from "../../data/faculty";
 const LeadershipSidebar = () => {
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-bold text-foreground">
-        Our Leadership
-      </h3>
+      <h3 className="text-xl font-bold text-foreground">Our Leadership</h3>
 
       <div className="space-y-4">
         {facultyData.leadership.map((leader) => (
@@ -24,9 +22,7 @@ const LeadershipSidebar = () => {
               <h4 className="text-sm font-semibold text-foreground">
                 {leader.name}
               </h4>
-              <p className="text-xs text-primary">
-                {leader.designation}
-              </p>
+              <p className="text-xs text-primary">{leader.designation}</p>
             </div>
 
             {leader.message && (

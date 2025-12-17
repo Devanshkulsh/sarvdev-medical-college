@@ -60,9 +60,7 @@ export default function TestimonialsSection() {
                 />
 
                 <div className="flex-1">
-                  <p className="text-sm text-[#6B5A52] mb-3">
-                    “{t.quote}”
-                  </p>
+                  <p className="text-sm text-[#6B5A52] mb-3">“{t.quote}”</p>
 
                   <p className="text-sm font-semibold text-[#2A1E1A]">
                     {t.name}

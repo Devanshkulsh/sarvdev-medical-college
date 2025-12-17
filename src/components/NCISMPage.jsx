@@ -10,16 +10,12 @@ const NCISMPage = () => {
       <Banner
         title="NCISM"
         subtitle="National Commission for Indian System of Medicine"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "NCISM" },
-        ]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "NCISM" }]}
       />
 
       {/* ===== CONTENT SECTION ===== */}
       <section className="py-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
           {/* HEADING */}
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
@@ -78,7 +74,6 @@ const NCISMPage = () => {
               </div>
             ))}
           </div>
-
         </div>
       </section>
     </>

@@ -9,15 +9,14 @@ const PDFViewer = ({
 }) => {
   if (!pdfUrl) {
     return (
-      <div className="text-sm text-muted-foreground">
-        PDF not available
-      </div>
+      <div className="text-sm text-muted-foreground">PDF not available</div>
     );
   }
 
   return (
-    <div className={`w-full rounded-xl border border-black/10 bg-white shadow-sm ${className}`}>
-      
+    <div
+      className={`w-full rounded-xl border border-black/10 bg-white shadow-sm ${className}`}
+    >
       {/* HEADER */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-5 py-4 border-b bg-[#8B1E1E]/5">
         <div className="flex items-center gap-2">

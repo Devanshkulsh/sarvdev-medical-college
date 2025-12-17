@@ -81,7 +81,6 @@ const IntroductionWithInfrastructure = () => {
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
             {/* LEFT CONTENT */}
             <div>
               <span className="inline-block mb-3 px-3 py-1 text-xs font-semibold rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E]">
@@ -131,7 +130,6 @@ const IntroductionWithInfrastructure = () => {
                 className="rounded-xl object-cover h-40 w-full shadow-sm"
               />
             </div>
-
           </div>
         </div>
       </section>
@@ -139,7 +137,6 @@ const IntroductionWithInfrastructure = () => {
       {/* ================= INFRASTRUCTURE ACCORDIONS ================= */}
       <section className="py-14 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* SECTION HEADING */}
           <div className="mb-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
@@ -184,7 +181,6 @@ const IntroductionWithInfrastructure = () => {
               );
             })}
           </div>
-
         </div>
       </section>
     </>

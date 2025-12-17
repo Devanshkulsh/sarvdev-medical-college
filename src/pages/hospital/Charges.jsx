@@ -100,9 +100,9 @@ const Charges = () => {
               College Charges
             </h2>
             <p className="mt-2 text-sm text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive academic, hospital, and residential Charges
-              designed to support quality education, clinical training, and
-              student well-being in accordance with regulatory standards.
+              Comprehensive academic, hospital, and residential Charges designed
+              to support quality education, clinical training, and student
+              well-being in accordance with regulatory standards.
             </p>
           </div>
 

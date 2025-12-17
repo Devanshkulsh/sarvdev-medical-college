@@ -60,13 +60,13 @@ export default function NewsSection() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-2 text-[#6B5A52]">
                   <Calendar className="w-4 h-4" />
-                  <time className="text-sm">
-                    {formatDate(item.date)}
-                  </time>
+                  <time className="text-sm">{formatDate(item.date)}</time>
                 </div>
 
-                <span className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full
-                                 bg-[#F2B705]/10 text-[#F2B705] border border-[#F2B705]/20">
+                <span
+                  className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full
+                                 bg-[#F2B705]/10 text-[#F2B705] border border-[#F2B705]/20"
+                >
                   {item.category}
                 </span>
               </div>

@@ -26,16 +26,15 @@ const ContactPage = () => {
       {/* ===== CONTACT SECTION ===== */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
           {/* INTRO */}
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
               Get in Touch With Us
             </h2>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-              For admissions, academics, hospital services, or general enquiries,
-              feel free to contact Sarvdev Ayurvedic Medical College & Maha
-              Mrityunjay Hospital.
+              For admissions, academics, hospital services, or general
+              enquiries, feel free to contact Sarvdev Ayurvedic Medical College
+              & Maha Mrityunjay Hospital.
             </p>
           </div>
 
@@ -58,15 +57,27 @@ const ContactPage = () => {
                 Contact Information
               </h3>
 
-              <InfoItem icon={<Phone />} title="Phone" text="+91 94152 57492, +91 91987 62108" />
-              <InfoItem icon={<Mail />} title="Email" text="sdayurvedamh@gmail.com" />
+              <InfoItem
+                icon={<Phone />}
+                title="Phone"
+                text="+91 94152 57492, +91 91987 62108"
+              />
+              <InfoItem
+                icon={<Mail />}
+                title="Email"
+                text="sdayurvedamh@gmail.com"
+              />
               <InfoItem
                 icon={<MapPin />}
                 title="Address"
                 text="Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital,
                 Itaura Chandeshwer, Azamgarh, Uttar Pradesh – 276128"
               />
-              <InfoItem icon={<Clock />} title="Office Hours" text="Monday – Saturday | 9:00 AM – 5:00 PM" />
+              <InfoItem
+                icon={<Clock />}
+                title="Office Hours"
+                text="Monday – Saturday | 9:00 AM – 5:00 PM"
+              />
 
               {/* SOCIAL */}
               <div className="pt-5 border-t border-black/10">
@@ -74,9 +85,18 @@ const ContactPage = () => {
                   Connect With Us
                 </p>
                 <div className="flex gap-4">
-                  <SocialIcon href="https://www.facebook.com/p/Sarvdev-Ayurvedic-medical-college-61569381983714/" icon={<Facebook />} />
-                  <SocialIcon href="https://www.instagram.com/sarvdevayurvediccollege/" icon={<Instagram />} />
-                  <SocialIcon href="https://www.youtube.com/@SarvdevAyurvediccollege" icon={<Youtube />} />
+                  <SocialIcon
+                    href="https://www.facebook.com/p/Sarvdev-Ayurvedic-medical-college-61569381983714/"
+                    icon={<Facebook />}
+                  />
+                  <SocialIcon
+                    href="https://www.instagram.com/sarvdevayurvediccollege/"
+                    icon={<Instagram />}
+                  />
+                  <SocialIcon
+                    href="https://www.youtube.com/@SarvdevAyurvediccollege"
+                    icon={<Youtube />}
+                  />
                 </div>
               </div>
             </div>
@@ -89,15 +109,23 @@ const ContactPage = () => {
             </h3>
 
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><span className="font-semibold text-foreground">By Road:</span> Well connected via Azamgarh city road network.</li>
-              <li><span className="font-semibold text-foreground">By Rail:</span> Nearest railway station – Azamgarh Junction.</li>
-              <li><span className="font-semibold text-foreground">By Air:</span> Nearest airport – Gorakhpur / Varanasi.</li>
+              <li>
+                <span className="font-semibold text-foreground">By Road:</span>{" "}
+                Well connected via Azamgarh city road network.
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">By Rail:</span>{" "}
+                Nearest railway station – Azamgarh Junction.
+              </li>
+              <li>
+                <span className="font-semibold text-foreground">By Air:</span>{" "}
+                Nearest airport – Gorakhpur / Varanasi.
+              </li>
             </ul>
           </div>
 
           {/* ===== FORM + RIGHT STACK ===== */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
             {/* LEFT — FORM */}
             <div className="rounded-2xl border border-black/10 bg-white p-6 sm:p-8 shadow-sm">
               <h3 className="text-xl font-bold text-center text-foreground">
@@ -110,7 +138,10 @@ const ContactPage = () => {
               <form className="mt-8 space-y-5">
                 <Input label="Full Name" placeholder="Enter your name" />
                 <Input label="Email Address" placeholder="Enter your email" />
-                <Input label="Phone Number" placeholder="Enter your phone number" />
+                <Input
+                  label="Phone Number"
+                  placeholder="Enter your phone number"
+                />
 
                 <div>
                   <label className="text-sm font-medium text-foreground">
@@ -164,7 +195,6 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>

@@ -50,17 +50,17 @@ img[data-loaded]::after {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8B1E1E; /* brand maroon */
+  background: #8b1e1e; /* brand maroon */
   border-radius: 10px;
   border: 2px solid #f4f1ee;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7A1A1A;
+  background: #7a1a1a;
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #8B1E1E #f4f1ee;
+  scrollbar-color: #8b1e1e #f4f1ee;
 }

@@ -9,10 +9,7 @@ const RulesRegulations = () => {
     switch (block.type) {
       case "heading":
         return (
-          <h4
-            key={idx}
-            className="text-sm font-semibold text-foreground mt-4"
-          >
+          <h4 key={idx} className="text-sm font-semibold text-foreground mt-4">
             {block.content}
           </h4>
         );
@@ -83,7 +80,6 @@ const RulesRegulations = () => {
   return (
     <section className="py-14 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* ✅ SECTION HEADING */}
         <div className="mb-10 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
@@ -128,7 +124,6 @@ const RulesRegulations = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

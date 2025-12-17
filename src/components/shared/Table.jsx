@@ -69,10 +69,7 @@ const Table = ({
 
           <tbody className="bg-white">
             {paginatedData.map((row, rowIndex) => (
-              <tr
-                key={rowIndex}
-                className="hover:bg-[#8B1E1E]/5 transition"
-              >
+              <tr key={rowIndex} className="hover:bg-[#8B1E1E]/5 transition">
                 {showIndex && (
                   <td className="px-4 py-3 text-sm text-muted-foreground border-b">
                     {startIndex + rowIndex + 1}
@@ -150,9 +147,7 @@ const Table = ({
           ))}
 
           <button
-            onClick={() =>
-              setCurrentPage((p) => Math.min(p + 1, totalPages))
-            }
+            onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             disabled={currentPage === totalPages}
             className="p-2 rounded-md border disabled:opacity-40 hover:bg-[#8B1E1E]/10"
           >

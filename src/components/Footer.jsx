@@ -207,9 +207,7 @@ export function Footer() {
             <div className="text-center md:text-left">
               © {currentYear} {siteName}. All rights reserved.
             </div>
-            <div className="text-center">
-              Affiliated with {affiliation}
-            </div>
+            <div className="text-center">Affiliated with {affiliation}</div>
             <div className="text-center md:text-right">
               Developed &amp; Managed by{" "}
               <a

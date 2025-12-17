@@ -14,7 +14,6 @@ const Courses = () => {
       {/* ===== COURSE CONTENT ===== */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
           {/* ===== INTRO WITH IMAGE ===== */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* TEXT */}
@@ -72,9 +71,9 @@ const Courses = () => {
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 The BAMS program is divided into professional phases covering
-                classical Ayurvedic texts along with modern anatomy,
-                physiology, pathology, pharmacology, surgery, gynecology, and
-                extensive clinical training.
+                classical Ayurvedic texts along with modern anatomy, physiology,
+                pathology, pharmacology, surgery, gynecology, and extensive
+                clinical training.
               </p>
 
               <ul className="space-y-3 text-sm text-muted-foreground">
@@ -105,7 +104,7 @@ const Courses = () => {
           {/* ===== CTA BUTTON ===== */}
           <div className="text-center">
             <button
-              onClick={() => window.location.href = "/admissions"} // 🔁 change link if needed
+              onClick={() => (window.location.href = "/admissions")} // 🔁 change link if needed
               className="
                 inline-flex items-center justify-center
                 rounded-xl px-10 py-4
@@ -120,10 +119,10 @@ const Courses = () => {
             </button>
 
             <p className="mt-3 text-xs text-muted-foreground">
-              Admission subject to eligibility & counseling as per regulatory norms
+              Admission subject to eligibility & counseling as per regulatory
+              norms
             </p>
           </div>
-
         </div>
       </section>
     </>

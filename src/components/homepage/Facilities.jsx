@@ -4,8 +4,10 @@ import facilities from "../../data/facilities";
 
 function PillBadge({ children }) {
   return (
-    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold 
-                     border border-[#8B1E1E]/30 text-[#8B1E1E] bg-[#FDF1E8]">
+    <span
+      className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold 
+                     border border-[#8B1E1E]/30 text-[#8B1E1E] bg-[#FDF1E8]"
+    >
       {children}
     </span>
   );
@@ -57,9 +59,7 @@ function FacilityCard({ facility }) {
 
       <div className="mt-4 pt-4 flex flex-wrap gap-3">
         {Array.isArray(facility.features) &&
-          facility.features.map((f) => (
-            <FeatureChip key={f}>{f}</FeatureChip>
-          ))}
+          facility.features.map((f) => <FeatureChip key={f}>{f}</FeatureChip>)}
       </div>
     </article>
   );

@@ -50,9 +50,7 @@ const NewsTable = ({ data }) => {
                     Click to download attachment
                   </a>
                 ) : (
-                  <span className="text-muted-foreground">
-                    No Attachment
-                  </span>
+                  <span className="text-muted-foreground">No Attachment</span>
                 )}
               </td>
             </tr>

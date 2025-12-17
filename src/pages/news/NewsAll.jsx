@@ -19,7 +19,6 @@ const NewsAll = () => {
       {/* ===== CONTENT SECTION ===== */}
       <section className="py-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          
           {/* Page Intro */}
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
@@ -33,7 +32,6 @@ const NewsAll = () => {
 
           {/* Reusable Table */}
           <NewsTable data={NewsAllData} />
-
         </div>
       </section>
     </>

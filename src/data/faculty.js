@@ -45,8 +45,7 @@ const facultyData = {
     expertise: "Rasashastra and Bhaishajya Kalpana",
     publications:
       "24 books in Sanskrit and English, 90+ research papers in international journals",
-    bio:
-      "Dr. K.R.C. Reddy is well known for his valuable contribution in the field of Ayurveda pertaining to Ayurvedic Pharmaceutics. He has worked as Research fellow in Japan and served as subject expert member in T.K.D.L under CSIR, New Delhi.",
+    bio: "Dr. K.R.C. Reddy is well known for his valuable contribution in the field of Ayurveda pertaining to Ayurvedic Pharmaceutics. He has worked as Research fellow in Japan and served as subject expert member in T.K.D.L under CSIR, New Delhi.",
   },
 
   faculty: [

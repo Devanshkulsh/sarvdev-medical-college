@@ -11,7 +11,10 @@ const Introduction = () => {
       <Banner
         title="College & Hostel"
         subtitle="Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital"
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "College & Hostel" }]}
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "College & Hostel" },
+        ]}
       />
       <CollegeIntroduction />
       <FacilitiesSection />

@@ -90,7 +90,9 @@ const Videos = () => {
                 <div
                   className={`w-14 h-14 rounded-full bg-white/90 flex items-center justify-center
                               transition-all duration-300 ${
-                                hoveredIndex === index ? "scale-110" : "scale-100"
+                                hoveredIndex === index
+                                  ? "scale-110"
+                                  : "scale-100"
                               }`}
                 >
                   <PlayCircle className="w-8 h-8 text-[#8B1E1E]" />
@@ -161,7 +163,8 @@ const Videos = () => {
       {/* Count */}
       <div className="relative z-10 text-center mt-8">
         <p className="text-sm text-[#6B5A52]">
-          Showing {Math.min(visibleCount, videos.length)} of {videos.length} videos
+          Showing {Math.min(visibleCount, videos.length)} of {videos.length}{" "}
+          videos
         </p>
         <div className="w-32 h-1 bg-linear-to-r from-transparent via-[#8B1E1E] to-transparent mx-auto mt-2 rounded-full"></div>
       </div>

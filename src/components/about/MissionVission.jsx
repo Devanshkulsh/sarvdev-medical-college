@@ -4,16 +4,13 @@ import { Target, Eye } from "lucide-react";
 const MissionVision = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
       {/* Mission */}
       <div className="card-ayurvedic bg-card rounded-lg border shadow-sm p-6 space-y-4">
         <div className="p-3 bg-primary/10 rounded-xl w-fit">
           <Target className="h-6 w-6 text-primary" />
         </div>
 
-        <h3 className="text-xl font-bold text-foreground">
-          Our Mission
-        </h3>
+        <h3 className="text-xl font-bold text-foreground">Our Mission</h3>
 
         <p className="text-muted-foreground">
           The mission of Maha Mrityunjay Ayurvedic Hospital is to improve the
@@ -40,9 +37,7 @@ const MissionVision = () => {
           <Eye className="h-6 w-6 text-primary" />
         </div>
 
-        <h3 className="text-xl font-bold text-foreground">
-          Our Vision
-        </h3>
+        <h3 className="text-xl font-bold text-foreground">Our Vision</h3>
 
         <div className="space-y-3">
           <p className="text-muted-foreground">
@@ -55,7 +50,6 @@ const MissionVision = () => {
           </p>
         </div>
       </div>
-
     </div>
   );
 };

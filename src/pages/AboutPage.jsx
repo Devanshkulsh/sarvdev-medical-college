@@ -14,17 +14,13 @@ export default function About() {
       <Banner
         title="About Us"
         subtitle="Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About Us" },
-        ]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
       />
 
       {/* Main Content */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-
             {/* LEFT: Content */}
             <div className="lg:col-span-2 space-y-10">
               <AboutIntro />
@@ -37,7 +33,6 @@ export default function About() {
               <LeadershipSidebar />
               <AffiliationCard />
             </div>
-
           </div>
         </div>
         <CollegeCouncil />

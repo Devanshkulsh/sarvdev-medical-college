@@ -9,9 +9,9 @@ const AboutIntro = () => {
 
       <p className="text-[#6B5A52] leading-relaxed">
         Sarvdev Ayurvedic Medical College and Maha Mrityunjay Hospital is
-        affiliated with Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh.
-        The institution is committed to giving quality education and healthcare
-        facilities to the society.
+        affiliated with Mahayogi Guru Gorakhnath AYUSH University, Uttar
+        Pradesh. The institution is committed to giving quality education and
+        healthcare facilities to the society.
       </p>
 
       <p className="text-[#6B5A52] leading-relaxed">
