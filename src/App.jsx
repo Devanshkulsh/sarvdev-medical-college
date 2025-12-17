@@ -29,6 +29,7 @@ import ContactPage from "./pages/ContactPage";
 import Commiittee from "./pages/committee/Commiittee";
 import FloatingButtons from "./components/FloatingButtons";
 import NCISMPage from "./components/NCISMPage";
+import Admissions from "./pages/Admissions";
 
 function App() {
   return (
@@ -116,6 +117,7 @@ function App() {
         <Route path="/committee/student-support" element={<Commiittee />} />
         <Route path="/committee/career" element={<Commiittee />} />
         <Route path="/ncism" element={<NCISMPage />} />
+        <Route path="/admissions" element={<Admissions />} />
       </Routes>
       <FloatingButtons />
       <ContactSticky />
