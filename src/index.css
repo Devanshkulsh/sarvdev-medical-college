@@ -37,3 +37,30 @@ img:not([data-loaded])::after {
 img[data-loaded]::after {
   display: none;
 }
+
+/* ===== Custom Scrollbar ===== */
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f1ee; /* light neutral */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B1E1E; /* brand maroon */
+  border-radius: 10px;
+  border: 2px solid #f4f1ee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1A1A;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8B1E1E #f4f1ee;
+}
