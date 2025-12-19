@@ -31,18 +31,25 @@ export function TopBar() {
             "
           >
             {/* Phone */}
-            <a
-              href={`tel:${phoneNumber}`}
-              className="
-                flex items-center gap-1.5
-                hover:text-[#F2B705]
-                transition-colors
-                whitespace-nowrap
-              "
-            >
-              <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              <span>{phoneNumber}</span>
-            </a>
+            <div className="flex items-center gap-3 whitespace-nowrap">
+              <a
+                href="tel:+919415257492"
+                className="flex items-center gap-1.5 hover:text-[#F2B705] transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span>+91 9415257492</span>
+              </a>
+
+              <span className="opacity-70">|</span>
+
+              <a
+                href="tel:+919198762108"
+                className="flex items-center gap-1.5 hover:text-[#F2B705] transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span>+91 9198762108</span>
+              </a>
+            </div>
 
             {/* Email */}
             <a

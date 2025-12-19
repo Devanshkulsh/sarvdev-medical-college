@@ -71,13 +71,14 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 items-start">
           {/* About */}
           <div className="space-y-3 sm:space-y-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img
                 src="/logo.webp"
                 alt="Sarvdev Logo"
                 className="h-14 w-14 bg-white rounded-lg p-1 object-contain"
               />
-            </div>
+            </Link>
+
             <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
               {siteName}
             </h3>

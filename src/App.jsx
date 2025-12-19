@@ -31,6 +31,9 @@ import FloatingButtons from "./components/FloatingButtons";
 import NCISMPage from "./components/NCISMPage";
 import Admissions from "./pages/Admissions";
 import TestimonialsPage from "./pages/TestimonialsPage";
+import ResultsPage from "./pages/ResultsPage";
+import VacanciesPage from "./pages/VacanciesPage";
+import NoticesPage from "./pages/NoticesPage";
 
 function App() {
   return (
@@ -120,6 +123,9 @@ function App() {
         <Route path="/ncism" element={<NCISMPage />} />
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/students/results" element={<ResultsPage />} />
+        <Route path="/news/vacancies" element={<VacanciesPage />} />
+        <Route path="/news/notices" element={<NoticesPage />} />
       </Routes>
       <FloatingButtons />
       <ContactSticky />

@@ -1,0 +1,56 @@
+export const noticesData = [
+  {
+    id: 1,
+    title: "BAMS First Professional Examination Schedule",
+    category: "Examination",
+    date: "15 March 2025",
+    issuedBy: "Examination Cell",
+    important: true,
+    pdf: "/notices/bams-exam-schedule.pdf",
+  },
+  {
+    id: 2,
+    title: "Admission Open for BAMS – Academic Session 2025–26",
+    category: "Admission",
+    date: "10 March 2025",
+    issuedBy: "Admission Committee",
+    important: true,
+    pdf: "/notices/bams-admission-2025.pdf",
+  },
+  {
+    id: 3,
+    title: "Holiday Notice on Account of Buddha Purnima",
+    category: "General",
+    date: "05 March 2025",
+    issuedBy: "College Administration",
+    important: false,
+    pdf: "/notices/buddha-purnima-holiday.pdf",
+  },
+  {
+    id: 4,
+    title: "Monthly Attendance Submission – Teaching Staff",
+    category: "Academic",
+    date: "01 March 2025",
+    issuedBy: "Academic Section",
+    important: false,
+    pdf: "/notices/teaching-staff-attendance.pdf",
+  },
+  {
+    id: 5,
+    title: "OPD & Hospital Services Timing Update",
+    category: "Hospital",
+    date: "25 Feb 2025",
+    issuedBy: "Hospital Administration",
+    important: false,
+    pdf: "/notices/hospital-opd-timing.pdf",
+  },
+];
+
+export const noticeCategories = [
+  "All",
+  "Academic",
+  "Examination",
+  "Admission",
+  "General",
+  "Hospital",
+];
