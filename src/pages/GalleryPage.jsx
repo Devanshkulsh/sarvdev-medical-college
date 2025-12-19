@@ -3,6 +3,8 @@ import Banner from "../components/shared/Banner";
 import { galleryTabs, galleryImages } from "../data/galleryPage";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+const INITIAL_VISIBLE = 9;
+
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("all");
 
@@ -10,12 +12,25 @@ const GalleryPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  /* SHOW MORE STATE */
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
   const filteredImages = useMemo(() => {
     if (activeTab === "all") {
       return Object.values(galleryImages).flat();
     }
     return galleryImages[activeTab] || [];
   }, [activeTab]);
+
+  /* Reset visible count when tab changes */
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE);
+  }, [activeTab]);
+
+  const visibleImages =
+    activeTab === "all"
+      ? filteredImages.slice(0, visibleCount)
+      : filteredImages;
 
   /* 🧠 Keyboard controls */
   useEffect(() => {
@@ -83,41 +98,64 @@ const GalleryPage = () => {
           </div>
 
           {/* Masonry */}
-          {filteredImages.length > 0 ? (
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-              {filteredImages.map((src, index) => (
-                <div
-                  key={index}
-                  onClick={() => openLightbox(index)}
-                  className="
-                    group cursor-pointer break-inside-avoid
-                    overflow-hidden rounded-xl border border-black/10 shadow-sm
-                    relative
-                  "
-                >
-                  <img
-                    src={src}
-                    alt="Gallery"
-                    className="
-                      w-full h-auto object-cover
-                      transition-transform duration-500
-                      group-hover:scale-110
-                    "
-                    loading="lazy"
-                  />
-
-                  {/* Hover Overlay */}
+          {visibleImages.length > 0 ? (
+            <>
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+                {visibleImages.map((src, index) => (
                   <div
+                    key={index}
+                    onClick={() => openLightbox(index)}
                     className="
-                    absolute inset-0
-                    bg-black/30 opacity-0
-                    group-hover:opacity-100
-                    transition
-                  "
-                  />
-                </div>
-              ))}
-            </div>
+                      group cursor-pointer break-inside-avoid
+                      overflow-hidden rounded-xl border border-black/10 shadow-sm
+                      relative
+                    "
+                  >
+                    <img
+                      src={src}
+                      alt="Gallery"
+                      className="
+                        w-full h-auto object-cover
+                        transition-transform duration-500
+                        group-hover:scale-110
+                      "
+                      loading="lazy"
+                    />
+
+                    {/* Hover Overlay */}
+                    <div
+                      className="
+                        absolute inset-0
+                        bg-black/30 opacity-0
+                        group-hover:opacity-100
+                        transition
+                      "
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* SHOW MORE BUTTON (ONLY FOR ALL TAB) */}
+              {activeTab === "all" &&
+                visibleCount < filteredImages.length && (
+                  <div className="flex justify-center pt-6">
+                    <button
+                      onClick={() =>
+                        setVisibleCount((prev) => prev + INITIAL_VISIBLE)
+                      }
+                      className="
+                        px-6 py-3 rounded-md
+                        bg-[#8B1E1E] text-white
+                        font-semibold text-sm
+                        hover:bg-[#7A1A1A]
+                        transition
+                      "
+                    >
+                      Show More
+                    </button>
+                  </div>
+                )}
+            </>
           ) : (
             <p className="text-center text-sm text-muted-foreground">
               No images available for this category.
