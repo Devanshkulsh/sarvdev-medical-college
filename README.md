@@ -4,44 +4,6 @@ Official website of **Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospit
 
 🔗 **Live Website**: https://sarvdev-medical-college.vercel.app
 
----
-
-## 📌 Project Overview
-
-This is a modern, responsive, SEO-optimized web application developed using **React + Vite + Tailwind CSS**, designed for:
-
-- Students
-- Faculty
-- Patients
-- Regulatory authorities
-- General public
-
-The website includes all mandatory disclosures, dynamic pages, and user-friendly navigation.
-
----
-
-## 🚀 Tech Stack
-
-- **Frontend Framework**: React (Vite)
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **Deployment**: Vercel
-- **Form Integration**: External JS-based admission form
-- **SEO**: Semantic HTML, optimized metadata, lazy loading
-
----
-
-## 📂 Project Structure
-
-# 🏥 Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital
-
-Official website of **Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital**, built to provide transparent academic, hospital, and regulatory information in compliance with **NCISM / Ministry of AYUSH** guidelines.
-
-🔗 **Live Website**: https://sarvdev-medical-college.vercel.app
-
----
-
 ## 📌 Project Overview
 
 This is a modern, responsive, SEO-optimized web application developed using **React + Vite + Tailwind CSS**, designed for:
