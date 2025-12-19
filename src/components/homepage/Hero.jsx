@@ -31,7 +31,7 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#F2B705]/20 text-[#F2B705] border border-[#F2B705]/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#F2B705] rounded-full animate-pulse" />
-            Admission Open 2024-25
+            Admission Open 2025-26
           </div>
 
           {/* Main Heading */}

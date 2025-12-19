@@ -3,7 +3,7 @@ const testimonials = [
     id: 1,
     name: "Dr. Suresh Kumar",
     role: "Professor of Kayachikitsa",
-    avatar: "/avatars/dr-suresh.jpg", // Replace with actual image
+    avatar: "/avatars/dr-suresh.jpg",
     quote:
       "Teaching at Sarvdev has been a deeply rewarding experience. Students show real dedication to traditional science combined with modern rigor.",
   },
@@ -41,11 +41,83 @@ const testimonials = [
   },
   {
     id: 6,
-    name: "Dr. Karan Patel",
-    role: "Visiting Faculty",
-    avatar: "/avatars/karan.jpg",
+    name: "Ankit Mishra",
+    role: "BAMS Intern",
+    avatar: "/avatars/ankit.jpg",
     quote:
-      "A perfect blend of heritage and modern infrastructure. The quality of education is top-notch.",
+      "The hospital exposure during internship prepared me for real clinical practice with confidence.",
+  },
+  {
+    id: 7,
+    name: "Mrs. Sunita Devi",
+    role: "Patient, Panchakarma",
+    avatar: "/avatars/sunita.jpg",
+    quote:
+      "The Panchakarma therapies were extremely effective. Doctors and staff were very caring.",
+  },
+  {
+    id: 8,
+    name: "Dr. Rakesh Yadav",
+    role: "Assistant Professor, Shalya Tantra",
+    avatar: "/avatars/rakesh.jpg",
+    quote:
+      "Sarvdev maintains excellent academic discipline while encouraging research and innovation.",
+  },
+  {
+    id: 9,
+    name: "Neha Gupta",
+    role: "BAMS Student",
+    avatar: "/avatars/neha.jpg",
+    quote:
+      "The faculty always motivates us to think practically and ethically as future Ayurvedic doctors.",
+  },
+  {
+    id: 10,
+    name: "Amit Srivastava",
+    role: "Patient, IPD",
+    avatar: "/avatars/amit.jpg",
+    quote:
+      "Clean facilities, disciplined staff, and effective treatments made my recovery smooth.",
+  },
+  {
+    id: 11,
+    name: "Dr. Meenakshi Rao",
+    role: "Guest Lecturer",
+    avatar: "/avatars/meenakshi.jpg",
+    quote:
+      "The students here are inquisitive and dedicated. The institution has a strong academic culture.",
+  },
+  {
+    id: 12,
+    name: "Rohit Tiwari",
+    role: "BAMS Student",
+    avatar: "/avatars/rohit.jpg",
+    quote:
+      "Clinical demonstrations and OPD exposure helped me connect theory with real-life practice.",
+  },
+  {
+    id: 13,
+    name: "Mrs. Kamla Yadav",
+    role: "Patient, OPD",
+    avatar: "/avatars/kamla.jpg",
+    quote:
+      "I found relief from chronic issues through Ayurvedic treatment here. Highly recommended.",
+  },
+  {
+    id: 14,
+    name: "Dr. Pankaj Sharma",
+    role: "Senior Consultant",
+    avatar: "/avatars/pankaj.jpg",
+    quote:
+      "Sarvdev is doing commendable work in preserving Ayurveda while adopting modern standards.",
+  },
+  {
+    id: 15,
+    name: "Kavita Singh",
+    role: "BAMS Student",
+    avatar: "/avatars/kavita.jpg",
+    quote:
+      "Supportive teachers, peaceful campus, and strong clinical exposure make learning enjoyable.",
   },
 ];
 

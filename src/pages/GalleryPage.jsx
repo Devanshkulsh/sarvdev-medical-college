@@ -1,9 +1,14 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Banner from "../components/shared/Banner";
 import { galleryTabs, galleryImages } from "../data/galleryPage";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("all");
+
+  /* 🔍 LIGHTBOX STATE */
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const filteredImages = useMemo(() => {
     if (activeTab === "all") {
@@ -11,6 +16,37 @@ const GalleryPage = () => {
     }
     return galleryImages[activeTab] || [];
   }, [activeTab]);
+
+  /* 🧠 Keyboard controls */
+  useEffect(() => {
+    if (!lightboxOpen) return;
+
+    const handleKey = (e) => {
+      if (e.key === "Escape") setLightboxOpen(false);
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxOpen, currentIndex]);
+
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const nextImage = () => {
+    setCurrentIndex((prev) =>
+      prev === filteredImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? filteredImages.length - 1 : prev - 1
+    );
+  };
 
   return (
     <>
@@ -52,13 +88,32 @@ const GalleryPage = () => {
               {filteredImages.map((src, index) => (
                 <div
                   key={index}
-                  className="break-inside-avoid overflow-hidden rounded-xl border border-black/10 shadow-sm"
+                  onClick={() => openLightbox(index)}
+                  className="
+                    group cursor-pointer break-inside-avoid
+                    overflow-hidden rounded-xl border border-black/10 shadow-sm
+                    relative
+                  "
                 >
                   <img
                     src={src}
                     alt="Gallery"
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    className="
+                      w-full h-auto object-cover
+                      transition-transform duration-500
+                      group-hover:scale-110
+                    "
                     loading="lazy"
+                  />
+
+                  {/* Hover Overlay */}
+                  <div
+                    className="
+                    absolute inset-0
+                    bg-black/30 opacity-0
+                    group-hover:opacity-100
+                    transition
+                  "
                   />
                 </div>
               ))}
@@ -70,6 +125,42 @@ const GalleryPage = () => {
           )}
         </div>
       </section>
+
+      {/* ===== LIGHTBOX VIEWER ===== */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-100 bg-black/90 flex items-center justify-center">
+          {/* Close */}
+          <button
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-6 right-6 text-white hover:text-[#F2B705]"
+          >
+            <X size={32} />
+          </button>
+
+          {/* Prev */}
+          <button
+            onClick={prevImage}
+            className="absolute left-6 text-white hover:text-[#F2B705]"
+          >
+            <ChevronLeft size={40} />
+          </button>
+
+          {/* Image */}
+          <img
+            src={filteredImages[currentIndex]}
+            alt="Gallery Preview"
+            className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+          />
+
+          {/* Next */}
+          <button
+            onClick={nextImage}
+            className="absolute right-6 text-white hover:text-[#F2B705]"
+          >
+            <ChevronRight size={40} />
+          </button>
+        </div>
+      )}
     </>
   );
 };

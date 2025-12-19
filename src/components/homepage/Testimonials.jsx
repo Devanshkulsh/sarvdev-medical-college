@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
 
         {/* Grid */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t) => (
+          {testimonials.slice(0, 6).map((t) => (
             <blockquote
               key={t.id}
               className="relative bg-white border border-[#E6E1DD] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"

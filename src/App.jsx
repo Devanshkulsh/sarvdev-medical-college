@@ -30,6 +30,7 @@ import Commiittee from "./pages/committee/Commiittee";
 import FloatingButtons from "./components/FloatingButtons";
 import NCISMPage from "./components/NCISMPage";
 import Admissions from "./pages/Admissions";
+import TestimonialsPage from "./pages/TestimonialsPage";
 
 function App() {
   return (
@@ -118,6 +119,7 @@ function App() {
         <Route path="/committee/career" element={<Commiittee />} />
         <Route path="/ncism" element={<NCISMPage />} />
         <Route path="/admissions" element={<Admissions />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
       </Routes>
       <FloatingButtons />
       <ContactSticky />
