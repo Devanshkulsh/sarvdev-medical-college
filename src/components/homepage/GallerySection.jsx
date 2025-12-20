@@ -175,7 +175,7 @@ export default function GallerySection() {
                        bg-[#8B1E1E] text-white hover:bg-[#7A1A1A] transition"
             aria-label="See more gallery"
           >
-            See more
+            View Sarvdev Ayurvedic Medical College Photo Gallery
           </Link>
         </div>
       </div>
