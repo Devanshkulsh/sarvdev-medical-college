@@ -86,6 +86,7 @@ export default function NewsSection() {
                 <Link
                   to={item.slug}
                   className="inline-flex items-center gap-2 text-[#8B1E1E] font-medium hover:underline"
+                  aria-label="Read more about the news"
                 >
                   Read More
                   <ArrowRight className="w-4 h-4" />
