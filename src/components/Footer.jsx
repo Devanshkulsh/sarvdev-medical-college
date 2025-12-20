@@ -139,16 +139,22 @@ export function Footer() {
                 {email}
               </a>
 
-              <div className="flex items-start gap-3 text-white/85 py-1">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <address className="not-italic leading-relaxed">
-                  {address.line1}
-                  <br />
-                  {address.city}, {address.state}
-                  <br />
-                  {address.pincode}
-                </address>
-              </div>
+              <a
+  href="https://maps.app.goo.gl/XDmB1E7Tv1nbp52j9"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-3 text-white/85 py-1 hover:text-[#F2B705] transition-colors"
+>
+  <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+  <address className="not-italic leading-relaxed">
+    {address.line1}
+    <br />
+    {address.city}, {address.state}
+    <br />
+    {address.pincode}
+  </address>
+</a>
+
             </div>
           </div>
 

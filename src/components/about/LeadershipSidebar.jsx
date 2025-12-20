@@ -48,6 +48,9 @@ const LeadershipSidebar = () => {
             <p className="text-xs text-primary">
               {facultyData.vicechancellor.designation}
             </p>
+            <p className="text-xs text-primary">
+              {facultyData.vicechancellor.organization}
+            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-1">
