@@ -115,17 +115,21 @@ export function Footer() {
             </h3>
 
             <div className="space-y-2 text-sm">
-              <a
-                href={`tel:${phones[0]}`}
-                className="flex items-start gap-3 text-white/85 hover:text-[#F2B705] transition-colors py-1"
-              >
+              <div className="flex items-start gap-3 text-sm text-white/85 py-1">
                 <Phone className="h-4 w-4 mt-0.5 shrink-0" />
-                <div>
+
+                <div className="flex flex-col">
                   {phones.map((p, i) => (
-                    <div key={i}>{p}</div>
+                    <a
+                      key={i}
+                      href={`tel:${p.replace(/\s+/g, "")}`}
+                      className="hover:text-[#F2B705] transition-colors"
+                    >
+                      {p}
+                    </a>
                   ))}
                 </div>
-              </a>
+              </div>
 
               <a
                 href={`mailto:${email}`}
