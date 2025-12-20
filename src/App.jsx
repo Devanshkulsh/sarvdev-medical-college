@@ -34,6 +34,7 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import ResultsPage from "./pages/ResultsPage";
 import VacanciesPage from "./pages/VacanciesPage";
 import NoticesPage from "./pages/NoticesPage";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -127,6 +128,7 @@ function App() {
         <Route path="/news/vacancies" element={<VacanciesPage />} />
         <Route path="/news/notices" element={<NoticesPage />} />
       </Routes>
+      <ScrollToTopButton />
       <FloatingButtons />
       <ContactSticky />
       <Footer />
