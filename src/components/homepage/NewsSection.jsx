@@ -88,7 +88,7 @@ export default function NewsSection() {
                   className="inline-flex items-center gap-2 text-[#8B1E1E] font-medium hover:underline"
                   aria-label="Read more about the news"
                 >
-                  Read More
+                  Read More about the Sarvdev Ayurvedic Medical college news
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
