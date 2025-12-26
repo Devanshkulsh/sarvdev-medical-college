@@ -45,6 +45,7 @@ const importantLinks = [
 ];
 
 export function Footer() {
+  const cleanPhone = (phone) => phone.replace(/[^\d+]/g, "");
   const currentYear = new Date().getFullYear();
   const siteName = "Sarvdev Ayurvedic Medical College & Hospital";
   const affiliation =
