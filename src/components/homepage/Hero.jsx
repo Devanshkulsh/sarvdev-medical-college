@@ -66,7 +66,7 @@ export function Hero() {
             </Link>
 
             <a
-              href="tel:+919415257492"
+              href="tel:+919198762108"
               className="inline-flex items-center justify-center gap-2 rounded-md px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg font-medium transition-colors
              bg-white text-[#8B1E1E] border border-transparent
              sm:bg-white/20 sm:text-white sm:border-white/40 sm:backdrop-blur
