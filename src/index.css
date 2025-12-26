@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  overflow-x: hidden;
+}
+
 /* ===== GLOBAL IMAGE LOADER ===== */
 img {
   background-color: rgba(0, 0, 0, 0.06);

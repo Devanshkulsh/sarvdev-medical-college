@@ -66,7 +66,7 @@ export default function ContactSection() {
                     className="flex items-center gap-3 hover:text-[#8B1E1E] transition-colors"
                   >
                     <Phone className="w-5 h-5 text-[#8B1E1E]" />
-                    <span>+91 94152 57492</span>
+                    <span>+91 94152 57492 (For other queries)</span>
                   </a>
 
                   <a
@@ -74,7 +74,7 @@ export default function ContactSection() {
                     className="flex items-center gap-3 hover:text-[#8B1E1E] transition-colors"
                   >
                     <Phone className="w-5 h-5 text-[#8B1E1E]" />
-                    <span>+91 91987 62108</span>
+                    <span>+91 91987 62108 (For admissions)</span>
                   </a>
 
                   <a
