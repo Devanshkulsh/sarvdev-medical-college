@@ -73,7 +73,7 @@ export function TopBar() {
               "
             >
               <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
-              <span className="max-w-[280px] sm:max-w-none">
+              <span className="max-w-70 sm:max-w-none">
                 {address}
               </span>
             </a>
