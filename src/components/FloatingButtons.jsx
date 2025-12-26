@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "919415257492";
+const WHATSAPP_NUMBER = "9198762108";
 
 const presetMessages = [
   "Hello, I want to know about BAMS admission.",
@@ -39,7 +39,7 @@ const FloatingButtons = () => {
     <>
       {/* ===== PHONE (BOTTOM LEFT) ===== */}
       <a
-        href="tel:+919415257492"
+        href="tel:9198762108"
         aria-label="Call Us"
         className="fixed bottom-5 left-5 z-50 flex h-14 w-14 items-center justify-center rounded-full
                    bg-[#8B1E1E] text-white shadow-lg

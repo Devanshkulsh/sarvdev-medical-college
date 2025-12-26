@@ -60,7 +60,7 @@ const ContactPage = () => {
               <InfoItem
                 icon={<Phone />}
                 title="Phone"
-                text="+91 94152 57492, +91 91987 62108"
+                text="+91 94152 57492 (For other queries), +91 91987 62108 (For admissions)"
               />
               <InfoItem
                 icon={<Mail />}

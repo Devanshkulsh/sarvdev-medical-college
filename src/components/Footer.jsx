@@ -49,7 +49,7 @@ export function Footer() {
   const siteName = "Sarvdev Ayurvedic Medical College & Hospital";
   const affiliation =
     "Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh";
-  const phones = ["+91 9415257492", "+91 9198762108"];
+  const phones = ["+91 9415257492 (Other queries)", "+91 9198762108 (Admissions)"];
   const email = "sdayurvedamh@gmail.com";
   const address = {
     line1: "Itaura Chandeshwer",
