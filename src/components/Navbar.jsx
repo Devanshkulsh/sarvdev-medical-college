@@ -184,7 +184,7 @@ export function Navbar() {
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden xl:flex flex-1 justify-center max-w-full overflow-visible">
+          <nav className="hidden 2xl:flex flex-1 justify-center max-w-full overflow-visible">
             <ul
               className="
     flex items-center
@@ -266,7 +266,7 @@ export function Navbar() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setMobileOpen((s) => !s)}
-            className="xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
+            className="2xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
             aria-label="Toggle menu"
           >
             <svg
@@ -292,7 +292,7 @@ export function Navbar() {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="lg:hidden border-t bg-white">
+        <div className="2xl:hidden border-t bg-white">
           <ul className="px-4 py-3 space-y-1">
             {navItems.map((item, i) => {
               const isOpen = openMobileMenu === i;
