@@ -108,6 +108,7 @@ export function Navbar() {
           label: "List of Students",
           children: [
             { label: "Batch 2024-2025", href: "/students/list/2024-25" },
+            { label: "Batch 2025-2026", href: "/students/list/2025-26" },
           ],
         },
         {
@@ -233,6 +234,25 @@ export function Navbar() {
                               {sub.label}
                               <ChevronRight className="w-4 h-4" />
                             </span>
+                          )}
+
+                          {sub.children && (
+                            <ul className="absolute left-full top-0 hidden group-hover/sub:block bg-white border shadow-md rounded-md min-w-65 z-50">
+                              {sub.children.map((child, k) => (
+                                <li key={k}>
+                                  <Link
+                                    to={child.href}
+                                    className={`block px-4 py-2 text-sm hover:bg-[#C4551A]/10 ${
+                                      isActive(child.href)
+                                        ? `${mutedBg} ${primaryText}`
+                                        : ""
+                                    }`}
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
                           )}
                         </li>
                       ))}
