@@ -184,7 +184,7 @@ export function Navbar() {
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden 2xl:flex flex-1 justify-center max-w-full overflow-visible">
+          <nav className="hidden xl:flex flex-1 justify-center max-w-full overflow-visible">
             <ul
               className="
     flex items-center
@@ -230,29 +230,31 @@ export function Navbar() {
                               {sub.label}
                             </Link>
                           ) : (
-                            <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-[#C4551A]/10">
-                              {sub.label}
-                              <ChevronRight className="w-4 h-4" />
-                            </span>
-                          )}
-
-                          {sub.children && (
-                            <ul className="absolute left-full top-0 hidden group-hover/sub:block bg-white border shadow-md rounded-md min-w-65 z-50">
-                              {sub.children.map((child, k) => (
-                                <li key={k}>
-                                  <Link
-                                    to={child.href}
-                                    className={`block px-4 py-2 text-sm hover:bg-[#C4551A]/10 ${
-                                      isActive(child.href)
-                                        ? `${mutedBg} ${primaryText}`
-                                        : ""
-                                    }`}
-                                  >
-                                    {child.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                            <>
+                              <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-[#C4551A]/10">
+                                {sub.label}
+                                <ChevronRight className="w-4 h-4" />
+                              </span>
+                              
+                              {sub.children && (
+                                <ul className="hidden group-hover/sub:block bg-white border-t">
+                                  {sub.children.map((child, k) => (
+                                    <li key={k}>
+                                      <Link
+                                        to={child.href}
+                                        className={`block px-8 py-2 text-sm hover:bg-[#C4551A]/10 ${
+                                          isActive(child.href)
+                                            ? `${mutedBg} ${primaryText}`
+                                            : ""
+                                        }`}
+                                      >
+                                        {child.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </>
                           )}
                         </li>
                       ))}
@@ -266,7 +268,7 @@ export function Navbar() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setMobileOpen((s) => !s)}
-            className="2xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
+            className="xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
             aria-label="Toggle menu"
           >
             <svg
@@ -292,7 +294,7 @@ export function Navbar() {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div className="2xl:hidden border-t bg-white">
+        <div className="lg:hidden border-t bg-white">
           <ul className="px-4 py-3 space-y-1">
             {navItems.map((item, i) => {
               const isOpen = openMobileMenu === i;
