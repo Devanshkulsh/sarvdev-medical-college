@@ -36,6 +36,7 @@ import VacanciesPage from "./pages/VacanciesPage";
 import NoticesPage from "./pages/NoticesPage";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import AdmissionFormModal from "./components/AdmissionFormModal";
+import ListOfStudents2526 from "./pages/students-corner/ListOfStudents2526";
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function App() {
           element={<PatientMonthlyAttendance />}
         />
         <Route path="students/list/2024-25" element={<ListOfStudents />} />
+        <Route path="students/list/2025-26" element={<ListOfStudents2526 />} />
         <Route
           path="/students/attendance/2024-25"
           element={<StudentMonthlyAttendance />}

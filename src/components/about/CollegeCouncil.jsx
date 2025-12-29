@@ -51,7 +51,7 @@ const CollegeCouncil = () => {
           {/* PDF Button */}
           <div className="flex justify-center">
             <a
-              href="/about/college-council-24.pdf"
+              href="/about/CC.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
