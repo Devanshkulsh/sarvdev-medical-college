@@ -163,8 +163,8 @@ export function Navbar() {
 
   return (
     <header className="relative w-full bg-white shadow-sm">
-      <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24 gap-4">
+      <div className="max-w-400 mx-auto px-4 sm:px-6 md:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24 gap-4">
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
@@ -183,8 +183,14 @@ export function Navbar() {
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex flex-1 justify-center">
-            <ul className="flex items-center gap-2 xl:gap-3 whitespace-nowrap">
+          <nav className="hidden lg:flex flex-1 justify-center max-w-full overflow-visible">
+            <ul
+              className="
+    flex items-center
+    flex-wrap justify-start
+    gap-x-1 gap-y-2 xl:gap-x-2
+  "
+            >
               {navItems.map((item, i) => (
                 <li key={i} className="relative group">
                   {item.href ? (
@@ -223,33 +229,10 @@ export function Navbar() {
                               {sub.label}
                             </Link>
                           ) : (
-                            <span
-                              className={`flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-[#C4551A]/10 ${
-                                isChildActive(sub.children) ? primaryText : ""
-                              }`}
-                            >
+                            <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-[#C4551A]/10">
                               {sub.label}
                               <ChevronRight className="w-4 h-4" />
                             </span>
-                          )}
-
-                          {sub.children && (
-                            <ul className="absolute left-full top-0 hidden group-hover/sub:block bg-white border shadow-md rounded-md min-w-65">
-                              {sub.children.map((child, k) => (
-                                <li key={k}>
-                                  <Link
-                                    to={child.href}
-                                    className={`block px-4 py-2 text-sm hover:bg-[#C4551A]/10 ${
-                                      isActive(child.href)
-                                        ? `${mutedBg} ${primaryText}`
-                                        : ""
-                                    }`}
-                                  >
-                                    {child.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
                           )}
                         </li>
                       ))}

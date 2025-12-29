@@ -3,6 +3,15 @@ export const CommitteeData = [
     title: "Co-curricular and Extra-curricular Activity Committee",
     blocks: [
       {
+        type: "pdf",
+        files: [
+          {
+            label: "Co-curricular and Extra-curricular Activity Committee",
+            url: "/committee/CCECA.pdf",
+          },
+        ],
+      },
+      {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
         rows: [
@@ -21,6 +30,15 @@ export const CommitteeData = [
     title: "Human Resource Development Committee",
     blocks: [
       {
+        type: "pdf",
+        files: [
+          {
+            label: "Human Resource Development Committee",
+            url: "/committee/HRDC.pdf",
+          },
+        ],
+      },
+      {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
         rows: [
@@ -37,6 +55,15 @@ export const CommitteeData = [
   {
     title: "Research Innovation and Entrepreneurship Development Committee",
     blocks: [
+          {
+        type: "pdf",
+        files: [
+          {
+            label: "Research Innovation and Entrepreneurship Development Committee",
+            url: "/committee/RIEDC.pdf",
+          },
+        ],
+      },
       {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
@@ -55,6 +82,15 @@ export const CommitteeData = [
   {
     title: "Internal Quality Assurance Committee",
     blocks: [
+      {
+        type: "pdf",
+        files: [
+          {
+            label: "Internal Quality Assurance Committee",
+            url: "/committee/IQAC.pdf",
+          },
+        ],
+      },
       {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
@@ -91,6 +127,15 @@ export const CommitteeData = [
     title: "Student Council",
     blocks: [
       {
+        type: "pdf",
+        files: [
+          {
+            label: "Student Council",
+            url: "/committee/SC.pdf",
+          },
+        ],
+      },
+      {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
         rows: [
@@ -111,6 +156,15 @@ export const CommitteeData = [
   {
     title: "Grievance Redressal Committee",
     blocks: [
+        {
+        type: "pdf",
+        files: [
+          {
+            label: "Grievance Redressal Committee",
+            url: "/committee/GRC.pdf",
+          },
+        ],
+      },
       {
         type: "table",
         headers: ["Sr No.", "Name", "Designation in Committee"],
@@ -128,6 +182,15 @@ export const CommitteeData = [
   {
     title: "Anti Ragging Cell",
     blocks: [
+      {
+        type: "pdf",
+        files: [
+          {
+            label: "Anti Ragging Cell",
+            url: "/committee/ARC.pdf",
+          },
+        ],
+      },
       {
         type: "table",
         headers: [
@@ -163,6 +226,15 @@ export const CommitteeData = [
   {
     title: "Student Support, Career Guidance and Placement Cell",
     blocks: [
+            {
+        type: "pdf",
+        files: [
+          {
+            label: "Committee Against Sexual Harassment",
+            url: "/committee/CCSH.pdf",
+          },
+        ],
+      },
       {
         type: "table",
         headers: ["Sr No.", "Name", "Committee Against Sexual Harassment"],
