@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, FileText } from "lucide-react";
 import Banner from "../../components/shared/Banner";
 import { CommitteeData } from "../../data/committee";
 
@@ -74,6 +74,33 @@ const Commiittee = () => {
           </div>
         );
 
+      /* 🔥 NEW PDF SUPPORT */
+      case "pdf":
+        return (
+          <div key={idx} className="space-y-2 mt-3">
+            {block.files.map((file, i) => (
+              <a
+                key={i}
+                href={file.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center gap-3
+                  rounded-md border border-black/10
+                  px-4 py-2 text-sm
+                  hover:bg-[#8B1E1E]/10
+                  transition-colors
+                "
+              >
+                <FileText className="h-4 w-4 text-[#8B1E1E]" />
+                <span className="text-muted-foreground">
+                  {file.label}
+                </span>
+              </a>
+            ))}
+          </div>
+        );
+
       default:
         return null;
     }
@@ -81,17 +108,14 @@ const Commiittee = () => {
 
   return (
     <>
-      {/* Top Banner */}
       <Banner
         title="Committee"
         subtitle="Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Committee" }]}
       />
 
-      {/* RULES & REGULATIONS SECTION */}
       <section className="py-14 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SECTION HEADING */}
           <div className="mb-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
               College Committees
@@ -104,7 +128,6 @@ const Commiittee = () => {
             </p>
           </div>
 
-          {/* ACCORDIONS */}
           <div className="space-y-4">
             {CommitteeData.map((rule, index) => {
               const isOpen = openIndex === index;
