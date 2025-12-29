@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 
 export default function ContactSection() {
+  const mapsLink = "https://maps.app.goo.gl/KpTA4jSoN2tLMaQeA";
+
   const mapsEmbedSrc =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.005235748696!2d83.20265887526256!3d26.000645877202594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991bd9808a051fd%3A0xaa9a23dd0b59c79b!2sSarvdev%20Ayurvedic%20medical%20college%20and%20Maha%20Mrityunjai%20Hospital%20itaura%20chandeshwer%20Azamgarh!5e0!3m2!1sen!2sin!4v1765646849975!5m2!1sen!2sin";
 
@@ -85,14 +87,27 @@ export default function ContactSection() {
                     <span>sdayurvedamh@gmail.com</span>
                   </a>
 
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#8B1E1E] mt-0.5" />
-                    <address className="not-italic leading-relaxed text-[#6B5A52]">
+                  <a
+                    href={mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start gap-3 transition-colors"
+                  >
+                    <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-[#8B1E1E]" />
+
+                    <address
+                      className="
+      not-italic leading-relaxed
+      text-[#6B5A52]
+      transition-colors
+      group-hover:text-[#8B1E1E]
+    "
+                    >
                       Itaura Chandeshwer
                       <br />
                       Azamgarh, Uttar Pradesh — 276128
                     </address>
-                  </div>
+                  </a>
                 </div>
               </div>
 
