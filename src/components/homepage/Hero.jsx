@@ -20,8 +20,8 @@ export function Hero() {
         <div
           className="absolute inset-0 bg-linear-to-r 
   from-[#8B1E1E]/55 
-  via-[#8B1E1E]/25 
-  to-[#8B1E1E]/15"
+  via-[#8B1E1E]/15 
+  to-[#8B1E1E]/10"
         />
       </div>
 
