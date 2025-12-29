@@ -183,7 +183,7 @@ export function Navbar() {
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex flex-1 justify-center max-w-full overflow-visible">
+          <nav className="hidden xl:flex flex-1 justify-center max-w-full overflow-visible">
             <ul
               className="
     flex items-center
@@ -246,7 +246,7 @@ export function Navbar() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setMobileOpen((s) => !s)}
-            className="lg:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
+            className="xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
             aria-label="Toggle menu"
           >
             <svg
