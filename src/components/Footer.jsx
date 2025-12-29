@@ -45,11 +45,15 @@ const importantLinks = [
 ];
 
 export function Footer() {
+  const cleanPhone = (phone) => phone.replace(/[^\d+]/g, "");
   const currentYear = new Date().getFullYear();
   const siteName = "Sarvdev Ayurvedic Medical College & Hospital";
   const affiliation =
     "Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh";
-  const phones = ["+91 9415257492 (Other queries)", "+91 9198762108 (Admissions)"];
+  const phones = [
+    "+91 9415257492 (Other queries)",
+    "+91 9198762108 (Admissions)",
+  ];
   const email = "sdayurvedamh@gmail.com";
   const address = {
     line1: "Itaura Chandeshwer",
@@ -122,7 +126,7 @@ export function Footer() {
                   {phones.map((p, i) => (
                     <a
                       key={i}
-                      href={`tel:${p.replace(/\s+/g, "")}`}
+                      href={`tel:${cleanPhone(p)}`}
                       className="hover:text-[#F2B705] transition-colors"
                     >
                       {p}
