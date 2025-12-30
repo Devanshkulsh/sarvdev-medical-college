@@ -22,6 +22,7 @@ export function Navbar() {
     {
       label: "Faculty",
       children: [
+        { label: "Organization Chart", href: "/faculty/org-chart" },
         {
           label: "Teaching Staff",
           children: [
@@ -61,7 +62,6 @@ export function Navbar() {
             },
           ],
         },
-        { label: "Organization Chart", href: "/faculty/org-chart" },
       ],
     },
     {
@@ -104,6 +104,13 @@ export function Navbar() {
     {
       label: "Student's Corner",
       children: [
+        { label: "Results", href: "/students/results" },
+        {
+          label: "Monthly Attendance",
+          children: [
+            { label: "Batch 2024-2025", href: "/students/attendance/2024-25" },
+          ],
+        },
         {
           label: "List of Students",
           children: [
@@ -111,13 +118,8 @@ export function Navbar() {
             { label: "Batch 2025-2026", href: "/students/list/2025-26" },
           ],
         },
-        {
-          label: "Monthly Attendance",
-          children: [
-            { label: "Batch 2024-2025", href: "/students/attendance/2024-25" },
-          ],
-        },
-        { label: "Results", href: "/students/results" },
+        
+    
       ],
     },
     {
