@@ -1,123 +1,80 @@
 const testimonials = [
+  // ================= Professors / Consultants =================
   {
     id: 1,
-    name: "Dr. Suresh Kumar",
-    role: "Professor of Kayachikitsa",
-    avatar: "/avatars/dr-suresh.jpg",
+    name: "Dr. Harkesh Singh",
+    role: "Professor & Consultant, Kayachikitsa",
+    avatar: "/avatars/dr-harkesh.jpg",
     quote:
-      "Teaching at Sarvdev has been a deeply rewarding experience. Students show real dedication to traditional science combined with modern rigor.",
+      "The Kayachikitsa department at Sarvdev emphasizes classical Ayurvedic principles while ensuring strong clinical application. Students are trained to diagnose and treat with confidence and ethical responsibility.",
   },
   {
     id: 2,
-    name: "Ms. Priya Sharma",
-    role: "BAMS Student (Class of 2024)",
-    avatar: "/avatars/priya.jpg",
+    name: "Dr. Prem Kumar",
+    role: "Professor & Consultant, Shalya Tantra",
+    avatar: "/avatars/dr-rakesh.jpg",
     quote:
-      "The practical exposure and friendly faculty helped me build confidence. The Panchakarma centre is world-class.",
+      "Shalya Tantra training here is highly structured, with excellent exposure to surgical procedures and case-based learning. The institution maintains high academic and clinical discipline.",
   },
   {
     id: 3,
-    name: "Mr. Rajesh Verma",
-    role: "Patient, OPD",
-    avatar: "/avatars/rajesh.jpg",
+    name: "Dr. Dolly Kumari",
+    role: "Professor & Consultant, Panchakarma",
+    avatar: "/avatars/dr-meenakshi.jpg",
     quote:
-      "The care I received was professional and compassionate. The Ayurvedic treatments helped me recover effectively.",
+      "Sarvdev’s Panchakarma facilities are well-equipped and follow authentic Ayurvedic protocols. Students gain hands-on experience that prepares them for real-world therapeutic practice.",
   },
+
+  // ================= Students =================
   {
     id: 4,
-    name: "Sneha Singh",
-    role: "BAMS Student",
-    avatar: "/avatars/sneha.jpg",
+    name: "Aishwarya Gupta",
+    role: "BAMS Student (Batch 2024–2025)",
+    avatar: "/avatars/priya.jpg",
     quote:
-      "The herbal garden and practical labs helped me understand Ayurveda in a deeper way. Amazing campus!",
+      "Clinical postings and OPD exposure helped me develop a practical understanding of Ayurveda. The faculty constantly guides us to think critically and treat patients holistically.",
   },
   {
     id: 5,
-    name: "Dr. Karan Patel",
-    role: "Visiting Faculty",
-    avatar: "/avatars/karan.jpg",
+    name: "Abhay Mishra",
+    role: "BAMS Student (Batch 2024–2025)",
+    avatar: "/avatars/rohit.jpg",
     quote:
-      "A perfect blend of heritage and modern infrastructure. The quality of education is top-notch.",
+      "The structured curriculum, regular clinical demonstrations, and supportive mentors have shaped my professional outlook as a future Ayurvedic physician.",
   },
   {
     id: 6,
-    name: "Ankit Mishra",
-    role: "BAMS Intern",
-    avatar: "/avatars/ankit.jpg",
+    name: "Anamika Bharti",
+    role: "BAMS Student (Batch 2025–2026)",
+    avatar: "/avatars/kavita.jpg",
     quote:
-      "The hospital exposure during internship prepared me for real clinical practice with confidence.",
+      "As a new student, the campus environment and friendly teachers made my transition smooth. Learning Ayurveda here feels exciting and inspiring every day.",
   },
+
+  // ================= Patients =================
   {
     id: 7,
+    name: "Mr. Rajesh Verma",
+    role: "Patient, Kayachikitsa OPD",
+    avatar: "/avatars/rajesh.jpg",
+    quote:
+      "I received effective treatment for my chronic health issues through Kayachikitsa. The doctors explained everything clearly and treated me with great care.",
+  },
+  {
+    id: 8,
+    name: "Mrs. Kamla Yadav",
+    role: "Patient, Shalya Tantra",
+    avatar: "/avatars/kamla.jpg",
+    quote:
+      "The surgical treatment I received under Shalya Tantra was well-managed and professional. The doctors and nursing staff were attentive throughout my recovery.",
+  },
+  {
+    id: 9,
     name: "Mrs. Sunita Devi",
     role: "Patient, Panchakarma",
     avatar: "/avatars/sunita.jpg",
     quote:
-      "The Panchakarma therapies were extremely effective. Doctors and staff were very caring.",
-  },
-  {
-    id: 8,
-    name: "Dr. Rakesh Yadav",
-    role: "Assistant Professor, Shalya Tantra",
-    avatar: "/avatars/rakesh.jpg",
-    quote:
-      "Sarvdev maintains excellent academic discipline while encouraging research and innovation.",
-  },
-  {
-    id: 9,
-    name: "Neha Gupta",
-    role: "BAMS Student",
-    avatar: "/avatars/neha.jpg",
-    quote:
-      "The faculty always motivates us to think practically and ethically as future Ayurvedic doctors.",
-  },
-  {
-    id: 10,
-    name: "Amit Srivastava",
-    role: "Patient, IPD",
-    avatar: "/avatars/amit.jpg",
-    quote:
-      "Clean facilities, disciplined staff, and effective treatments made my recovery smooth.",
-  },
-  {
-    id: 11,
-    name: "Dr. Meenakshi Rao",
-    role: "Guest Lecturer",
-    avatar: "/avatars/meenakshi.jpg",
-    quote:
-      "The students here are inquisitive and dedicated. The institution has a strong academic culture.",
-  },
-  {
-    id: 12,
-    name: "Rohit Tiwari",
-    role: "BAMS Student",
-    avatar: "/avatars/rohit.jpg",
-    quote:
-      "Clinical demonstrations and OPD exposure helped me connect theory with real-life practice.",
-  },
-  {
-    id: 13,
-    name: "Mrs. Kamla Yadav",
-    role: "Patient, OPD",
-    avatar: "/avatars/kamla.jpg",
-    quote:
-      "I found relief from chronic issues through Ayurvedic treatment here. Highly recommended.",
-  },
-  {
-    id: 14,
-    name: "Dr. Pankaj Sharma",
-    role: "Senior Consultant",
-    avatar: "/avatars/pankaj.jpg",
-    quote:
-      "Sarvdev is doing commendable work in preserving Ayurveda while adopting modern standards.",
-  },
-  {
-    id: 15,
-    name: "Kavita Singh",
-    role: "BAMS Student",
-    avatar: "/avatars/kavita.jpg",
-    quote:
-      "Supportive teachers, peaceful campus, and strong clinical exposure make learning enjoyable.",
+      "The Panchakarma therapies helped me regain my strength and balance. The calm environment and caring staff made my treatment experience very positive.",
   },
 ];
 

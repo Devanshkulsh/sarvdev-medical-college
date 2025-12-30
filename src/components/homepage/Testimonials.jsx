@@ -2,6 +2,25 @@ import React from "react";
 import testimonials from "../../data/testimonials";
 
 export default function TestimonialsSection() {
+  const professors = testimonials.filter((t) =>
+    t.role.toLowerCase().includes("professor") ||
+    t.role.toLowerCase().includes("consultant")
+  );
+
+  const students = testimonials.filter((t) =>
+    t.role.toLowerCase().includes("student")
+  );
+
+  const patients = testimonials.filter((t) =>
+    t.role.toLowerCase().includes("patient")
+  );
+
+  // Pick 2 from each category
+  const visibleTestimonials = [
+    ...professors.slice(0, 2),
+    ...students.slice(0, 2),
+    ...patients.slice(0, 2),
+  ];
   return (
     <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +51,7 @@ export default function TestimonialsSection() {
 
         {/* Grid */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.slice(0, 6).map((t) => (
+          {visibleTestimonials.map((t) => (
             <blockquote
               key={t.id}
               className="relative bg-white border border-[#E6E1DD] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
