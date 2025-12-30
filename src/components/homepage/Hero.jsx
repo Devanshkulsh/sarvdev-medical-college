@@ -18,10 +18,14 @@ export function Hero() {
           className="w-full h-full object-cover"
         />
         <div
-          className="absolute inset-0 bg-linear-to-r 
-  from-[#8B1E1E]/55 
-  via-[#8B1E1E]/15 
-  to-[#8B1E1E]/10"
+          className="
+    absolute inset-0
+    bg-linear-to-b
+    sm:bg-linear-to-r
+    from-[#8B1E1E]/55
+    via-[#8B1E1E]/15
+    to-[#8B1E1E]/10
+  "
         />
       </div>
 
