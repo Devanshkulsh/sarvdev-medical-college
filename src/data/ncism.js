@@ -34,6 +34,10 @@ export const ncismData = [
         label: "Permission for the Academic Session 2024-2025",
         url: "/ncism/ncism24.pdf",
       },
+      {
+        label: "Permission for the Academic Session 2025-2026",
+        url: "/ncism/ncism25.pdf",
+      },
     ],
   },
 ];
