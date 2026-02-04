@@ -48,6 +48,23 @@ const facultyData = {
     bio: "Dr. K.R.C. Reddy is well known for his valuable contribution in the field of Ayurveda pertaining to Ayurvedic Pharmaceutics. He has worked as Research fellow in Japan and served as subject expert member in T.K.D.L under CSIR, New Delhi.",
   },
 
+  universityOfficials: [
+    {
+      id: "registrar",
+      name: "Mr. R. B. Singh",
+      designation: "Registrar",
+      organization: "Mahayogi Guru Gorakhnath AYUSH University",
+      image: "/about/rbSingh.webp",
+    },
+    {
+      id: "exam-controller",
+      name: "Prof. Dr. C. K. Rajput",
+      designation: "Exam Controller",
+      organization: "Mahayogi Guru Gorakhnath AYUSH University",
+      image: "/about/rajput.webp",
+    },
+  ],
+
   faculty: [
     {
       id: "fac1",

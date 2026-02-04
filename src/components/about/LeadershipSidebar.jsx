@@ -7,6 +7,7 @@ const LeadershipSidebar = () => {
       <h3 className="text-xl font-bold text-foreground">Our Leadership</h3>
 
       <div className="space-y-4">
+        {/* Chairman & Principal */}
         {facultyData.leadership.map((leader) => (
           <div
             key={leader.id}
@@ -64,6 +65,34 @@ const LeadershipSidebar = () => {
             ))}
           </div>
         </div>
+
+        {facultyData.universityOfficials.map((official) => (
+          <div
+            key={official.id}
+            className="card-ayurvedic bg-card rounded-lg border shadow-sm p-5 text-center space-y-3"
+          >
+            <img
+              src={
+                official.image ||
+                "https://ui-avatars.com/api/?name=" +
+                  encodeURIComponent(official.name) +
+                  "&background=FDF1E8&color=8B1E1E"
+              }
+              alt={official.name}
+              className="w-16 h-16 rounded-full mx-auto object-cover bg-muted"
+            />
+
+            <div>
+              <h4 className="text-sm font-semibold text-foreground">
+                {official.name}
+              </h4>
+              <p className="text-xs text-primary">{official.designation}</p>
+              <p className="text-xs text-muted-foreground">
+                {official.organization}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

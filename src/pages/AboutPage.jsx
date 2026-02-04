@@ -3,7 +3,6 @@ import AboutIntro from "../components/about/AboutIntro";
 import MissionVision from "../components/about/MissionVission";
 import AyurvedaHeritage from "../components/about/AyurvedaHeritage";
 import LeadershipSidebar from "../components/about/LeadershipSidebar";
-import AffiliationCard from "../components/about/AffiliationCard";
 import RulesRegulations from "../components/about/RulesRegulations";
 import CollegeCouncil from "../components/about/CollegeCouncil";
 
@@ -31,7 +30,6 @@ export default function About() {
             {/* RIGHT: Sidebar */}
             <div className="lg:col-span-1 -mt-5 space-y-6">
               <LeadershipSidebar />
-              <AffiliationCard />
             </div>
           </div>
         </div>
