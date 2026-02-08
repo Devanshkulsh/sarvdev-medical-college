@@ -55,7 +55,7 @@ const Courses = () => {
                 <h4 className="text-sm font-semibold text-muted-foreground">
                   {item.title}
                 </h4>
-                <p className="mt-2 text-lg font-bold text-[#8B1E1E]">
+                <p className="mt-2 text-lg font-bold text-[color:var(--brand-primary)]">
                   {item.value}
                 </p>
               </div>
@@ -108,9 +108,9 @@ const Courses = () => {
               className="
                 inline-flex items-center justify-center
                 rounded-xl px-10 py-4
-                bg-[#8B1E1E] text-white
+                bg-[color:var(--brand-primary)] text-white
                 font-semibold text-sm
-                hover:bg-[#721616]
+                hover:bg-[color:var(--brand-secondary)]
                 transition
                 shadow-md
               "
@@ -130,3 +130,4 @@ const Courses = () => {
 };
 
 export default Courses;
+

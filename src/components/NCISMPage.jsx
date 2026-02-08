@@ -60,9 +60,9 @@ const NCISMPage = () => {
                       className="
                         inline-flex items-center gap-2
                         rounded-md px-4 py-2
-                        bg-[#8B1E1E]/10 text-[#8B1E1E]
+                        bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]
                         text-sm font-semibold
-                        hover:bg-[#8B1E1E]/20
+                        hover:bg-[color:var(--brand-primary)]/20
                         transition
                       "
                     >
@@ -81,3 +81,4 @@ const NCISMPage = () => {
 };
 
 export default NCISMPage;
+

@@ -33,7 +33,7 @@ const Charges = () => {
                 key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
-                <span className="w-2 h-2 rounded-full bg-[#8B1E1E] mt-2 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[color:var(--brand-primary)] mt-2 shrink-0" />
                 {item}
               </li>
             ))}
@@ -44,7 +44,7 @@ const Charges = () => {
         return (
           <div key={idx} className="overflow-x-auto mt-4">
             <table className="w-full border border-black/10 text-sm">
-              <thead className="bg-[#8B1E1E]/10">
+              <thead className="bg-[color:var(--brand-primary)]/10">
                 <tr>
                   {block.headers.map((h, i) => (
                     <th
@@ -124,7 +124,7 @@ const Charges = () => {
                       {rule.title}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 text-[#8B1E1E] transition-transform ${
+                      className={`h-5 w-5 text-[color:var(--brand-primary)] transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -146,3 +146,4 @@ const Charges = () => {
 };
 
 export default Charges;
+

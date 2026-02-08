@@ -34,9 +34,9 @@ const ScrollToTopButton = () => {
         fixed bottom-24 right-6 z-50
         flex items-center justify-center
         h-12 w-12 rounded-full
-        bg-[#8B1E1E] text-white
+        bg-[color:var(--brand-primary)] text-white
         shadow-lg
-        hover:bg-[#7A1A1A]
+        hover:bg-[color:var(--brand-secondary)]
         transition-all
       "
     >
@@ -46,3 +46,4 @@ const ScrollToTopButton = () => {
 };
 
 export default ScrollToTopButton;
+

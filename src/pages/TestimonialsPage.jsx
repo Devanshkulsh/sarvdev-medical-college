@@ -32,15 +32,15 @@ const TestimonialsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[#8B1E1E]/10 text-[#8B1E1E]">
+            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
               Testimonials
             </span>
 
-            <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[#2A1E1A]">
+            <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[color:var(--text-primary)]">
               Real Experiences, Real Trust
             </h2>
 
-            <p className="mt-3 text-[#6B5A52]">
+            <p className="mt-3 text-[color:var(--text-muted)]">
               Genuine feedback from our students, patients, and well-wishers
               reflecting our commitment to Ayurvedic education and healthcare.
             </p>
@@ -55,8 +55,8 @@ const TestimonialsPage = () => {
               }}
               className={`px-5 py-2 rounded-md text-sm font-semibold transition ${
                 viewMode === "all"
-                  ? "bg-[#8B1E1E] text-white"
-                  : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                  ? "bg-[color:var(--brand-primary)] text-white"
+                  : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
               }`}
             >
               View All
@@ -69,8 +69,8 @@ const TestimonialsPage = () => {
               }}
               className={`px-5 py-2 rounded-md text-sm font-semibold transition ${
                 viewMode === "paginated"
-                  ? "bg-[#8B1E1E] text-white"
-                  : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                  ? "bg-[color:var(--brand-primary)] text-white"
+                  : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
               }`}
             >
               Paginated View
@@ -82,11 +82,11 @@ const TestimonialsPage = () => {
             {visibleTestimonials.map((t) => (
               <blockquote
                 key={t.id}
-                className="relative bg-white border border-[#E6E1DD] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="relative bg-white border border-[color:var(--brand-soft)] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 {/* Decorative Quote */}
                 <svg
-                  className="absolute -top-3 -left-3 w-10 h-10 text-[#F2B705]/10"
+                  className="absolute -top-3 -left-3 w-10 h-10 text-[color:var(--brand-highlight)]/10"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -103,22 +103,22 @@ const TestimonialsPage = () => {
                         encodeURIComponent(t.name) +
                         "&background=FDF1E8&color=8B1E1E";
                     }}
-                    className="w-14 h-14 rounded-full object-cover ring-2 ring-[#8B1E1E]/15"
+                    className="w-14 h-14 rounded-full object-cover ring-2 ring-[color:var(--brand-primary)]/15"
                   />
 
                   <div className="flex-1">
-                    <p className="text-sm text-[#6B5A52] mb-3">“{t.quote}”</p>
+                    <p className="text-sm text-[color:var(--text-muted)] mb-3">“{t.quote}”</p>
 
-                    <p className="text-sm font-semibold text-[#2A1E1A]">
+                    <p className="text-sm font-semibold text-[color:var(--text-primary)]">
                       {t.name}
                     </p>
 
-                    <p className="text-xs text-[#6B5A52]">{t.role}</p>
+                    <p className="text-xs text-[color:var(--text-muted)]">{t.role}</p>
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-[#8B1E1E]/10 text-[#8B1E1E]">
+                  <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
                     Verified
                   </span>
                 </div>
@@ -137,7 +137,7 @@ const TestimonialsPage = () => {
         ${
           currentPage === 1
             ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-            : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+            : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
         }`}
               >
                 Prev
@@ -154,8 +154,8 @@ const TestimonialsPage = () => {
                     className={`h-9 w-9 rounded-md text-sm font-semibold transition
             ${
               currentPage === page
-                ? "bg-[#8B1E1E] text-white shadow"
-                : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                ? "bg-[color:var(--brand-primary)] text-white shadow"
+                : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
             }`}
                   >
                     {page}
@@ -173,7 +173,7 @@ const TestimonialsPage = () => {
         ${
           currentPage === totalPages
             ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-            : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+            : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
         }`}
               >
                 Next
@@ -187,3 +187,4 @@ const TestimonialsPage = () => {
 };
 
 export default TestimonialsPage;
+

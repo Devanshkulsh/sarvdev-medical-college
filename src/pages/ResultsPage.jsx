@@ -37,9 +37,9 @@ const ResultsPage = () => {
           </div>
 
           {/* IMPORTANT NOTE */}
-          <div className="rounded-xl border border-[#F2B705]/40 bg-[#F2B705]/10 p-5 flex gap-4 items-start">
-            <Info className="text-[#8B1E1E] mt-0.5" />
-            <p className="text-sm text-[#7A5A00]">
+          <div className="rounded-xl border border-[color:var(--brand-highlight)]/40 bg-[color:var(--brand-highlight)]/10 p-5 flex gap-4 items-start">
+            <Info className="text-[color:var(--brand-primary)] mt-0.5" />
+            <p className="text-sm text-[color:var(--text-muted)]">
               Results are published for reference only. Students must rely on
               original marksheets issued by the university for official use.
             </p>
@@ -84,7 +84,7 @@ const InfoCard = ({ title, value }) => (
     <p className="text-xs font-semibold text-muted-foreground uppercase">
       {title}
     </p>
-    <p className="mt-2 text-sm font-bold text-[#8B1E1E]">{value}</p>
+    <p className="mt-2 text-sm font-bold text-[color:var(--brand-primary)]">{value}</p>
   </div>
 );
 
@@ -102,9 +102,9 @@ const ResultCard = ({ title, description, pdfUrl }) => (
       className="
         mt-6 inline-flex items-center justify-center gap-2
         rounded-md px-4 py-2
-        bg-[#8B1E1E] text-white
+        bg-[color:var(--brand-primary)] text-white
         text-sm font-semibold
-        hover:bg-[#7A1A1A]
+        hover:bg-[color:var(--brand-secondary)]
         transition
       "
     >
@@ -115,3 +115,4 @@ const ResultCard = ({ title, description, pdfUrl }) => (
 );
 
 export default ResultsPage;
+

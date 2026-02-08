@@ -79,7 +79,7 @@ const HostelInfrastructure = () => {
 
               {/* Content */}
               <div className="p-5 space-y-2">
-                <h3 className="text-lg font-semibold text-[#2A1E1A]">
+                <h3 className="text-lg font-semibold text-[color:var(--text-primary)]">
                   {item.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -88,7 +88,7 @@ const HostelInfrastructure = () => {
               </div>
 
               {/* Accent Bar */}
-              <div className="h-1 bg-[#8B1E1E]/80" />
+              <div className="h-1 bg-[color:var(--brand-primary)]/80" />
             </div>
           ))}
         </div>
@@ -98,3 +98,4 @@ const HostelInfrastructure = () => {
 };
 
 export default HostelInfrastructure;
+

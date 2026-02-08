@@ -1,7 +1,7 @@
 import React from "react";
 import { Hero } from "../components/homepage/Hero";
 import AboutSection from "../components/homepage/AboutSection";
-import Videos from "../components/homepage/Videos";
+// import Videos from "../components/homepage/Videos";
 import FacilitiesSection from "../components/homepage/Facilities";
 import Testimonials from "../components/homepage/Testimonials";
 import GallerySection from "../components/homepage/GallerySection";
@@ -14,7 +14,7 @@ const Homepage = () => {
     <div>
       <Hero />
       <AboutSection />
-      <Videos />
+      {/* <Videos /> */}
       <FacilitiesSection />
       <Testimonials />
       <ResearchPublications />

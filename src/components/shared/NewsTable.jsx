@@ -21,7 +21,7 @@ const NewsTable = ({ data }) => {
               {/* SR NO */}
               <td className="px-4 py-3">
                 <div className="flex items-center gap-2">
-                  <PlusCircle className="w-4 h-4 text-[#0f766e]" />
+                  <PlusCircle className="w-4 h-4 text-[color:var(--brand-secondary)]" />
                   {index + 1}
                 </div>
               </td>
@@ -62,3 +62,4 @@ const NewsTable = ({ data }) => {
 };
 
 export default NewsTable;
+

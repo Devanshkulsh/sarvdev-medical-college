@@ -41,8 +41,8 @@ const NoticesPage = () => {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-md text-sm font-semibold transition ${
                   activeCategory === cat
-                    ? "bg-[#8B1E1E] text-white"
-                    : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                    ? "bg-[color:var(--brand-primary)] text-white"
+                    : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
                 }`}
               >
                 {cat}
@@ -53,7 +53,7 @@ const NoticesPage = () => {
           {/* TABLE */}
           <div className="overflow-x-auto rounded-xl border border-black/10 shadow-sm">
             <table className="w-full text-sm">
-              <thead className="bg-[#8B1E1E]/10 text-[#8B1E1E]">
+              <thead className="bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
                 <tr>
                   <th className="px-4 py-3 text-left">Notice</th>
                   <th className="px-4 py-3 text-left">Category</th>
@@ -69,13 +69,13 @@ const NoticesPage = () => {
                     <tr
                       key={notice.id}
                       className={`border-t ${
-                        notice.important ? "bg-[#F2B705]/10" : "bg-white"
+                        notice.important ? "bg-[color:var(--brand-highlight)]/10" : "bg-white"
                       }`}
                     >
                       <td className="px-4 py-3 font-medium text-foreground">
                         {notice.title}
                         {notice.important && (
-                          <span className="ml-2 text-xs font-semibold text-[#8B1E1E]">
+                          <span className="ml-2 text-xs font-semibold text-[color:var(--brand-primary)]">
                             (Important)
                           </span>
                         )}
@@ -99,8 +99,8 @@ const NoticesPage = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-semibold
-                                     bg-[#8B1E1E]/10 text-[#8B1E1E]
-                                     hover:bg-[#8B1E1E]/20 transition"
+                                     bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]
+                                     hover:bg-[color:var(--brand-primary)]/20 transition"
                         >
                           <FileText className="w-4 h-4" />
                           View
@@ -134,3 +134,4 @@ const NoticesPage = () => {
 };
 
 export default NoticesPage;
+

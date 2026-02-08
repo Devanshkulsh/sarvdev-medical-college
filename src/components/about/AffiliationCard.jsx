@@ -3,8 +3,8 @@ import React from "react";
 const AffiliationCard = () => {
   return (
     <div
-      className="card-ayurvedic bg-[#8B1E1E]/5
-            border border-[#8B1E1E]/20 rounded-lg shadow-sm p-5 space-y-4"
+      className="card-ayurvedic bg-[color:var(--brand-primary)]/5
+            border border-[color:var(--brand-primary)]/20 rounded-lg shadow-sm p-5 space-y-4"
     >
       <h4 className="text-sm font-semibold text-foreground tracking-wide">
         Affiliation
@@ -34,3 +34,4 @@ const AffiliationCard = () => {
 };
 
 export default AffiliationCard;
+

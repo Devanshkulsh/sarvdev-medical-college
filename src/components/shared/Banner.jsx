@@ -35,7 +35,7 @@ export default function Banner({
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(139,30,30,0.82) 0%, rgba(122,26,26,0.62) 45%, rgba(139,30,30,0.42) 100%)",
+            "linear-gradient(90deg, color-mix(in srgb, var(--brand-primary) 82%, transparent) 0%, color-mix(in srgb, var(--brand-secondary) 62%, transparent) 45%, color-mix(in srgb, var(--brand-primary) 42%, transparent) 100%)",
         }}
         aria-hidden="true"
       />

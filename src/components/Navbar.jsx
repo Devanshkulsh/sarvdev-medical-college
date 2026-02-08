@@ -118,8 +118,6 @@ export function Navbar() {
             { label: "Batch 2025-2026", href: "/students/list/2025-26" },
           ],
         },
-        
-    
       ],
     },
     {
@@ -150,10 +148,10 @@ export function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
 
-  /* 🎨 LOGO MATCHED COLORS */
-  const primaryText = "text-[#8B1E1E]"; // Deep logo red
-  const mutedBg = "bg-[#C4551A]/10"; // Soft saffron hover
-  const navText = "text-[#2A1E1A]"; // Dark herbal text
+  /* 🎨 UPDATED THEME COLORS */
+  const primaryText = "text-[var(--brand-primary)]";
+  const mutedBg = "bg-[var(--brand-secondary)]/15";
+  const navText = "text-[var(--text-primary)]";
 
   const isActive = (href) => location.pathname === href;
 
@@ -161,7 +159,7 @@ export function Navbar() {
     children.some(
       (c) =>
         c.href === location.pathname ||
-        (c.children && isChildActive(c.children))
+        (c.children && isChildActive(c.children)),
     );
 
   return (
@@ -176,10 +174,10 @@ export function Navbar() {
               className="h-10 w-10 sm:h-11 sm:w-11 object-contain"
             />
             <div className="leading-tight">
-              <div className={`text-sm sm:text-xl font-bold ${primaryText}`}>
+              <div className={`text-sm sm:text-xl font-bold`}>
                 Sarvdev Ayurvedic Medical College
               </div>
-              <div className="text-[11px] text-[#2A1E1A]/60">
+              <div className="text-[11px] text-(--text-primary)/60">
                 &amp; Maha Mrityunjay Hospital
               </div>
             </div>
@@ -187,13 +185,7 @@ export function Navbar() {
 
           {/* DESKTOP NAV */}
           <nav className="hidden xl:flex flex-1 justify-center max-w-full overflow-visible">
-            <ul
-              className="
-    flex items-center
-    flex-wrap justify-start
-    gap-x-1 gap-y-2 xl:gap-x-2
-  "
-            >
+            <ul className="flex items-center flex-wrap justify-start gap-x-1 gap-y-2 xl:gap-x-2">
               {navItems.map((item, i) => (
                 <li key={i} className="relative group">
                   {item.href ? (
@@ -223,7 +215,7 @@ export function Navbar() {
                           {sub.href ? (
                             <Link
                               to={sub.href}
-                              className={`flex items-center justify-between px-4 py-2 text-sm hover:bg-[#C4551A]/10 ${
+                              className={`flex items-center justify-between px-4 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
                                 isActive(sub.href)
                                   ? `${mutedBg} ${primaryText}`
                                   : ""
@@ -233,18 +225,18 @@ export function Navbar() {
                             </Link>
                           ) : (
                             <>
-                              <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-[#C4551A]/10">
+                              <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-(--brand-secondary)/15">
                                 {sub.label}
                                 <ChevronRight className="w-4 h-4" />
                               </span>
-                              
+
                               {sub.children && (
                                 <ul className="hidden group-hover/sub:block bg-white border-t">
                                   {sub.children.map((child, k) => (
                                     <li key={k}>
                                       <Link
                                         to={child.href}
-                                        className={`block px-8 py-2 text-sm hover:bg-[#C4551A]/10 ${
+                                        className={`block px-8 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
                                           isActive(child.href)
                                             ? `${mutedBg} ${primaryText}`
                                             : ""
@@ -270,7 +262,7 @@ export function Navbar() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setMobileOpen((s) => !s)}
-            className="xl:hidden p-2 rounded-md hover:bg-[#C4551A]/10"
+            className="xl:hidden p-2 rounded-md hover:bg-(--brand-secondary)/15"
             aria-label="Toggle menu"
           >
             <svg
@@ -341,7 +333,7 @@ export function Navbar() {
                                 setOpenMobileSubMenu(
                                   openMobileSubMenu === `${i}-${j}`
                                     ? null
-                                    : `${i}-${j}`
+                                    : `${i}-${j}`,
                                 )
                               }
                               className="w-full flex justify-between px-3 py-2 text-sm"
