@@ -41,13 +41,13 @@ const AdmissionFormModal = () => {
         {/* Close Button */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-4 right-4 text-gray-600 hover:text-[#8B1E1E]"
+          className="absolute top-4 right-4 text-gray-600 hover:text-[color:var(--brand-primary)]"
         >
           <X size={24} />
         </button>
 
         {/* Header */}
-        <div className="px-6 py-5 bg-[#8B1E1E]/5 border-b">
+        <div className="px-6 py-5 bg-[color:var(--brand-primary)]/5 border-b">
           <h2 className="text-xl sm:text-2xl font-bold text-foreground">
             Admission Enquiry
           </h2>
@@ -58,8 +58,8 @@ const AdmissionFormModal = () => {
 
         {/* Info message if form not loaded */}
         {!formLoaded && (
-          <div className="mx-6 mt-4 rounded-lg border border-[#F2B705]/40 bg-[#F2B705]/10 px-4 py-2">
-            <p className="text-xs sm:text-sm text-[#7A5A00]">
+          <div className="mx-6 mt-4 rounded-lg border border-[color:var(--brand-highlight)]/40 bg-[color:var(--brand-highlight)]/10 px-4 py-2">
+            <p className="text-xs sm:text-sm text-[color:var(--text-muted)]">
               If the admission form does not appear, please wait or reload the page.
             </p>
           </div>
@@ -75,3 +75,4 @@ const AdmissionFormModal = () => {
 };
 
 export default AdmissionFormModal;
+

@@ -33,7 +33,7 @@ const Commiittee = () => {
                 key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
-                <span className="w-2 h-2 rounded-full bg-[#8B1E1E] mt-2 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[color:var(--brand-primary)] mt-2 shrink-0" />
                 {item}
               </li>
             ))}
@@ -44,7 +44,7 @@ const Commiittee = () => {
         return (
           <div key={idx} className="overflow-x-auto mt-4">
             <table className="w-full border border-black/10 text-sm">
-              <thead className="bg-[#8B1E1E]/10">
+              <thead className="bg-[color:var(--brand-primary)]/10">
                 <tr>
                   {block.headers.map((h, i) => (
                     <th
@@ -88,11 +88,11 @@ const Commiittee = () => {
                   flex items-center gap-3
                   rounded-md border border-black/10
                   px-4 py-2 text-sm
-                  hover:bg-[#8B1E1E]/10
+                  hover:bg-[color:var(--brand-primary)]/10
                   transition-colors
                 "
               >
-                <FileText className="h-4 w-4 text-[#8B1E1E]" />
+                <FileText className="h-4 w-4 text-[color:var(--brand-primary)]" />
                 <span className="text-muted-foreground">
                   {file.label}
                 </span>
@@ -145,7 +145,7 @@ const Commiittee = () => {
                       {rule.title}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 text-[#8B1E1E] transition-transform ${
+                      className={`h-5 w-5 text-[color:var(--brand-primary)] transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -167,3 +167,4 @@ const Commiittee = () => {
 };
 
 export default Commiittee;
+

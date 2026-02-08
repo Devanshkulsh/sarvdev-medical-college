@@ -30,7 +30,7 @@ const IntroductionWithInfrastructure = () => {
         return (
           <div key={idx} className="overflow-x-auto mt-4">
             <table className="w-full border border-black/10 text-sm">
-              <thead className="bg-[#8B1E1E]/10">
+              <thead className="bg-[color:var(--brand-primary)]/10">
                 <tr>
                   {block.headers.map((h, i) => (
                     <th
@@ -83,7 +83,7 @@ const IntroductionWithInfrastructure = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* LEFT CONTENT */}
             <div>
-              <span className="inline-block mb-3 px-3 py-1 text-xs font-semibold rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E]">
+              <span className="inline-block mb-3 px-3 py-1 text-xs font-semibold rounded-full bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
                 Hospital Introduction
               </span>
 
@@ -166,7 +166,7 @@ const IntroductionWithInfrastructure = () => {
                       {rule.title}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 text-[#8B1E1E] transition-transform ${
+                      className={`h-5 w-5 text-[color:var(--brand-primary)] transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -188,3 +188,4 @@ const IntroductionWithInfrastructure = () => {
 };
 
 export default IntroductionWithInfrastructure;
+

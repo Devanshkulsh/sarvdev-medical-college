@@ -20,7 +20,7 @@ function Button({ asChild = false, className = "", children, ...props }) {
 function Card({ className = "", children, ...props }) {
   return (
     <div
-      className={`rounded-2xl border border-[#E6E1DD] bg-white text-[#2A1E1A] shadow-md ${className}`}
+      className={`rounded-2xl border border-(--brand-soft) bg-white text-(--text-primary) shadow-md ${className}`}
       {...props}
     >
       {children}
@@ -42,8 +42,8 @@ function Badge({ variant = "outline", className = "", children, ...props }) {
     "inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold";
   const variantClass =
     variant === "outline"
-      ? "border border-[#8B1E1E] text-[#8B1E1E] bg-white"
-      : "bg-[#8B1E1E] text-white";
+      ? "border border-[var(--brand-primary)] text-[var(--brand-primary)] bg-white"
+      : "bg-[var(--brand-primary)] text-white";
   return (
     <div className={`${base} ${variantClass} ${className}`} {...props}>
       {children}
@@ -55,12 +55,12 @@ function Badge({ variant = "outline", className = "", children, ...props }) {
 function FeatureItem({ icon, title, description }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="p-2 bg-[#F2B705]/10 rounded-lg text-[#8B1E1E] shrink-0">
+      <div className="p-2 bg-(--brand-highlight)/20 rounded-lg text-(--brand-primary) shrink-0">
         {icon}
       </div>
       <div>
-        <h4 className="font-semibold text-[#2A1E1A]">{title}</h4>
-        <p className="text-sm text-[#6B5A52]">{description}</p>
+        <h4 className="font-semibold text-(--text-primary)">{title}</h4>
+        <p className="text-sm text-(--text-muted)">{description}</p>
       </div>
     </div>
   );
@@ -85,10 +85,12 @@ export function AboutSection() {
 
               {/* Floating Card */}
               <div className="hidden md:block absolute -bottom-6 -right-6">
-                <Card className="bg-[#8B1E1E] text-white shadow-xl max-w-55">
+                <Card className="bg-(--brand-primary) text-white shadow-xl max-w-55">
                   <CardContent className="p-6 text-center">
-                    <p className="text-4xl font-bold text-[#F2B705]">5000+</p>
-                    <p className="text-sm mt-1 text-white">
+                    <p className="text-4xl font-bold text-(--brand-highlight)">
+                      5000+
+                    </p>
+                    <p className="text-sm mt-1 text-[color:var(--text-primary)]">
                       Years of Ayurvedic Wisdom
                     </p>
                   </CardContent>
@@ -104,19 +106,20 @@ export function AboutSection() {
               <span>About Our Institution</span>
             </Badge>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#2A1E1A]">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-(--text-primary)">
               Pioneers in Ayurvedic{" "}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: "linear-gradient(135deg, #8B1E1E, #F2B705)",
+                  backgroundImage:
+                    "linear-gradient(135deg, var(--brand-primary), var(--brand-highlight))",
                 }}
               >
                 Education & Healthcare
               </span>
             </h2>
 
-            <p className="text-[#6B5A52] leading-relaxed">
+            <p className="text-(--text-muted) leading-relaxed">
               Maha Mrityunjay hospital is the pioneer in the field of Ayurveda
               in the world. The Hospital offers treatment for every ailment and
               is affordable. The Hospital has is successfully running Out
@@ -154,7 +157,7 @@ export function AboutSection() {
             {/* CTA */}
             <Button
               asChild
-              className="inline-flex items-center gap-2 rounded-md bg-[#8B1E1E] text-white px-4 py-2 font-semibold shadow hover:bg-[#7A1A1A] transition-colors"
+              className="inline-flex items-center gap-2 rounded-md bg-(--brand-primary) text-white px-4 py-2 font-semibold shadow hover:bg-(--brand-secondary) transition-colors"
             >
               <Link to="/about" className="inline-flex items-center gap-2">
                 <span>Learn More About Us</span>
@@ -169,3 +172,4 @@ export function AboutSection() {
 }
 
 export default AboutSection;
+

@@ -21,16 +21,16 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[#8B1E1E]/10 text-[#8B1E1E]">
+          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
             <Clock className="w-3 h-3" />
             Get in Touch
           </span>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[#2A1E1A]">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[color:var(--text-primary)]">
             Contact Us
           </h2>
 
-          <p className="mt-3 text-[#6B5A52]">
+          <p className="mt-3 text-[color:var(--text-muted)]">
             Have a question about admissions, courses or hospital services?
             Reach out to us using the details below.
           </p>
@@ -39,7 +39,7 @@ export default function ContactSection() {
         {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Map */}
-          <div className="overflow-hidden rounded-xl border border-[#E6E1DD] shadow-sm bg-white">
+          <div className="overflow-hidden rounded-xl border border-[color:var(--brand-soft)] shadow-sm bg-white">
             <div className="w-full h-auto md:h-72 lg:h-96">
               <iframe
                 title="Sarvdev Map"
@@ -55,35 +55,35 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Card */}
-          <div className="rounded-xl border border-[#E6E1DD] shadow-sm bg-white">
+          <div className="rounded-xl border border-[color:var(--brand-soft)] shadow-sm bg-white">
             <div className="h-auto md:h-72 lg:h-96 p-6 flex flex-col justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-[#2A1E1A] mb-3">
+                <h3 className="text-lg font-semibold text-[color:var(--text-primary)] mb-3">
                   Contact details
                 </h3>
 
-                <div className="space-y-4 text-sm text-[#6B5A52]">
+                <div className="space-y-4 text-sm text-[color:var(--text-muted)]">
                   <a
                     href="tel:+919415257492"
-                    className="flex items-center gap-3 hover:text-[#8B1E1E] transition-colors"
+                    className="flex items-center gap-3 hover:text-[color:var(--brand-primary)] transition-colors"
                   >
-                    <Phone className="w-5 h-5 text-[#8B1E1E]" />
-                    <span>+91 94152 57492 (For other queries)</span>
+                    <Phone className="w-5 h-5 text-[color:var(--brand-primary)]" />
+                    <span>+91 94152 57492 (Official)</span>
                   </a>
 
                   <a
                     href="tel:+919198762108"
-                    className="flex items-center gap-3 hover:text-[#8B1E1E] transition-colors"
+                    className="flex items-center gap-3 hover:text-[color:var(--brand-primary)] transition-colors"
                   >
-                    <Phone className="w-5 h-5 text-[#8B1E1E]" />
+                    <Phone className="w-5 h-5 text-[color:var(--brand-primary)]" />
                     <span>+91 91987 62108 (For admissions)</span>
                   </a>
 
                   <a
                     href="mailto:sdayurvedamh@gmail.com"
-                    className="flex items-center gap-3 hover:text-[#8B1E1E] transition-colors"
+                    className="flex items-center gap-3 hover:text-[color:var(--brand-primary)] transition-colors"
                   >
-                    <Mail className="w-5 h-5 text-[#8B1E1E]" />
+                    <Mail className="w-5 h-5 text-[color:var(--brand-primary)]" />
                     <span>sdayurvedamh@gmail.com</span>
                   </a>
 
@@ -93,14 +93,14 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="group flex items-start gap-3 transition-colors"
                   >
-                    <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-[#8B1E1E]" />
+                    <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-[color:var(--brand-primary)]" />
 
                     <address
                       className="
       not-italic leading-relaxed
-      text-[#6B5A52]
+      text-[color:var(--text-muted)]
       transition-colors
-      group-hover:text-[#8B1E1E]
+      group-hover:text-[color:var(--brand-primary)]
     "
                     >
                       Itaura Chandeshwer
@@ -118,32 +118,32 @@ export default function ContactSection() {
                     href="https://www.facebook.com/p/Sarvdev-Ayurvedic-medical-college-61569381983714/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-white/10 hover:bg-[#8B1E1E]/10 transition-colors"
+                    className="p-2 rounded-full bg-white/10 hover:bg-[color:var(--brand-primary)]/10 transition-colors"
                   >
-                    <Facebook className="w-5 h-5 text-[#2A1E1A]" />
+                    <Facebook className="w-5 h-5 text-[color:var(--text-primary)]" />
                   </a>
 
                   <a
                     href="https://www.instagram.com/sarvdevayurvediccollege/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-white/10 hover:bg-[#8B1E1E]/10 transition-colors"
+                    className="p-2 rounded-full bg-white/10 hover:bg-[color:var(--brand-primary)]/10 transition-colors"
                   >
-                    <Instagram className="w-5 h-5 text-[#2A1E1A]" />
+                    <Instagram className="w-5 h-5 text-[color:var(--text-primary)]" />
                   </a>
 
                   <a
                     href="https://www.youtube.com/@SarvdevAyurvediccollege"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-white/10 hover:bg-[#8B1E1E]/10 transition-colors"
+                    className="p-2 rounded-full bg-white/10 hover:bg-[color:var(--brand-primary)]/10 transition-colors"
                   >
-                    <Youtube className="w-5 h-5 text-[#2A1E1A]" />
+                    <Youtube className="w-5 h-5 text-[color:var(--text-primary)]" />
                   </a>
                 </div>
 
-                <div className="text-sm text-[#6B5A52] text-center sm:text-right">
-                  <span className="font-medium text-[#2A1E1A]">
+                <div className="text-sm text-[color:var(--text-muted)] text-center sm:text-right">
+                  <span className="font-medium text-[color:var(--text-primary)]">
                     Office hours:
                   </span>{" "}
                   Mon—Sat, 9:00 AM — 5:00 PM
@@ -156,3 +156,4 @@ export default function ContactSection() {
     </section>
   );
 }
+

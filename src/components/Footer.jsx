@@ -51,7 +51,7 @@ export function Footer() {
   const affiliation =
     "Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh";
   const phones = [
-    "+91 9415257492 (Other queries)",
+    "+91 9415257492 (Official)",
     "+91 9198762108 (Admissions)",
   ];
   const email = "sdayurvedamh@gmail.com";
@@ -69,7 +69,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#8B1E1E] text-white">
+    <footer className="bg-[color:var(--brand-primary)] text-white">
       {/* Main Footer */}
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-14 max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 items-start">
@@ -102,9 +102,9 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-white/85 hover:text-[#F2B705] transition-colors flex items-center gap-2 py-1"
+                    className="text-sm text-white/85 hover:text-[color:var(--brand-highlight)] transition-colors flex items-center gap-2 py-1"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#F2B705]" />
+                    <span className="w-1 h-1 rounded-full bg-[color:var(--brand-highlight)]" />
                     {link.label}
                   </Link>
                 </li>
@@ -127,7 +127,7 @@ export function Footer() {
                     <a
                       key={i}
                       href={`tel:${cleanPhone(p)}`}
-                      className="hover:text-[#F2B705] transition-colors"
+                      className="hover:text-[color:var(--brand-highlight)] transition-colors"
                     >
                       {p}
                     </a>
@@ -137,7 +137,7 @@ export function Footer() {
 
               <a
                 href={`mailto:${email}`}
-                className="flex items-center gap-3 text-white/85 hover:text-[#F2B705] transition-colors py-1"
+                className="flex items-center gap-3 text-white/85 hover:text-[color:var(--brand-highlight)] transition-colors py-1"
               >
                 <Mail className="h-4 w-4 shrink-0" />
                 {email}
@@ -147,7 +147,7 @@ export function Footer() {
                 href="https://maps.app.goo.gl/XDmB1E7Tv1nbp52j9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 text-white/85 py-1 hover:text-[#F2B705] transition-colors"
+                className="flex items-start gap-3 text-white/85 py-1 hover:text-[color:var(--brand-highlight)] transition-colors"
               >
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 <address className="not-italic leading-relaxed">
@@ -203,7 +203,7 @@ export function Footer() {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white/10 rounded-full hover:bg-[#F2B705] hover:text-[#8B1E1E] transition-colors"
+                    className="p-2 bg-white/10 rounded-full hover:bg-[color:var(--brand-highlight)] hover:text-[color:var(--brand-primary)] transition-colors"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -228,7 +228,7 @@ export function Footer() {
                 href="https://ntechzy.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#F2B705] hover:underline font-medium"
+                className="text-[color:var(--brand-highlight)] hover:underline font-medium"
               >
                 Ntechzy Pvt. Ltd.
               </a>
@@ -239,3 +239,4 @@ export function Footer() {
     </footer>
   );
 }
+

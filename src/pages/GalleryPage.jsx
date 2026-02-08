@@ -86,8 +86,8 @@ const GalleryPage = () => {
                     px-4 py-2 rounded-md text-sm font-semibold transition
                     ${
                       isActive
-                        ? "bg-[#8B1E1E] text-white"
-                        : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                        ? "bg-[color:var(--brand-primary)] text-white"
+                        : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
                     }
                   `}
                 >
@@ -145,9 +145,9 @@ const GalleryPage = () => {
                       }
                       className="
                         px-6 py-3 rounded-md
-                        bg-[#8B1E1E] text-white
+                        bg-[color:var(--brand-primary)] text-white
                         font-semibold text-sm
-                        hover:bg-[#7A1A1A]
+                        hover:bg-[color:var(--brand-secondary)]
                         transition
                       "
                     >
@@ -170,7 +170,7 @@ const GalleryPage = () => {
           {/* Close */}
           <button
             onClick={() => setLightboxOpen(false)}
-            className="absolute top-6 right-6 text-white hover:text-[#F2B705]"
+            className="absolute top-6 right-6 text-white hover:text-[color:var(--brand-highlight)]"
           >
             <X size={32} />
           </button>
@@ -178,7 +178,7 @@ const GalleryPage = () => {
           {/* Prev */}
           <button
             onClick={prevImage}
-            className="absolute left-6 text-white hover:text-[#F2B705]"
+            className="absolute left-6 text-white hover:text-[color:var(--brand-highlight)]"
           >
             <ChevronLeft size={40} />
           </button>
@@ -193,7 +193,7 @@ const GalleryPage = () => {
           {/* Next */}
           <button
             onClick={nextImage}
-            className="absolute right-6 text-white hover:text-[#F2B705]"
+            className="absolute right-6 text-white hover:text-[color:var(--brand-highlight)]"
           >
             <ChevronRight size={40} />
           </button>
@@ -204,3 +204,4 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
+

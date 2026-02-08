@@ -32,7 +32,7 @@ const Admissions = () => {
           {/* Card */}
           <div className="rounded-2xl bg-white shadow-lg border border-black/10 overflow-hidden">
             {/* Header */}
-            <div className="px-6 py-5 bg-[#8B1E1E]/5 border-b">
+            <div className="px-6 py-5 bg-[color:var(--brand-primary)]/5 border-b">
               <h2 className="text-xl sm:text-2xl font-bold text-foreground">
                 Admission Enquiry Form
               </h2>
@@ -43,8 +43,8 @@ const Admissions = () => {
 
             {/* ⚠️ INFO MESSAGE (ONLY IF FORM NOT LOADED) */}
             {!formLoaded && (
-              <div className="mx-6 mt-4 rounded-lg border border-[#F2B705]/40 bg-[#F2B705]/10 px-4 py-2">
-                <p className="text-xs sm:text-sm text-[#7A5A00]">
+              <div className="mx-6 mt-4 rounded-lg border border-[color:var(--brand-highlight)]/40 bg-[color:var(--brand-highlight)]/10 px-4 py-2">
+                <p className="text-xs sm:text-sm text-[color:var(--text-muted)]">
                   If the admission form does not appear below, please reload the
                   page.
                 </p>
@@ -69,3 +69,4 @@ const Admissions = () => {
 };
 
 export default Admissions;
+

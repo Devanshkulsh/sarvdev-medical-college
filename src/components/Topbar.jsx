@@ -9,7 +9,7 @@ export function TopBar() {
   const mapsUrl = "https://maps.app.goo.gl/XDmB1E7Tv1nbp52j9";
 
   return (
-    <div className="sticky top-0 z-40 bg-[#8B1E1E] text-white">
+    <div className="sticky top-0 z-40 bg-(--brand-primary) text-white">
       <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <div
           className="
@@ -33,7 +33,7 @@ export function TopBar() {
             <div className="flex flex-wrap items-center justify-center gap-2">
               <a
                 href="tel:+919198762108"
-                className="flex items-center gap-1.5 hover:text-[#F2B705] transition-colors whitespace-nowrap"
+                className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
               >
                 <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 <span>+91 9198762108 (Admissions)</span>
@@ -43,17 +43,17 @@ export function TopBar() {
 
               <a
                 href="tel:+919415257492"
-                className="flex items-center gap-1.5 hover:text-[#F2B705] transition-colors whitespace-nowrap"
+                className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
               >
                 <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                <span>+91 9415257492 (Other Queries)</span>
+                <span>+91 9415257492 (Official)</span>
               </a>
             </div>
 
             {/* Email */}
             <a
               href={`mailto:${emailAddress}`}
-              className="flex items-center gap-1.5 hover:text-[#F2B705] transition-colors whitespace-nowrap"
+              className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
             >
               <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span>{emailAddress}</span>
@@ -66,7 +66,7 @@ export function TopBar() {
               rel="noopener noreferrer"
               className="
                 flex items-center gap-1.5
-                hover:text-[#F2B705]
+                hover:text-(--brand-highlight)
                 transition-colors
                 text-center
                 leading-tight
@@ -83,12 +83,12 @@ export function TopBar() {
             className="
               mt-1 sm:mt-0
               rounded-full
-              bg-white text-[#8B1E1E]
+              bg-white text-(--brand-primary)
               px-4 py-1.5
               text-xs sm:text-sm
               font-semibold
-              hover:bg-[#F2B705]
-              hover:text-[#2A1E1A]
+              hover:bg-(--brand-highlight)
+              hover:text-(--text-primary)
               transition-colors
               whitespace-nowrap
             "
