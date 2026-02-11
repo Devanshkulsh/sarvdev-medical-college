@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../../components/shared/Banner";
-import PDFViewer from "../../components/shared/PDFViewer";
+// import PDFViewer from "../../components/shared/PDFViewer";
+import ExcelViewer from "../../components/shared/ExcelViewer";
 
 const ListOfStudents = () => {
   return (
@@ -19,21 +20,10 @@ const ListOfStudents = () => {
       {/* ===== CONTENT ===== */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {/* PAGE HEADING */}
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground">
-              Batch 2024–25
-            </h1>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Official student list as per academic records
-            </p>
-          </div>
-
-          {/* PDF VIEWER */}
-          <PDFViewer
-            title="BAMS Students List – Batch 2024–25"
-            pdfUrl="/students/list/batch2425.pdf"
-            height="800px"
+          {/* Excel VIEWER */}
+          <ExcelViewer
+            title="Student List (Academic Year 2024–2025)"
+            fileUrl="https://res.cloudinary.com/dhlqc0ymy/raw/upload/v1770809698/batch2425_NEW_t1ai5k.xlsx"
           />
         </div>
       </section>
