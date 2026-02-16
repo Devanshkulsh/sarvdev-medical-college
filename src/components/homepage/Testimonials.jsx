@@ -70,11 +70,19 @@ export default function TestimonialsSection() {
                   src={t.avatar}
                   alt={t.name}
                   onError={(e) => {
-                    e.currentTarget.src =
-                      "https://ui-avatars.com/api/?name=" +
-                      encodeURIComponent(t.name) +
-                      "&background=FDF1E8&color=8B1E1E";
-                  }}
+  const styles = getComputedStyle(document.documentElement);
+
+  const bg = styles.getPropertyValue("--avatar-bg").replace("#", "").trim();
+  const color = styles
+    .getPropertyValue("--avatar-text")
+    .replace("#", "")
+    .trim();
+
+  e.currentTarget.src =
+    `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}` +
+    `&background=${bg}&color=${color}`;
+}}
+
                   className="w-14 h-14 rounded-full object-cover ring-2 ring-[color:var(--brand-primary)]/15"
                 />
 

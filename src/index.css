@@ -2,14 +2,17 @@
 
 /* ===== ROOT COLOR VARIABLES (GLOBAL THEME) ===== */
 :root {
-  --brand-primary: #72bf78;
-  --brand-secondary: #a0d683;
-  --brand-soft: #d3ee98;
-  --brand-highlight: #feff9f;
+  --brand-primary: #3f8f55; /* dark green */
+  --brand-secondary: #5faa6b; /* medium green */
+  --brand-soft: #9fd49a; /* muted soft green */
+  --brand-highlight: #e6f3a3; /* warm soft highlight */
+  --avatar-bg: #e6f3e6;   /* soft green */
+  --avatar-text: #3f8f55; /* brand primary */
 
-  --bg-neutral: #f7f9f4;
+  /* Background & Text */
+  --bg-neutral: #f3f7f1;
   --text-primary: #1f2933;
-  --text-muted: #6b7280;
+  --text-muted: #4b5563;
 }
 
 /* ===== GLOBAL BODY ===== */
@@ -21,7 +24,7 @@ body {
 
 /* ===== GLOBAL IMAGE LOADER ===== */
 img {
-  background-color: rgba(114, 191, 120, 0.12);
+  background-color: rgba(63, 143, 85, 0.18);
 }
 
 /* Skeleton shimmer */
@@ -36,9 +39,9 @@ img:not([data-loaded])::after {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(254, 255, 159, 0) 0%,
-    rgba(254, 255, 159, 0.6) 50%,
-    rgba(254, 255, 159, 0) 100%
+    rgba(230, 243, 163, 0) 0%,
+    rgba(230, 243, 163, 0.55) 50%,
+    rgba(230, 243, 163, 0) 100%
   );
   animation: shimmer 1.4s infinite;
 }

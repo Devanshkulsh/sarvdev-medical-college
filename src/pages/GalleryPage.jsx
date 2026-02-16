@@ -53,13 +53,13 @@ const GalleryPage = () => {
 
   const nextImage = () => {
     setCurrentIndex((prev) =>
-      prev === filteredImages.length - 1 ? 0 : prev + 1
+      prev === filteredImages.length - 1 ? 0 : prev + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? filteredImages.length - 1 : prev - 1
+      prev === 0 ? filteredImages.length - 1 : prev - 1,
     );
   };
 
@@ -136,25 +136,24 @@ const GalleryPage = () => {
               </div>
 
               {/* SHOW MORE BUTTON (ONLY FOR ALL TAB) */}
-              {activeTab === "all" &&
-                visibleCount < filteredImages.length && (
-                  <div className="flex justify-center pt-6">
-                    <button
-                      onClick={() =>
-                        setVisibleCount((prev) => prev + INITIAL_VISIBLE)
-                      }
-                      className="
+              {activeTab === "all" && visibleCount < filteredImages.length && (
+                <div className="flex justify-center pt-6">
+                  <button
+                    onClick={() =>
+                      setVisibleCount((prev) => prev + INITIAL_VISIBLE)
+                    }
+                    className="
                         px-6 py-3 rounded-md
                         bg-[color:var(--brand-primary)] text-white
                         font-semibold text-sm
                         hover:bg-[color:var(--brand-secondary)]
                         transition
                       "
-                    >
-                      Show More
-                    </button>
-                  </div>
-                )}
+                  >
+                    Show More
+                  </button>
+                </div>
+              )}
             </>
           ) : (
             <p className="text-center text-sm text-muted-foreground">
@@ -204,4 +203,3 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
-
