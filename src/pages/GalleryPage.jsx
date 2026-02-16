@@ -3,7 +3,7 @@ import Banner from "../components/shared/Banner";
 import { galleryTabs, galleryImages } from "../data/galleryPage";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const INITIAL_VISIBLE = 9;
+const INITIAL_VISIBLE = 10;
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -27,10 +27,7 @@ const GalleryPage = () => {
     setVisibleCount(INITIAL_VISIBLE);
   }, [activeTab]);
 
-  const visibleImages =
-    activeTab === "all"
-      ? filteredImages.slice(0, visibleCount)
-      : filteredImages;
+  const visibleImages = filteredImages.slice(0, visibleCount);
 
   /* 🧠 Keyboard controls */
   useEffect(() => {
@@ -136,22 +133,25 @@ const GalleryPage = () => {
               </div>
 
               {/* SHOW MORE BUTTON (ONLY FOR ALL TAB) */}
-              {activeTab === "all" && visibleCount < filteredImages.length && (
+              {visibleCount < filteredImages.length && (
                 <div className="flex justify-center pt-6">
                   <button
-                    onClick={() =>
-                      setVisibleCount((prev) => prev + INITIAL_VISIBLE)
-                    }
-                    className="
-                        px-6 py-3 rounded-md
-                        bg-[color:var(--brand-primary)] text-white
-                        font-semibold text-sm
-                        hover:bg-[color:var(--brand-secondary)]
-                        transition
-                      "
-                  >
-                    Show More
-                  </button>
+  onClick={() =>
+    setVisibleCount((prev) => prev + INITIAL_VISIBLE)
+  }
+  className="
+    px-6 py-3 rounded-md
+    bg-[color:var(--brand-primary)] text-white
+    font-semibold text-sm
+    shadow-sm
+    hover:bg-[color:var(--brand-secondary)]
+    focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-primary)]/30
+    transition
+  "
+>
+  Show More
+</button>
+
                 </div>
               )}
             </>
