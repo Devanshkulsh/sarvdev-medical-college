@@ -122,9 +122,8 @@ export const CommitteeData = [
         rows: [
           ["1", "Dr. Yogita Jain", "Chairperson"],
           ["2", "Dr. Samarth Prakashrao Kotasthane", "Member Secretary"],
-          ["3", "Dr. Eknath Pruthvinath Jadhav", "Member"],
-          ["4", "Dr. Niladri Bihari Sharma", "Member"],
-          ["5", "Dr. Abhishek Rajbhar", "Member"],
+          ["3", "Dr. Niladri Bihari Sharma", "Member"],
+          ["4", "Dr. Abhishek Rajbhar", "Member"],
         ],
       },
     ],
