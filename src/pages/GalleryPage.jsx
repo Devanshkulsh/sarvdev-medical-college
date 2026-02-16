@@ -3,7 +3,7 @@ import Banner from "../components/shared/Banner";
 import { galleryTabs, galleryImages } from "../data/galleryPage";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const INITIAL_VISIBLE = 9;
+const INITIAL_VISIBLE = 10;
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -27,10 +27,7 @@ const GalleryPage = () => {
     setVisibleCount(INITIAL_VISIBLE);
   }, [activeTab]);
 
-  const visibleImages =
-    activeTab === "all"
-      ? filteredImages.slice(0, visibleCount)
-      : filteredImages;
+  const visibleImages = filteredImages.slice(0, visibleCount);
 
   /* 🧠 Keyboard controls */
   useEffect(() => {
@@ -53,13 +50,13 @@ const GalleryPage = () => {
 
   const nextImage = () => {
     setCurrentIndex((prev) =>
-      prev === filteredImages.length - 1 ? 0 : prev + 1
+      prev === filteredImages.length - 1 ? 0 : prev + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? filteredImages.length - 1 : prev - 1
+      prev === 0 ? filteredImages.length - 1 : prev - 1,
     );
   };
 
@@ -136,25 +133,24 @@ const GalleryPage = () => {
               </div>
 
               {/* SHOW MORE BUTTON (ONLY FOR ALL TAB) */}
-              {activeTab === "all" &&
-                visibleCount < filteredImages.length && (
-                  <div className="flex justify-center pt-6">
-                    <button
-                      onClick={() =>
-                        setVisibleCount((prev) => prev + INITIAL_VISIBLE)
-                      }
-                      className="
-                        px-6 py-3 rounded-md
-                        bg-[#8B1E1E] text-white
-                        font-semibold text-sm
-                        hover:bg-[#7A1A1A]
-                        transition
-                      "
-                    >
-                      Show More
-                    </button>
-                  </div>
-                )}
+              {visibleCount < filteredImages.length && (
+                <div className="flex justify-center pt-6">
+                  <button
+                    onClick={() =>
+                      setVisibleCount((prev) => prev + INITIAL_VISIBLE)
+                    }
+                    className="
+        px-6 py-3 rounded-md
+        bg-[#8B1E1E] text-white
+        font-semibold text-sm
+        hover:bg-[#7A1A1A]
+        transition
+      "
+                  >
+                    Show More
+                  </button>
+                </div>
+              )}
             </>
           ) : (
             <p className="text-center text-sm text-muted-foreground">
