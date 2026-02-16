@@ -5,8 +5,23 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const INITIAL_VISIBLE = 10;
 
+const othersTabs = [
+  { id: "yoga", label: "Yoga Day 2025", prefix: "/gallery/yoga/" },
+  { id: "cycle", label: "Sunday on Cycle Campaign", prefix: "/gallery/cycle/" },
+  { id: "medical", label: "Medical Camp & Seminar", prefix: "/gallery/medical-seminar/" },
+  { id: "women", label: "International Women's Day", prefix: "/gallery/women-day/" },
+  { id: "buddha", label: "Buddha Purnima", prefix: "/gallery/budh-purnima/" },
+  { id: "ayurveda", label: "9th Ayurveda Day", prefix: "/gallery/ayurveda-day/" },
+  { id: "motivational", label: "Motivational Lecture", prefix: "/gallery/motivational-lecture/" },
+  { id: "inauguration", label: "College Inauguration", prefix: "/gallery/college-inauguration/" },
+  { id: "college", label: "College", prefix: "/gallery/college/" },
+  { id: "covid", label: "Covid-19 Help", prefix: "/gallery/covid/" },
+];
+
+
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [activeOtherTab, setActiveOtherTab] = useState(othersTabs[0].id);
 
   /* 🔍 LIGHTBOX STATE */
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -16,16 +31,32 @@ const GalleryPage = () => {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
   const filteredImages = useMemo(() => {
-    if (activeTab === "all") {
-      return Object.values(galleryImages).flat();
-    }
-    return galleryImages[activeTab] || [];
-  }, [activeTab]);
+  if (activeTab === "all") {
+    return Object.values(galleryImages).flat();
+  }
+
+  if (activeTab === "others") {
+    const active = othersTabs.find((t) => t.id === activeOtherTab);
+    return galleryImages.others.filter((img) =>
+      img.startsWith(active.prefix),
+    );
+  }
+
+  return galleryImages[activeTab] || [];
+}, [activeTab, activeOtherTab]);
+
 
   /* Reset visible count when tab changes */
   useEffect(() => {
     setVisibleCount(INITIAL_VISIBLE);
   }, [activeTab]);
+
+  useEffect(() => {
+  setVisibleCount(INITIAL_VISIBLE);
+  if (activeTab !== "others") return;
+  setActiveOtherTab(othersTabs[0].id);
+}, [activeTab]);
+
 
   const visibleImages = filteredImages.slice(0, visibleCount);
 
@@ -93,6 +124,31 @@ const GalleryPage = () => {
               );
             })}
           </div>
+
+          {activeTab === "others" && (
+  <div className="flex flex-wrap justify-center gap-2">
+    {othersTabs.map((tab) => {
+      const isActive = activeOtherTab === tab.id;
+      return (
+        <button
+          key={tab.id}
+          onClick={() => setActiveOtherTab(tab.id)}
+          className={`
+            px-3 py-1.5 rounded-full text-xs font-semibold transition
+            ${
+              isActive
+                ? "bg-[#8B1E1E] text-white"
+                : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+            }
+          `}
+        >
+          {tab.label}
+        </button>
+      );
+    })}
+  </div>
+)}
+
 
           {/* Masonry */}
           {visibleImages.length > 0 ? (
