@@ -1,19 +1,167 @@
+/* =======================
+   GALLERY TABS
+======================= */
+
 export const galleryTabs = [
   { id: "all", label: "All" },
-  { id: "yoga-day-2025", label: "Yoga Day 2025" },
-  { id: "cycle-campaign", label: "Sunday on Cycle Campaign" },
-  { id: "medical-camp-seminar", label: "Medical Camp and Seminar" },
-  { id: "womens-day", label: "International Womens Day" },
-  { id: "buddha-purnima", label: "Buddha Purnima" },
-  { id: "ayurveda-day", label: "9th Ayurveda Day" },
-  { id: "motivational-lecture", label: "Motivational Lecture" },
-  { id: "college-inauguration", label: "College Inauguration" },
-  { id: "college", label: "College" },
-  { id: "covid-help", label: "Covid-19 Help" },
+
+  // NEW STRUCTURED TABS
+  { id: "campus", label: "Campus" },
+  { id: "herbal-garden", label: "Herbal Garden" },
+  { id: "hospital", label: "Hospital" },
+  { id: "labs-classes", label: "Labs & Classes" },
+  { id: "panchkarma", label: "Panchkarma" },
+  { id: "yog-classes", label: "Yog Classes" },
+
+  // EXISTING CONTENT
+  { id: "others", label: "Others" },
 ];
 
+/* =======================
+   GALLERY IMAGES
+======================= */
+
 export const galleryImages = {
-  "yoga-day-2025": [
+  /* ---------- NEW EMPTY CATEGORIES (READY FOR FUTURE USE) ---------- */
+
+  campus: [
+    "/gallery/campus/campus1.webp",
+    "/gallery/campus/campus2.webp",
+    "/gallery/campus/campus3.webp",
+    "/gallery/campus/campus4.webp",
+    "/gallery/campus/campus5.webp",
+    "/gallery/campus/campus6.webp",
+    "/gallery/campus/campus7.webp",
+    "/gallery/campus/campus8.webp",
+    "/gallery/campus/campus9.webp",
+    "/gallery/campus/campus10.webp",
+    "/gallery/campus/campus11.webp",
+    "/gallery/campus/campus12.webp",
+    "/gallery/campus/campus13.webp",
+    "/gallery/campus/campus14.webp",
+    "/gallery/campus/campus15.webp",
+    "/gallery/campus/campus16.webp",
+    "/gallery/campus/campus17.webp",
+    "/gallery/campus/campus18.webp",
+    "/gallery/campus/campus19.webp",
+    "/gallery/campus/campus20.webp",
+    "/gallery/campus/campus21.webp",
+    "/gallery/campus/campus22.webp",
+    "/gallery/campus/campus23.webp",
+    "/gallery/campus/campus24.webp",
+  ],
+  "herbal-garden": [
+    "/gallery/herbal-garden/herbal-garden1.webp",
+    "/gallery/herbal-garden/herbal-garden2.webp",
+    "/gallery/herbal-garden/herbal-garden3.webp",
+    "/gallery/herbal-garden/herbal-garden4.webp",
+    "/gallery/herbal-garden/herbal-garden5.webp",
+    "/gallery/herbal-garden/herbal-garden6.webp",
+    "/gallery/herbal-garden/herbal-garden7.webp",
+    "/gallery/herbal-garden/herbal-garden8.webp",
+    "/gallery/herbal-garden/herbal-garden9.webp",
+  ],
+  hospital: [
+    "/gallery/hospital/hospital1.webp",
+    "/gallery/hospital/hospital2.webp",
+    "/gallery/hospital/hospital3.webp",
+    "/gallery/hospital/hospital4.webp",
+    "/gallery/hospital/hospital5.webp",
+    "/gallery/hospital/hospital6.webp",
+    "/gallery/hospital/hospital7.webp",
+    "/gallery/hospital/hospital8.webp",
+    "/gallery/hospital/hospital9.webp",
+    "/gallery/hospital/hospital10.webp",
+    "/gallery/hospital/hospital11.webp",
+    "/gallery/hospital/hospital12.webp",
+    "/gallery/hospital/hospital13.webp",
+    "/gallery/hospital/hospital14.webp",
+    "/gallery/hospital/hospital15.webp",
+    "/gallery/hospital/hospital16.webp",
+    "/gallery/hospital/hospital17.webp",
+    "/gallery/hospital/hospital18.webp",
+    "/gallery/hospital/hospital19.webp",
+    "/gallery/hospital/hospital20.webp",
+    "/gallery/hospital/hospital21.webp",
+    "/gallery/hospital/hospital22.webp",
+    "/gallery/hospital/hospital23.webp",
+    "/gallery/hospital/hospital24.webp",
+    "/gallery/hospital/hospital25.webp",
+  ],
+  "labs-classes": [
+    "/gallery/labs-classes/labs-classes1.webp",
+    "/gallery/labs-classes/labs-classes2.webp",
+    "/gallery/labs-classes/labs-classes3.webp",
+    "/gallery/labs-classes/labs-classes4.webp",
+    "/gallery/labs-classes/labs-classes5.webp",
+    "/gallery/labs-classes/labs-classes6.webp",
+    "/gallery/labs-classes/labs-classes7.webp",
+    "/gallery/labs-classes/labs-classes8.webp",
+    "/gallery/labs-classes/labs-classes9.webp",
+    "/gallery/labs-classes/labs-classes10.webp",
+    "/gallery/labs-classes/labs-classes11.webp",
+    "/gallery/labs-classes/labs-classes12.webp",
+    "/gallery/labs-classes/labs-classes13.webp",
+    "/gallery/labs-classes/labs-classes14.webp",
+    "/gallery/labs-classes/labs-classes15.webp",
+    "/gallery/labs-classes/labs-classes16.webp",
+    "/gallery/labs-classes/labs-classes17.webp",
+    "/gallery/labs-classes/labs-classes18.webp",
+    "/gallery/labs-classes/labs-classes19.webp",
+    "/gallery/labs-classes/labs-classes20.webp",
+    "/gallery/labs-classes/labs-classes21.webp",
+    "/gallery/labs-classes/labs-classes22.webp",
+    "/gallery/labs-classes/labs-classes23.webp",
+    "/gallery/labs-classes/labs-classes24.webp",
+    "/gallery/labs-classes/labs-classes25.webp",
+    "/gallery/labs-classes/labs-classes26.webp",
+    "/gallery/labs-classes/labs-classes27.webp",
+    "/gallery/labs-classes/labs-classes28.webp",
+    "/gallery/labs-classes/labs-classes29.webp",
+    "/gallery/labs-classes/labs-classes30.webp",
+    "/gallery/labs-classes/labs-classes31.webp",
+    "/gallery/labs-classes/labs-classes32.webp",
+    "/gallery/labs-classes/labs-classes33.webp",
+    "/gallery/labs-classes/labs-classes34.webp",
+    "/gallery/labs-classes/labs-classes35.webp",
+    "/gallery/labs-classes/labs-classes36.webp",
+    "/gallery/labs-classes/labs-classes37.webp",
+    "/gallery/labs-classes/labs-classes38.webp",
+    "/gallery/labs-classes/labs-classes39.webp",
+    "/gallery/labs-classes/labs-classes40.webp",
+    "/gallery/labs-classes/labs-classes41.webp",
+    "/gallery/labs-classes/labs-classes42.webp",
+    "/gallery/labs-classes/labs-classes43.webp",
+    "/gallery/labs-classes/labs-classes44.webp",
+    "/gallery/labs-classes/labs-classes45.webp",
+  ],
+  panchkarma: [
+    "/gallery/panchkarma/panchkarma1.webp",
+    "/gallery/panchkarma/panchkarma2.webp",
+    "/gallery/panchkarma/panchkarma3.webp",
+    "/gallery/panchkarma/panchkarma4.webp",
+    "/gallery/panchkarma/panchkarma5.webp",
+    "/gallery/panchkarma/panchkarma6.webp",
+    "/gallery/panchkarma/panchkarma7.webp",
+    "/gallery/panchkarma/panchkarma8.webp",
+    "/gallery/panchkarma/panchkarma9.webp",
+    "/gallery/panchkarma/panchkarma10.webp",
+  ],
+  "yog-classes": [
+    "/gallery/yog-classes/yog-classes1.webp",
+    "/gallery/yog-classes/yog-classes2.webp",
+    "/gallery/yog-classes/yog-classes3.webp",
+    "/gallery/yog-classes/yog-classes4.webp",
+    "/gallery/yog-classes/yog-classes5.webp",
+    "/gallery/yog-classes/yog-classes6.webp",
+    "/gallery/yog-classes/yog-classes7.webp",
+    "/gallery/yog-classes/yog-classes8.webp",
+  ],
+
+  /* ---------- OTHERS (ALL EXISTING PHOTOS MOVED HERE) ---------- */
+
+  others: [
+    /* Yoga Day 2025 */
     "/gallery/yoga/yoga1.webp",
     "/gallery/yoga/yoga2.webp",
     "/gallery/yoga/yoga3.webp",
@@ -32,15 +180,13 @@ export const galleryImages = {
     "/gallery/yoga/yoga16.webp",
     "/gallery/yoga/yoga8.webp",
     "/gallery/yoga/yoga10.webp",
-  ],
 
-  "cycle-campaign": [
+    /* Sunday on Cycle Campaign */
     "/gallery/cycle/cycle1.webp",
     "/gallery/cycle/cycle2.webp",
     "/gallery/cycle/cycle3.webp",
-  ],
 
-  "medical-camp-seminar": [
+    /* Medical Camp & Seminar */
     "/gallery/medical-seminar/mcas1.webp",
     "/gallery/medical-seminar/mcas2.webp",
     "/gallery/medical-seminar/mcas3.webp",
@@ -49,26 +195,23 @@ export const galleryImages = {
     "/gallery/medical-seminar/mcas6.webp",
     "/gallery/medical-seminar/mcas7.webp",
     "/gallery/medical-seminar/mcas8.webp",
-  ],
 
-  "womens-day": [
+    /* International Women's Day */
     "/gallery/women-day/iwd1.webp",
     "/gallery/women-day/iwd2.webp",
     "/gallery/women-day/iwd3.webp",
     "/gallery/women-day/iwd4.webp",
     "/gallery/women-day/iwd5.webp",
     "/gallery/women-day/iwd6.webp",
-  ],
 
-  "buddha-purnima": [
+    /* Buddha Purnima */
     "/gallery/budh-purnima/bp1.webp",
     "/gallery/budh-purnima/bp2.webp",
     "/gallery/budh-purnima/bp3.webp",
     "/gallery/budh-purnima/bp4.webp",
     "/gallery/budh-purnima/bp5.webp",
-  ],
 
-  "ayurveda-day": [
+    /* 9th Ayurveda Day */
     "/gallery/ayurveda-day/yd1.webp",
     "/gallery/ayurveda-day/yd2.webp",
     "/gallery/ayurveda-day/yd3.webp",
@@ -108,9 +251,8 @@ export const galleryImages = {
     "/gallery/ayurveda-day/yd37.webp",
     "/gallery/ayurveda-day/yd38.webp",
     "/gallery/ayurveda-day/yd39.webp",
-  ],
 
-  "motivational-lecture": [
+    /* Motivational Lecture */
     "/gallery/motivational-lecture/ml1.webp",
     "/gallery/motivational-lecture/ml2.webp",
     "/gallery/motivational-lecture/ml3.webp",
@@ -135,9 +277,8 @@ export const galleryImages = {
     "/gallery/motivational-lecture/ml22.webp",
     "/gallery/motivational-lecture/ml23.webp",
     "/gallery/motivational-lecture/ml24.webp",
-  ],
 
-  "college-inauguration": [
+    /* College Inauguration */
     "/gallery/college-inauguration/ci1.webp",
     "/gallery/college-inauguration/ci2.webp",
     "/gallery/college-inauguration/ci3.webp",
@@ -149,9 +290,8 @@ export const galleryImages = {
     "/gallery/college-inauguration/ci9.webp",
     "/gallery/college-inauguration/ci10.webp",
     "/gallery/college-inauguration/ci11.webp",
-  ],
 
-  college: [
+    /* College */
     "/gallery/college/college1.webp",
     "/gallery/college/college2.webp",
     "/gallery/college/college3.webp",
@@ -175,9 +315,8 @@ export const galleryImages = {
     "/gallery/college/college21.webp",
     "/gallery/college/college22.webp",
     "/gallery/college/college23.webp",
-  ],
 
-  "covid-help": [
+    /* Covid-19 Help */
     "/gallery/covid/covid1.webp",
     "/gallery/covid/covid2.webp",
     "/gallery/covid/covid3.webp",
