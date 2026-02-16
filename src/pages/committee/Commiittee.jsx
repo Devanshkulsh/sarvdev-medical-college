@@ -167,4 +167,3 @@ const Commiittee = () => {
 };
 
 export default Commiittee;
-
