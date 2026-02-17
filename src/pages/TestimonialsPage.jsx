@@ -98,10 +98,19 @@ const TestimonialsPage = () => {
                     src={t.avatar}
                     alt={t.name}
                     onError={(e) => {
+                      const styles = getComputedStyle(document.documentElement);
+                      const bg = styles
+                        .getPropertyValue("--avatar-bg")
+                        .replace("#", "")
+                        .trim();
+                      const color = styles
+                        .getPropertyValue("--avatar-text")
+                        .replace("#", "")
+                        .trim();
                       e.currentTarget.src =
                         "https://ui-avatars.com/api/?name=" +
                         encodeURIComponent(t.name) +
-                        "&background=FDF1E8&color=8B1E1E";
+                        `&background=${bg}&color=${color}`;
                     }}
                     className="w-14 h-14 rounded-full object-cover ring-2 ring-[color:var(--brand-primary)]/15"
                   />
@@ -136,7 +145,7 @@ const TestimonialsPage = () => {
                 className={`px-4 h-9 rounded-md text-sm font-semibold transition
         ${
           currentPage === 1
-            ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+            ? "bg-[color:var(--avatar-bg)] text-[color:var(--text-muted)] cursor-not-allowed"
             : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
         }`}
               >
@@ -172,7 +181,7 @@ const TestimonialsPage = () => {
                 className={`px-4 h-9 rounded-md text-sm font-semibold transition
         ${
           currentPage === totalPages
-            ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+            ? "bg-[color:var(--avatar-bg)] text-[color:var(--text-muted)] cursor-not-allowed"
             : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
         }`}
               >

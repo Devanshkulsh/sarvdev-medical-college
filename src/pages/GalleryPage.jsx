@@ -137,8 +137,8 @@ const GalleryPage = () => {
             px-3 py-1.5 rounded-full text-xs font-semibold transition
             ${
               isActive
-                ? "bg-[#8B1E1E] text-white"
-                : "bg-[#8B1E1E]/10 text-[#8B1E1E] hover:bg-[#8B1E1E]/20"
+                ? "bg-[color:var(--brand-primary)] text-white"
+                : "bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/20"
             }
           `}
         >

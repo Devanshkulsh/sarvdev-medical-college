@@ -103,7 +103,7 @@ export default function GallerySection() {
             {images.map((src, idx) => (
               <div
                 key={idx}
-                className="overflow-hidden rounded-lg h-48 md:h-56 bg-gray-100"
+                className="overflow-hidden rounded-lg h-48 md:h-56 bg-[color:var(--avatar-bg)]"
               >
                 <img
                   src={src}
@@ -132,7 +132,7 @@ export default function GallerySection() {
                   className="gallery-slide shrink-0 w-[84%] sm:w-[70%] rounded-lg overflow-hidden scroll-snap-align-start"
                   style={{ scrollSnapAlign: "start" }}
                 >
-                  <div className="relative h-56 bg-gray-100">
+                  <div className="relative h-56 bg-[color:var(--avatar-bg)]">
                     <img
                       src={src}
                       alt={`gallery-mobile-${idx}`}

@@ -105,12 +105,12 @@ export function Navbar() {
       label: "Student's Corner",
       children: [
         { label: "Results", href: "/students/results" },
-        {
-          label: "Monthly Attendance",
-          children: [
-            { label: "Batch 2024-2025", href: "/students/attendance/2024-25" },
-          ],
-        },
+        // {
+        //   label: "Monthly Attendance",
+        //   children: [
+        //     { label: "Batch 2024-2025", href: "/students/attendance/2024-25" },
+        //   ],
+        // },
         {
           label: "List of Students",
           children: [
@@ -123,9 +123,9 @@ export function Navbar() {
     {
       label: "News",
       children: [
-        { label: "Vacancies", href: "/news/vacancies" },
-        { label: "News", href: "/news/all" },
         { label: "Notices", href: "/news/notices" },
+        { label: "News", href: "/news/all" },
+        { label: "Vacancies", href: "/news/vacancies" },
       ],
     },
     {
@@ -169,7 +169,7 @@ export function Navbar() {
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
-              src="/logo_bg.png"
+              src="/logo.webp"
               alt="Sarvdev Ayurvedic Medical College"
               className="h-10 w-10 sm:h-11 sm:w-11 object-contain"
             />

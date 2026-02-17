@@ -65,7 +65,7 @@ export default function NewsSection() {
 
                 <span
                   className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full
-                                 bg-[color:var(--brand-highlight)]/10 text-[color:var(--brand-highlight)] border border-[color:var(--brand-highlight)]/20"
+                                 bg-[color:var(--brand-highlight)]/20 text-[color:var(--brand-primary)] border border-[color:var(--brand-secondary)]/30"
                 >
                   {item.category}
                 </span>
