@@ -32,7 +32,7 @@ const Videos = () => {
       <div className="relative z-10 text-center mb-14 md:mb-16">
         <div className="inline-flex items-center gap-3 mb-4">
           <div className="w-10 h-1 bg-[color:var(--brand-primary)] rounded-full"></div>
-          <Youtube className="w-7 h-7 text-[color:var(--brand-highlight)]" />
+          <Youtube className="w-7 h-7 text-[color:var(--brand-primary)]" />
           <div className="w-10 h-1 bg-[color:var(--brand-primary)] rounded-full"></div>
         </div>
 
@@ -45,7 +45,7 @@ const Videos = () => {
         </p>
 
         <div className="mt-8">
-          <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-[color:var(--brand-highlight)]/10 text-[color:var(--brand-highlight)] border border-[color:var(--brand-highlight)]/30">
+          <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] border border-[color:var(--brand-primary)]/30">
             Experience Our Campus Virtually
           </span>
         </div>
@@ -72,7 +72,7 @@ const Videos = () => {
               className="relative w-full aspect-video rounded-xl overflow-hidden 
                          shadow-lg hover:shadow-2xl transition-all duration-500 
                          border-2 border-transparent group-hover:border-[color:var(--brand-primary)]/30
-                         bg-linear-to-br from-gray-50 to-gray-100"
+                         bg-linear-to-br from-[color:var(--avatar-bg)] to-[color:var(--bg-neutral)]"
             >
               {/* Hover overlay */}
               <div

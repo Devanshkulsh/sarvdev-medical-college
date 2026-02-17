@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Phone,
@@ -7,24 +8,60 @@ import {
   Users,
 } from "lucide-react";
 
+const HERO_SLIDES = [
+  {
+    src: "/hero/hero1.webp",
+    alt: "Sarvdev Ayurvedic Medical College campus view",
+  },
+  {
+    src: "/hero/hero2.webp",
+    alt: "College building front elevation",
+  },
+  {
+    src: "/hero/hero3.webp",
+    alt: "Sarvdev campus aerial view",
+  },
+  // {
+  //   src: "/hero/hero4.webp",
+  //   alt: "College infrastructure block",
+  // },
+  // {
+  //   src: "/hero/hero5.webp",
+  //   alt: "Campus life and landscape",
+  // },
+];
+
 export function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 4500);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Slider */}
       <div className="absolute inset-0">
-        <img
-          src="/homepage/hero.webp"
-          alt="Ayurvedic Medical Education"
-          className="w-full h-full object-cover"
-        />
+        {HERO_SLIDES.map((slide, index) => (
+          <img
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+        ))}
         <div
           className="
             absolute inset-0
-            bg-linear-to-b
-            sm:bg-linear-to-r
-            from-[rgba(114,191,120,0.65)]
-            via-[rgba(160,214,131,0.35)]
-            to-[rgba(211,238,152,0.25)]
+            bg-black/30
+            sm:bg-black/30
           "
         />
       </div>
@@ -39,19 +76,19 @@ export function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.55)]">
             Welcome to <span className="text-(--brand-highlight)">Sarvdev</span>
             <br className="hidden sm:block" />
             Ayurvedic Medical College
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-xl md:text-2xl text-white/90 font-light">
+          <p className="text-base sm:text-xl md:text-2xl text-white/90 font-light [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
             & Maha Mrityunjay Hospital
           </p>
 
           {/* Description */}
-          <p className="text-sm sm:text-base md:text-lg text-white/85 max-w-2xl leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
             A premier institution for Ayurvedic education affiliated with{" "}
             <strong className="text-white">
               Mahayogi Guru Gorakhnath AYUSH University, Uttar Pradesh
@@ -136,6 +173,21 @@ export function Hero() {
             />
           </div>
         </div>
+      </div>
+
+      {/* Slider Dots */}
+      <div className="absolute z-30 right-4 top-4 sm:right-6 sm:top-6 flex items-center gap-2 rounded-full bg-black/25 px-2.5 py-1.5 backdrop-blur-sm">
+        {HERO_SLIDES.map((slide, index) => (
+          <button
+            key={slide.src}
+            type="button"
+            aria-label={`Show slide ${index + 1}`}
+            onClick={() => setActiveSlide(index)}
+            className={`h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full transition ${
+              index === activeSlide ? "bg-white" : "bg-white/45 hover:bg-white/70"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

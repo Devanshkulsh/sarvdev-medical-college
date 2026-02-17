@@ -75,7 +75,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="relative">
               <img
-                src="/homepage/building.webp"
+                src="/homepage/about-section.webp"
                 alt="Sarvdev Ayurvedic Medical College and Maha Mrityunjay Hospital campus"
                 title="Sarvdev Ayurvedic Medical College | BAMS College in Uttar Pradesh | Ayurvedic Hospital"
                 loading="lazy"
@@ -172,4 +172,3 @@ export function AboutSection() {
 }
 
 export default AboutSection;
-
