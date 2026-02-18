@@ -72,7 +72,7 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-(--brand-highlight)/40 text-[color:var(--text-primary)] border border-(--brand-secondary)/50 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-(--brand-primary) rounded-full animate-pulse" />
-            Admission Open 2025–26
+            Admission Open 2026–27
           </div>
 
           {/* Main Heading */}
@@ -184,7 +184,9 @@ export function Hero() {
             aria-label={`Show slide ${index + 1}`}
             onClick={() => setActiveSlide(index)}
             className={`h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full transition ${
-              index === activeSlide ? "bg-white" : "bg-white/45 hover:bg-white/70"
+              index === activeSlide
+                ? "bg-white"
+                : "bg-white/45 hover:bg-white/70"
             }`}
           />
         ))}
@@ -202,9 +204,10 @@ function StatItem({ icon, value, label }) {
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-[color:var(--text-primary)]">
           {value}
         </p>
-        <p className="text-xs sm:text-sm text-[color:var(--text-muted)]">{label}</p>
+        <p className="text-xs sm:text-sm text-[color:var(--text-muted)]">
+          {label}
+        </p>
       </div>
     </div>
   );
 }
-

@@ -2,8 +2,8 @@ const testimonials = [
   // ================= Professors / Consultants =================
   {
     id: 1,
-    name: "Dr. Harkesh Singh",
-    role: "Professor & Consultant, Kayachikitsa",
+    name: "Dr. Asish Hazra",
+    role: "Assistant Professor/Lecturer, Kayachikitsa",
     avatar: "/avatars/dr-harkesh.jpg",
     quote:
       "The Kayachikitsa department at Sarvdev emphasizes classical Ayurvedic principles while ensuring strong clinical application. Students are trained to diagnose and treat with confidence and ethical responsibility.",
