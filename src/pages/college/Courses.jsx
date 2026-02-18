@@ -104,7 +104,7 @@ const Courses = () => {
           {/* ===== CTA BUTTON ===== */}
           <div className="text-center">
             <button
-              onClick={() => (window.location.href = "/admissions")} // 🔁 change link if needed
+              onClick={() => (window.location.href = "/admissions")}
               className="
                 inline-flex items-center justify-center
                 rounded-xl px-10 py-4
@@ -130,4 +130,3 @@ const Courses = () => {
 };
 
 export default Courses;
-

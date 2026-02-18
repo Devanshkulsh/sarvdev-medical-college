@@ -98,8 +98,8 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4 pt-2 mb-16 sm:mb-0">
-            <Link
-              to="/admissions"
+            <a
+              href="/admissions"
               className="
                 inline-flex items-center justify-center gap-2
                 rounded-md
@@ -114,7 +114,7 @@ export function Hero() {
             >
               <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
               Apply for Admission
-            </Link>
+            </a>
 
             <a
               href="tel:+919198762108"
