@@ -32,21 +32,21 @@ export function TopBar() {
             {/* Phone Numbers */}
             <div className="flex flex-wrap items-center justify-center gap-2">
               <a
-                href="tel:+919198762108"
-                className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
-              >
-                <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                <span>+91 9198762108 (Admissions)</span>
-              </a>
-
-              <span className="hidden sm:inline opacity-70">|</span>
-
-              <a
                 href="tel:+919415257492"
                 className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
               >
                 <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                 <span>+91 9415257492 (Official)</span>
+              </a>
+
+              <span className="hidden sm:inline opacity-70">|</span>
+
+              <a
+                href="tel:+919198762108"
+                className="flex items-center gap-1.5 hover:text-(--brand-highlight) transition-colors whitespace-nowrap"
+              >
+                <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                <span>+91 9198762108 (Admissions)</span>
               </a>
             </div>
 

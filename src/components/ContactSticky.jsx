@@ -28,10 +28,10 @@ export function ContactSticky({
         title="Apply Now"
         className={`${btnBase}
           fixed right-0 top-[45%] z-50 -translate-y-1/2
-          rounded-l-lg bg-[color:var(--brand-secondary)] text-[color:var(--bg-neutral)]
+          rounded-l-lg bg-(--brand-secondary) text-(--bg-neutral)]
           px-4 py-6
           animate-pulse
-          ring-2 ring-[color:var(--brand-secondary)]/40 ring-offset-2 ring-offset-white
+          ring-2 ring-(--brand-secondary)/40 ring-offset-2 ring-offset-white
           hover:animate-none
         `}
       >
