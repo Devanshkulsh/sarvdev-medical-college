@@ -17,14 +17,14 @@ const NewsAll = () => {
       />
 
       {/* ===== CONTENT SECTION ===== */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-[color:var(--bg-neutral)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {/* Page Intro */}
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[color:var(--text-primary)]">
               Latest Academic Updates
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-sm text-[color:var(--text-muted)]">
               Stay informed with the latest academic notices, calendars,
               circulars, and official announcements.
             </p>

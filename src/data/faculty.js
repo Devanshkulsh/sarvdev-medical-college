@@ -15,6 +15,9 @@ const facultyData = {
       designation: "Principal / Medical Superintendent",
       department: "Administration",
       image: "https://sarvdevayurveda.in/images/principal.png",
+      message:
+        "It gives me immense pleasure to welcome you to Sarvdev Ayurvedic Medical College & Maha Mrityunjay Hospital. Our institution is dedicated to nurturing competent Ayurvedic professionals by blending classical wisdom with modern scientific advancements. We emphasize strong academic foundations, clinical excellence, research orientation, and ethical medical practice. Through disciplined training, practical exposure, and patient-centered healthcare services, we strive to prepare our students to serve society with compassion, integrity, and professional excellence. Our mission is not only to impart knowledge but to cultivate skilled physicians who uphold the rich heritage of Ayurveda while contributing meaningfully to global healthcare.",
+
       qualifications: [
         "BAMS - Gulbarga University Karnataka 1998",
         "MD (Ayu) - Rajiv Gandhi University Of Health Sciences Bangalore Karnataka 2011",
@@ -30,22 +33,10 @@ const facultyData = {
 
   vicechancellor: {
     id: "vc",
-    name: "Prof. K. Rama Chandra Reddy",
+    name: "Dr. Surinder Singh",
     designation: "Vice-Chancellor",
     organization: "Mahayogi Guru Gorakhnath AYUSH University",
-    image: "https://sarvdevayurveda.in/images/mggaugvc.png",
-    qualifications: [
-      "BAMS",
-      "MD (Ayu)",
-      "Ph.D. (Ayu)",
-      "H.P.A Edu.",
-      "CLAD (Japan)",
-      "D.Lit",
-    ],
-    expertise: "Rasashastra and Bhaishajya Kalpana",
-    publications:
-      "24 books in Sanskrit and English, 90+ research papers in international journals",
-    bio: "Dr. K.R.C. Reddy is well known for his valuable contribution in the field of Ayurveda pertaining to Ayurvedic Pharmaceutics. He has worked as Research fellow in Japan and served as subject expert member in T.K.D.L under CSIR, New Delhi.",
+    image: "/about/newVC.webp",
   },
 
   universityOfficials: [

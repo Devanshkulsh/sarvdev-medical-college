@@ -60,7 +60,7 @@ const ContactPage = () => {
               <InfoItem
                 icon={<Phone />}
                 title="Phone"
-                text="+91 94152 57492 (For other queries), +91 91987 62108 (For admissions)"
+                text="+91 94152 57492 (Official), +91 91987 62108 (For admissions)"
               />
               <InfoItem
                 icon={<Mail />}
@@ -150,13 +150,13 @@ const ContactPage = () => {
                   <textarea
                     rows="4"
                     placeholder="Write your message..."
-                    className="mt-1 w-full rounded-md border border-black/10 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#8B1E1E]/30"
+                    className="mt-1 w-full rounded-md border border-black/10 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-primary)]/30"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-[#8B1E1E] py-3 text-sm font-semibold text-white hover:bg-[#7A1A1A] transition"
+                  className="w-full rounded-md bg-[color:var(--brand-primary)] py-3 text-sm font-semibold text-white hover:bg-[color:var(--brand-secondary)] transition"
                 >
                   Submit Enquiry
                 </button>
@@ -166,7 +166,7 @@ const ContactPage = () => {
             {/* RIGHT — STACKED CARDS */}
             <div className="space-y-6">
               {/* CAMPUS VISIT */}
-              <div className="rounded-2xl bg-[#8B1E1E]/10 px-6 py-6 text-center">
+              <div className="rounded-2xl bg-[color:var(--brand-primary)]/10 px-6 py-6 text-center">
                 <h4 className="text-sm font-bold text-foreground">
                   Campus Visit & Admission Enquiry
                 </h4>
@@ -178,18 +178,18 @@ const ContactPage = () => {
               </div>
 
               {/* EMERGENCY CARD */}
-              <div className="rounded-2xl border border-[#8B1E1E]/30 bg-[#8B1E1E]/10 px-6 py-6 text-center shadow-sm">
-                <h4 className="text-sm sm:text-base font-bold text-[#8B1E1E]">
+              <div className="rounded-2xl border border-[color:var(--brand-primary)]/30 bg-[color:var(--brand-primary)]/10 px-6 py-6 text-center shadow-sm">
+                <h4 className="text-sm sm:text-base font-bold text-[color:var(--brand-primary)]">
                   Maha Mrityunjay Hospital
                 </h4>
                 <p className="mt-2 text-sm text-muted-foreground">
                   24×7 Emergency & OPD Services Available
                 </p>
                 <div className="mt-3 flex justify-center gap-3">
-                  <span className="inline-flex rounded-full bg-[#8B1E1E]/20 px-4 py-1 text-xs font-semibold text-[#8B1E1E]">
+                  <span className="inline-flex rounded-full bg-[color:var(--brand-primary)]/20 px-4 py-1 text-xs font-semibold text-[color:var(--brand-primary)]">
                     Emergency Care
                   </span>
-                  <span className="inline-flex rounded-full bg-[#8B1E1E]/20 px-4 py-1 text-xs font-semibold text-[#8B1E1E]">
+                  <span className="inline-flex rounded-full bg-[color:var(--brand-primary)]/20 px-4 py-1 text-xs font-semibold text-[color:var(--brand-primary)]">
                     OPD Services
                   </span>
                 </div>
@@ -206,7 +206,7 @@ const ContactPage = () => {
 
 const InfoItem = ({ icon, title, text }) => (
   <div className="flex gap-4 items-start">
-    <div className="p-2 rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E]">
+    <div className="p-2 rounded-full bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
       {icon}
     </div>
     <div>
@@ -221,9 +221,9 @@ const SocialIcon = ({ href, icon }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-3 rounded-full bg-[#8B1E1E]/10 hover:bg-[#8B1E1E]/20 transition"
+    className="p-3 rounded-full bg-[color:var(--brand-primary)]/10 hover:bg-[color:var(--brand-primary)]/20 transition"
   >
-    <span className="text-[#8B1E1E]">{icon}</span>
+    <span className="text-[color:var(--brand-primary)]">{icon}</span>
   </a>
 );
 
@@ -233,9 +233,10 @@ const Input = ({ label, placeholder }) => (
     <input
       type="text"
       placeholder={placeholder}
-      className="mt-1 w-full rounded-md border border-black/10 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#8B1E1E]/30"
+      className="mt-1 w-full rounded-md border border-black/10 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-primary)]/30"
     />
   </div>
 );
 
 export default ContactPage;
+

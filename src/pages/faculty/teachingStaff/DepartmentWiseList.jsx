@@ -68,8 +68,8 @@ const DepartmentWiseList = () => {
         {facultySections.map((section, index) => (
           <div key={index} className="space-y-4">
             {/* ✅ Section Header (like your screenshot) */}
-            <div className="bg-[#8B1E1E]/10 border-l-4 border-[#8B1E1E] px-4 py-3 rounded">
-              <h2 className="text-lg font-bold text-[#2A1E1A]">
+            <div className="bg-[color:var(--brand-primary)]/10 border-l-4 border-[color:var(--brand-primary)] px-4 py-3 rounded">
+              <h2 className="text-lg font-bold text-[color:var(--text-primary)]">
                 {section.sectionTitle}
               </h2>
             </div>
@@ -83,3 +83,4 @@ const DepartmentWiseList = () => {
 };
 
 export default DepartmentWiseList;
+

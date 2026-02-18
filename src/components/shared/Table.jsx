@@ -25,8 +25,8 @@ const Table = ({
             inline-flex items-center gap-1
             px-3 py-1.5 rounded-md
             text-xs font-semibold
-            bg-[#8B1E1E]/10 text-[#8B1E1E]
-            hover:bg-[#8B1E1E]/20
+            bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]
+            hover:bg-[color:var(--brand-primary)]/20
             transition
           "
         >
@@ -48,10 +48,10 @@ const Table = ({
       {/* ================= DESKTOP TABLE ================= */}
       <div className="hidden md:block overflow-x-auto">
         <table className="w-full border border-black/10 rounded-lg overflow-hidden">
-          <thead className="bg-[#8B1E1E]/10">
+          <thead className="bg-[color:var(--brand-primary)]/10">
             <tr>
               {showIndex && (
-                <th className="px-4 py-3 text-left text-sm font-semibold text-[#8B1E1E] border-b">
+                <th className="px-4 py-3 text-left text-sm font-semibold text-[color:var(--brand-primary)] border-b">
                   #
                 </th>
               )}
@@ -59,7 +59,7 @@ const Table = ({
               {columns.map((col, i) => (
                 <th
                   key={i}
-                  className="px-4 py-3 text-left text-sm font-semibold text-[#8B1E1E] border-b"
+                  className="px-4 py-3 text-left text-sm font-semibold text-[color:var(--brand-primary)] border-b"
                 >
                   {col.header}
                 </th>
@@ -69,7 +69,7 @@ const Table = ({
 
           <tbody className="bg-white">
             {paginatedData.map((row, rowIndex) => (
-              <tr key={rowIndex} className="hover:bg-[#8B1E1E]/5 transition">
+              <tr key={rowIndex} className="hover:bg-[color:var(--brand-primary)]/5 transition">
                 {showIndex && (
                   <td className="px-4 py-3 text-sm text-muted-foreground border-b">
                     {startIndex + rowIndex + 1}
@@ -106,7 +106,7 @@ const Table = ({
             <div className="space-y-2">
               {columns.map((col, j) => (
                 <div key={j} className="flex flex-col">
-                  <span className="text-xs font-semibold text-[#8B1E1E]">
+                  <span className="text-xs font-semibold text-[color:var(--brand-primary)]">
                     {col.header}
                   </span>
 
@@ -126,7 +126,7 @@ const Table = ({
           <button
             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
             disabled={currentPage === 1}
-            className="p-2 rounded-md border disabled:opacity-40 hover:bg-[#8B1E1E]/10"
+            className="p-2 rounded-md border disabled:opacity-40 hover:bg-[color:var(--brand-primary)]/10"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -138,8 +138,8 @@ const Table = ({
               className={`px-3 py-1 rounded-md text-sm font-medium border
                 ${
                   currentPage === i + 1
-                    ? "bg-[#8B1E1E] text-white"
-                    : "hover:bg-[#8B1E1E]/10"
+                    ? "bg-[color:var(--brand-primary)] text-white"
+                    : "hover:bg-[color:var(--brand-primary)]/10"
                 }`}
             >
               {i + 1}
@@ -149,7 +149,7 @@ const Table = ({
           <button
             onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="p-2 rounded-md border disabled:opacity-40 hover:bg-[#8B1E1E]/10"
+            className="p-2 rounded-md border disabled:opacity-40 hover:bg-[color:var(--brand-primary)]/10"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -160,3 +160,4 @@ const Table = ({
 };
 
 export default Table;
+

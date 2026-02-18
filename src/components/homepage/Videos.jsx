@@ -25,27 +25,27 @@ const Videos = () => {
       className="relative z-10 bg-white py-16 md:py-4 px-4 md:px-10 lg:px-20 overflow-hidden font-poppins"
     >
       {/* Decorative Blobs */}
-      <div className="absolute -top-20 -left-24 w-72 h-72 bg-[#8B1E1E]/10 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute -bottom-24 -right-20 w-96 h-96 bg-[#F2B705]/20 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute -top-20 -left-24 w-72 h-72 bg-[color:var(--brand-primary)]/10 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute -bottom-24 -right-20 w-96 h-96 bg-[color:var(--brand-highlight)]/20 rounded-full blur-3xl opacity-40"></div>
 
       {/* Heading */}
       <div className="relative z-10 text-center mb-14 md:mb-16">
         <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-10 h-1 bg-[#8B1E1E] rounded-full"></div>
-          <Youtube className="w-7 h-7 text-[#F2B705]" />
-          <div className="w-10 h-1 bg-[#8B1E1E] rounded-full"></div>
+          <div className="w-10 h-1 bg-[color:var(--brand-primary)] rounded-full"></div>
+          <Youtube className="w-7 h-7 text-[color:var(--brand-primary)]" />
+          <div className="w-10 h-1 bg-[color:var(--brand-primary)] rounded-full"></div>
         </div>
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8B1E1E] mb-3">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[color:var(--brand-primary)] mb-3">
           Voices & Views of Sarvdev
         </h2>
 
-        <p className="text-lg md:text-xl text-[#6B5A52] max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-[color:var(--text-muted)] max-w-3xl mx-auto leading-relaxed">
           Student Stories · Faculty Insights · Campus Life
         </p>
 
         <div className="mt-8">
-          <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-[#F2B705]/10 text-[#F2B705] border border-[#F2B705]/30">
+          <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)] border border-[color:var(--brand-primary)]/30">
             Experience Our Campus Virtually
           </span>
         </div>
@@ -71,8 +71,8 @@ const Videos = () => {
             <div
               className="relative w-full aspect-video rounded-xl overflow-hidden 
                          shadow-lg hover:shadow-2xl transition-all duration-500 
-                         border-2 border-transparent group-hover:border-[#8B1E1E]/30
-                         bg-linear-to-br from-gray-50 to-gray-100"
+                         border-2 border-transparent group-hover:border-[color:var(--brand-primary)]/30
+                         bg-linear-to-br from-[color:var(--avatar-bg)] to-[color:var(--bg-neutral)]"
             >
               {/* Hover overlay */}
               <div
@@ -95,12 +95,12 @@ const Videos = () => {
                                   : "scale-100"
                               }`}
                 >
-                  <PlayCircle className="w-8 h-8 text-[#8B1E1E]" />
+                  <PlayCircle className="w-8 h-8 text-[color:var(--brand-primary)]" />
                 </div>
               </div>
 
               {/* YouTube badge */}
-              <div className="absolute top-3 right-3 bg-[#8B1E1E] text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-3 right-3 bg-[color:var(--brand-primary)] text-white text-xs font-bold px-2 py-1 rounded">
                 YouTube
               </div>
 
@@ -117,7 +117,7 @@ const Videos = () => {
             {/* Video number */}
             <div
               className="absolute -top-3 -left-3 w-8 h-8 rounded-full 
-                         bg-[#8B1E1E] text-white flex items-center justify-center 
+                         bg-[color:var(--brand-primary)] text-white flex items-center justify-center 
                          text-sm font-bold shadow-lg"
             >
               {index + 1}
@@ -137,9 +137,9 @@ const Videos = () => {
           <button
             onClick={showMore}
             className="px-8 py-3 rounded-full 
-                       bg-linear-to-r from-[#8B1E1E] to-[#7A1A1A] 
+                       bg-linear-to-r from-[color:var(--brand-primary)] to-[color:var(--brand-secondary)] 
                        text-white font-medium shadow-lg hover:shadow-xl
-                       hover:from-[#7A1A1A] hover:to-[#6A1616] 
+                       hover:from-[color:var(--brand-secondary)] hover:to-[color:var(--brand-secondary)] 
                        transition-all duration-300 flex items-center gap-2 group"
           >
             <span>Show More Videos</span>
@@ -162,14 +162,15 @@ const Videos = () => {
 
       {/* Count */}
       <div className="relative z-10 text-center mt-8">
-        <p className="text-sm text-[#6B5A52]">
+        <p className="text-sm text-[color:var(--text-muted)]">
           Showing {Math.min(visibleCount, videos.length)} of {videos.length}{" "}
           videos
         </p>
-        <div className="w-32 h-1 bg-linear-to-r from-transparent via-[#8B1E1E] to-transparent mx-auto mt-2 rounded-full"></div>
+        <div className="w-32 h-1 bg-linear-to-r from-transparent via-[color:var(--brand-primary)] to-transparent mx-auto mt-2 rounded-full"></div>
       </div>
     </section>
   );
 };
 
 export default Videos;
+

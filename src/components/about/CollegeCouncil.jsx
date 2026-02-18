@@ -20,8 +20,8 @@ const CollegeCouncil = () => {
         <div
           className="
             card-ayurvedic
-            bg-[#8B1E1E]/5
-            border border-[#8B1E1E]/20
+            bg-[color:var(--brand-primary)]/5
+            border border-[color:var(--brand-primary)]/20
             rounded-xl
             shadow-sm
             p-6 sm:p-8
@@ -31,8 +31,8 @@ const CollegeCouncil = () => {
         >
           {/* Icon */}
           <div className="flex justify-center">
-            <div className="w-14 h-14 rounded-full bg-[#8B1E1E]/10 flex items-center justify-center">
-              <FileText className="w-7 h-7 text-[#8B1E1E]" />
+            <div className="w-14 h-14 rounded-full bg-[color:var(--brand-primary)]/10 flex items-center justify-center">
+              <FileText className="w-7 h-7 text-[color:var(--brand-primary)]" />
             </div>
           </div>
 
@@ -57,9 +57,9 @@ const CollegeCouncil = () => {
               className="
                 inline-flex items-center gap-2
                 rounded-md px-5 py-3
-                bg-[#8B1E1E] text-white
+                bg-[color:var(--brand-primary)] text-white
                 text-sm font-semibold
-                shadow hover:bg-[#721818]
+                shadow hover:bg-[color:var(--brand-secondary)]
                 transition
               "
             >
@@ -79,3 +79,4 @@ const CollegeCouncil = () => {
 };
 
 export default CollegeCouncil;
+

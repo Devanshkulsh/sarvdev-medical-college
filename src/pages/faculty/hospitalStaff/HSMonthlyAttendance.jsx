@@ -40,8 +40,8 @@ const HSMonthlyAttendance = () => {
 
         {/* ===== Attendance 2025 ===== */}
         <div className="space-y-4">
-          <div className="bg-[#8B1E1E]/10 border-l-4 border-[#8B1E1E] px-4 py-3 rounded">
-            <h2 className="text-lg font-bold text-[#2A1E1A]">
+          <div className="bg-[color:var(--brand-primary)]/10 border-l-4 border-[color:var(--brand-primary)] px-4 py-3 rounded">
+            <h2 className="text-lg font-bold text-[color:var(--text-primary)]">
               Attendance of Hospital Staff – 2025
             </h2>
           </div>
@@ -55,8 +55,8 @@ const HSMonthlyAttendance = () => {
 
         {/* ===== Attendance 2024 ===== */}
         <div className="space-y-4">
-          <div className="bg-[#8B1E1E]/10 border-l-4 border-[#8B1E1E] px-4 py-3 rounded">
-            <h2 className="text-lg font-bold text-[#2A1E1A]">
+          <div className="bg-[color:var(--brand-primary)]/10 border-l-4 border-[color:var(--brand-primary)] px-4 py-3 rounded">
+            <h2 className="text-lg font-bold text-[color:var(--text-primary)]">
               Attendance of Hospital Staff – 2024
             </h2>
           </div>
@@ -74,3 +74,4 @@ const HSMonthlyAttendance = () => {
 };
 
 export default HSMonthlyAttendance;
+
