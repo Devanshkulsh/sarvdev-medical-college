@@ -34,7 +34,7 @@ const CollegeIntroduction = () => {
             {/* Section tag */}
             <span
               className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
-                             bg-[#8B1E1E]/10 text-[#8B1E1E]"
+                             bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]"
             >
               College Introduction
             </span>
@@ -71,3 +71,4 @@ const CollegeIntroduction = () => {
 };
 
 export default CollegeIntroduction;
+

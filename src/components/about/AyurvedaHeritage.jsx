@@ -6,8 +6,8 @@ const AyurvedaHeritage = () => {
     <div className="space-y-6">
       {/* ===== HERITAGE CARD ===== */}
       <div
-        className="card-ayurvedic bg-[#8B1E1E]/5
-              border border-[#8B1E1E]/20 rounded-lg shadow-sm p-6 space-y-4"
+        className="card-ayurvedic bg-[color:var(--brand-primary)]/5
+              border border-[color:var(--brand-primary)]/20 rounded-lg shadow-sm p-6 space-y-4"
       >
         <h3 className="text-xl font-bold text-foreground">
           The Heritage of Ayurveda
@@ -37,3 +37,4 @@ const AyurvedaHeritage = () => {
 };
 
 export default AyurvedaHeritage;
+

@@ -54,7 +54,7 @@ const LeadershipSidebar = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-1">
+          {/* <div className="flex flex-wrap justify-center gap-1">
             {facultyData.vicechancellor.qualifications.map((q) => (
               <span
                 key={q}
@@ -63,7 +63,7 @@ const LeadershipSidebar = () => {
                 {q}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {facultyData.universityOfficials.map((official) => (
@@ -76,7 +76,7 @@ const LeadershipSidebar = () => {
                 official.image ||
                 "https://ui-avatars.com/api/?name=" +
                   encodeURIComponent(official.name) +
-                  "&background=FDF1E8&color=8B1E1E"
+                  "&background=F6EDD6&color=23482F"
               }
               alt={official.name}
               className="w-16 h-16 rounded-full mx-auto object-cover bg-muted"

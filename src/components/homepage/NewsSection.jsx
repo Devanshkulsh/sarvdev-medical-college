@@ -23,7 +23,7 @@ export default function NewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[#8B1E1E]/10 text-[#8B1E1E]">
+          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
             <svg
               className="w-3 h-3"
               viewBox="0 0 24 24"
@@ -38,11 +38,11 @@ export default function NewsSection() {
             Latest Updates
           </span>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[#2A1E1A]">
+          <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-[color:var(--text-primary)]">
             News & Events
           </h2>
 
-          <p className="mt-3 text-[#6B5A52]">
+          <p className="mt-3 text-[color:var(--text-muted)]">
             Stay updated with the latest happenings at our institution.
           </p>
         </div>
@@ -53,31 +53,31 @@ export default function NewsSection() {
             <article
               key={item.id}
               className="relative bg-white rounded-xl border border-transparent
-                         hover:border-[#2A1E1A]/10 shadow-sm hover:shadow-md
+                         hover:border-[color:var(--text-primary)]/10 shadow-sm hover:shadow-md
                          transition p-6"
             >
               {/* Date + Category */}
               <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-2 text-[#6B5A52]">
+                <div className="flex items-center gap-2 text-[color:var(--text-muted)]">
                   <Calendar className="w-4 h-4" />
                   <time className="text-sm">{formatDate(item.date)}</time>
                 </div>
 
                 <span
                   className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full
-                                 bg-[#F2B705]/10 text-[#F2B705] border border-[#F2B705]/20"
+                                 bg-[color:var(--brand-highlight)]/20 text-[color:var(--brand-primary)] border border-[color:var(--brand-secondary)]/30"
                 >
                   {item.category}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="mt-4 text-xl font-semibold text-[#2A1E1A]">
+              <h3 className="mt-4 text-xl font-semibold text-[color:var(--text-primary)]">
                 {item.title}
               </h3>
 
               {/* Excerpt */}
-              <p className="mt-3 text-[#6B5A52] text-sm leading-relaxed">
+              <p className="mt-3 text-[color:var(--text-muted)] text-sm leading-relaxed">
                 {item.excerpt}
               </p>
 
@@ -85,7 +85,7 @@ export default function NewsSection() {
               <div className="mt-6">
                 <Link
                   to={item.slug}
-                  className="inline-flex items-center gap-2 text-[#8B1E1E] font-medium hover:underline"
+                  className="inline-flex items-center gap-2 text-[color:var(--brand-primary)] font-medium hover:underline"
                   aria-label="Read more about the news"
                 >
                   Read More about the Sarvdev Ayurvedic Medical college news
@@ -101,7 +101,7 @@ export default function NewsSection() {
           <Link
             to="/news/all"
             className="inline-flex items-center gap-2 rounded-full px-6 py-2
-                       border border-[#2A1E1A]/10 text-[#2A1E1A]
+                       border border-[color:var(--text-primary)]/10 text-[color:var(--text-primary)]
                        bg-white shadow-sm hover:shadow-md transition"
           >
             View All News
@@ -112,3 +112,4 @@ export default function NewsSection() {
     </section>
   );
 }
+

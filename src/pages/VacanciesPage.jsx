@@ -141,7 +141,7 @@ const VacanciesPage = () => {
 
           {/* ===== CTA ===== */}
           <div className="text-center">
-            <div className="inline-block rounded-xl bg-[#8B1E1E]/10 px-8 py-6">
+            <div className="inline-block rounded-xl bg-[color:var(--brand-primary)]/10 px-8 py-6">
               <h4 className="text-lg font-bold text-foreground">
                 Apply for Career Opportunities
               </h4>
@@ -151,7 +151,7 @@ const VacanciesPage = () => {
 
               <a
                 href="mailto:sdayurvedamh@gmail.com"
-                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#8B1E1E]"
+                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--brand-primary)]"
               >
                 <Mail className="w-4 h-4" />
                 sdayurvedamh@gmail.com
@@ -168,7 +168,7 @@ const VacanciesPage = () => {
 
 const FeatureCard = ({ icon, title, text }) => (
   <div className="rounded-xl border border-black/10 bg-white p-6 shadow-sm text-center">
-    <div className="mx-auto mb-3 w-10 h-10 flex items-center justify-center rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E]">
+    <div className="mx-auto mb-3 w-10 h-10 flex items-center justify-center rounded-full bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
       {icon}
     </div>
     <h4 className="text-sm font-bold text-foreground">{title}</h4>
@@ -193,10 +193,11 @@ const JobCard = ({ title, department, qualification, type }) => (
 
 const StepCard = ({ step, title, text }) => (
   <div className="rounded-xl border border-black/10 bg-white p-6 shadow-sm text-center">
-    <p className="text-xs font-semibold text-[#8B1E1E]">{step}</p>
+    <p className="text-xs font-semibold text-[color:var(--brand-primary)]">{step}</p>
     <h4 className="mt-2 text-sm font-bold text-foreground">{title}</h4>
     <p className="mt-2 text-sm text-muted-foreground">{text}</p>
   </div>
 );
 
 export default VacanciesPage;
+

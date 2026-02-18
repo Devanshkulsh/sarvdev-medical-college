@@ -72,7 +72,7 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[#8B1E1E]/10 text-[#8B1E1E]">
+          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold bg-[color:var(--brand-primary)]/10 text-[color:var(--brand-primary)]">
             <svg
               className="w-3 h-3"
               viewBox="0 0 24 24"
@@ -87,11 +87,11 @@ export default function GallerySection() {
             Gallery
           </span>
 
-          <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-[#2A1E1A]">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-[color:var(--text-primary)]">
             Campus & Life — A Visual Tour
           </h2>
 
-          <p className="mt-2 text-[#6B5A52] max-w-xl mx-auto">
+          <p className="mt-2 text-[color:var(--text-muted)] max-w-xl mx-auto">
             Pictures from classrooms, labs, hospital, herbal garden and student
             life.
           </p>
@@ -103,7 +103,7 @@ export default function GallerySection() {
             {images.map((src, idx) => (
               <div
                 key={idx}
-                className="overflow-hidden rounded-lg h-48 md:h-56 bg-gray-100"
+                className="overflow-hidden rounded-lg h-48 md:h-56 bg-[color:var(--avatar-bg)]"
               >
                 <img
                   src={src}
@@ -132,7 +132,7 @@ export default function GallerySection() {
                   className="gallery-slide shrink-0 w-[84%] sm:w-[70%] rounded-lg overflow-hidden scroll-snap-align-start"
                   style={{ scrollSnapAlign: "start" }}
                 >
-                  <div className="relative h-56 bg-gray-100">
+                  <div className="relative h-56 bg-[color:var(--avatar-bg)]">
                     <img
                       src={src}
                       alt={`gallery-mobile-${idx}`}
@@ -140,7 +140,7 @@ export default function GallerySection() {
                     />
                     <div className="absolute top-3 left-3 rounded-md p-2 bg-white/60 backdrop-blur-sm">
                       <svg
-                        className="w-5 h-5 text-[#8B1E1E]"
+                        className="w-5 h-5 text-[color:var(--brand-primary)]"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -160,7 +160,7 @@ export default function GallerySection() {
               {images.map((_, i) => (
                 <span
                   key={i}
-                  className="w-2 h-2 bg-[#6B5A52]/30 rounded-full"
+                  className="w-2 h-2 bg-[color:var(--text-muted)]/30 rounded-full"
                 />
               ))}
             </div>
@@ -172,7 +172,7 @@ export default function GallerySection() {
           <Link
             to="/gallery"
             className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium shadow-sm
-                       bg-[#8B1E1E] text-white hover:bg-[#7A1A1A] transition"
+                       bg-[color:var(--brand-primary)] text-white hover:bg-[color:var(--brand-secondary)] transition"
             aria-label="See more gallery"
           >
             View Sarvdev Ayurvedic Medical College Photo Gallery
@@ -182,3 +182,4 @@ export default function GallerySection() {
     </section>
   );
 }
+

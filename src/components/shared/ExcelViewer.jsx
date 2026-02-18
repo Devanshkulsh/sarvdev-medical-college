@@ -61,7 +61,7 @@ const ExcelViewer = ({ fileUrl, title }) => {
         cellPadding: 4,
       },
       headStyles: {
-        fillColor: [139, 30, 30], // #8B1E1E
+        fillColor: [198, 111, 31], // var(--brand-primary)
         textColor: 255,
       },
     });
@@ -70,7 +70,7 @@ const ExcelViewer = ({ fileUrl, title }) => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[color:var(--bg-neutral)]">
       <div className="max-w-7xl mx-auto px-4 space-y-6">
         {/* ===== HEADER ===== */}
         {title && (
@@ -90,14 +90,14 @@ const ExcelViewer = ({ fileUrl, title }) => {
             href={officeViewerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-[#8B1E1E]/30 bg-white px-4 py-2 text-sm font-medium text-[#8B1E1E] hover:bg-[#8B1E1E]/10 transition"
+            className="rounded-md border border-[color:var(--brand-primary)]/30 bg-white px-4 py-2 text-sm font-medium text-[color:var(--brand-primary)] hover:bg-[color:var(--brand-primary)]/10 transition"
           >
             View Full Excel
           </a>
 
           <button
             onClick={exportToPDF}
-            className="rounded-md bg-[#8B1E1E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#7A1A1A] transition"
+            className="rounded-md bg-[color:var(--brand-primary)] px-4 py-2 text-sm font-semibold text-white hover:bg-[color:var(--brand-secondary)] transition"
           >
             Export to PDF
           </button>
@@ -108,7 +108,7 @@ const ExcelViewer = ({ fileUrl, title }) => {
           <div className="max-h-[75vh] overflow-auto">
             <table className="min-w-275 w-full border-collapse">
               <thead className="sticky top-0 z-10">
-                <tr className="bg-[#8B1E1E]">
+                <tr className="bg-[color:var(--brand-primary)]">
                   {headers.map((h, i) => (
                     <th
                       key={i}
@@ -124,7 +124,7 @@ const ExcelViewer = ({ fileUrl, title }) => {
                 {data.map((row, rIdx) => (
                   <tr
                     key={rIdx}
-                    className="even:bg-[#8B1E1E]/5 hover:bg-[#8B1E1E]/10 transition"
+                    className="even:bg-[color:var(--brand-primary)]/5 hover:bg-[color:var(--brand-primary)]/10 transition"
                   >
                     {headers.map((_, cIdx) => (
                       <td
