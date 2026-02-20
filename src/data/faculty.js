@@ -33,7 +33,7 @@ const facultyData = {
 
   vicechancellor: {
     id: "vc",
-    name: "Prof. K. Rama Chandra Reddy",
+    name: "Dr. Surinder Singh",
     designation: "Vice-Chancellor",
     organization: "Mahayogi Guru Gorakhnath AYUSH University",
     image: "/about/vc.webp",
