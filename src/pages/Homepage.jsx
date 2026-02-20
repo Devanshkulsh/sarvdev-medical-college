@@ -17,9 +17,9 @@ const Homepage = () => {
       {/* <Videos /> */}
       <FacilitiesSection />
       <Testimonials />
+      <NewsSection />
       <ResearchPublications />
       <GallerySection />
-      <NewsSection />
       <ContactSection />
     </div>
   );

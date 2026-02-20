@@ -33,26 +33,26 @@ const facultyData = {
 
   vicechancellor: {
     id: "vc",
-    name: "Dr. Surinder Singh",
+    name: "Prof. K. Rama Chandra Reddy",
     designation: "Vice-Chancellor",
     organization: "Mahayogi Guru Gorakhnath AYUSH University",
-    image: "/about/newVC.webp",
+    image: "/about/vc.webp",
   },
 
   universityOfficials: [
     {
       id: "registrar",
-      name: "Mr. R. B. Singh",
+      name: "Mr. Ajeet kumar Jaiswal",
       designation: "Registrar",
       organization: "Mahayogi Guru Gorakhnath AYUSH University",
-      image: "/about/rbSingh.webp",
+      image: "/about/registrar.webp",
     },
     {
       id: "exam-controller",
-      name: "Prof. Dr. C. K. Rajput",
+      name: "Dr. Manish Rai",
       designation: "Exam Controller",
       organization: "Mahayogi Guru Gorakhnath AYUSH University",
-      image: "/about/rajput.webp",
+      image: "/about/examController.webp",
     },
   ],
 

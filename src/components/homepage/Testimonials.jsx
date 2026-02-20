@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
     ...patients.slice(0, 2),
   ];
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 linear-gradient(135deg, var(--brand-primary), var(--brand-highlight))">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
