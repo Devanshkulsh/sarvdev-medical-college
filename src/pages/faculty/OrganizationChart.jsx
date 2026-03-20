@@ -7,7 +7,7 @@ const OrganizationChart = () => {
         {/* Chart Card */}
         <div className="rounded-xl border border-black/10 bg-white shadow-sm p-4 sm:p-6">
           <img
-            src="/faculty/ochart.webp"
+            src="/faculty/organization-chart.webp"
             alt="Organization Chart"
             className="w-full h-auto object-contain rounded-md"
             loading="lazy"
