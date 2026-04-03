@@ -30,10 +30,10 @@ export function Navbar() {
               label: "Department Wise List",
               href: "/faculty/teachingStaff/department-wise-list",
             },
-            {
-              label: "Monthly Attendance",
-              href: "/faculty/teachingStaff/monthly-attendance",
-            },
+            // {
+            //   label: "Monthly Attendance",
+            //   href: "/faculty/teachingStaff/monthly-attendance",
+            // },
           ],
         },
         {
@@ -43,10 +43,10 @@ export function Navbar() {
               label: "Department Wise List",
               href: "/faculty/non-teaching/department-wise-list",
             },
-            {
-              label: "Monthly Attendance",
-              href: "/faculty/non-teaching/monthly-attendance",
-            },
+            // {
+            //   label: "Monthly Attendance",
+            //   href: "/faculty/non-teaching/monthly-attendance",
+            // },
           ],
         },
         {
@@ -56,10 +56,10 @@ export function Navbar() {
               label: "Department Wise List",
               href: "/faculty/hospital-staff/department-wise-list",
             },
-            {
-              label: "Monthly Attendance",
-              href: "/faculty/hospital-staff/monthly-attendance",
-            },
+            // {
+            //   label: "Monthly Attendance",
+            //   href: "/faculty/hospital-staff/monthly-attendance",
+            // },
           ],
         },
       ],

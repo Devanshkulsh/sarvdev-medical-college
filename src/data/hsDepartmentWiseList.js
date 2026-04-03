@@ -1,14 +1,5 @@
 export const HospitalStaffDepartmentWiseListData = [
   {
-    name: "Dr. Nilesh Prabhakar Masurkar",
-    designation: "Hospital Superintendant",
-    workingDepartment: "Hospital Staff",
-    doa: "10-Dec-23",
-    qualification: "Post Graduate",
-    father: "Mr. Prabhakar Ratnakar Masurkar",
-    natureOfAppointment: "Regular",
-  },
-  {
     name: "Dr. Pravin Pati Pandey",
     designation: "Deputy Medical Superintendant",
     workingDepartment: "Hospital Staff",

@@ -16,12 +16,8 @@ export const ncismData = [
       "Affiliation letters granted by Mahayogi Guru Gorakhnath AYUSH University for the academic programs.",
     documents: [
       {
-        label: "University Affiliation (2024)",
-        url: "/ncism/MYGGN24.pdf",
-      },
-      {
-        label: "University Affiliation (2021)",
-        url: "/ncism/Affiliation_Letter_SA.pdf",
+        label: "University Affiliation (2025-2026)",
+        url: "/ncism/uni-aff-2526.pdf",
       },
     ],
   },
