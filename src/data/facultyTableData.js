@@ -33,7 +33,7 @@ export const facultySections = [
       },
       {
         name: "Dr. Chandrika Adhikary",
-        designation: "Associate Professor / Lecturer",
+        designation: "Assistant Professor / Lecturer",
         department: "Rog Nidan Evam Vikriti Vigyanam",
         teacherCode: "AYRN01307",
         qualification: "B.A.M.S., M.D. (Rog Nidan)",
