@@ -77,24 +77,40 @@ export function TopBar() {
             </a>
           </div>
 
-          {/* PERMISSION BUTTON */}
-          <Link
-            to="/ncism"
-            className="
-              mt-1 sm:mt-0
-              rounded-full
-              bg-white text-(--brand-primary)
-              px-4 py-1.5
-              text-xs sm:text-sm
-              font-semibold
-              hover:bg-(--brand-highlight)
-              hover:text-(--text-primary)
-              transition-colors
-              whitespace-nowrap
-            "
-          >
-            Permission Letter
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-end">
+            <a
+              href="https://softitlab.com/sarvaonline/home.php?year=2026"
+              className="
+                rounded-full
+                bg-white text-(--brand-primary)
+                px-4 py-1.5
+                text-xs sm:text-sm
+                font-semibold
+                hover:bg-(--brand-highlight)
+                hover:text-(--text-primary)
+                transition-colors
+                whitespace-nowrap
+              "
+            >
+              OPD Login
+            </a>
+            <Link
+              to="/ncism"
+              className="
+                rounded-full
+                bg-white text-(--brand-primary)
+                px-4 py-1.5
+                text-xs sm:text-sm
+                font-semibold
+                hover:bg-(--brand-highlight)
+                hover:text-(--text-primary)
+                transition-colors
+                whitespace-nowrap
+              "
+            >
+              Permission Letter
+            </Link>
+          </div>
         </div>
       </div>
     </div>
