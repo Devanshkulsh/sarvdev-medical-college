@@ -84,21 +84,21 @@ export function Navbar() {
           label: "Department Wise Clinical Materials & Facilities",
           href: "/hospital/department-wise-clinical-materials-and-facilities",
         },
-        {
-          label: "Monthly Patient Attendance",
-          children: [
-            { label: "OPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
-            { label: "IPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
-            {
-              label: "Panchakarma",
-              href: "/hospital/attendance/patient-monthly-attendance",
-            },
-            { label: "Ksharsutra", href: "/hospital/attendance/ksharsutra" },
-            { label: "Operation Theater", href: "/hospital/attendance/ot" },
-            { label: "Pathology", href: "/hospital/attendance/pathology" },
-            { label: "X-Ray / USG", href: "/hospital/attendance/xray-usg" },
-          ],
-        },
+        // {
+        //   label: "Monthly Patient Attendance",
+        //   children: [
+        //     { label: "OPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
+        //     { label: "IPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
+        //     {
+        //       label: "Panchakarma",
+        //       href: "/hospital/attendance/patient-monthly-attendance",
+        //     },
+        //     { label: "Ksharsutra", href: "/hospital/attendance/ksharsutra" },
+        //     { label: "Operation Theater", href: "/hospital/attendance/ot" },
+        //     { label: "Pathology", href: "/hospital/attendance/pathology" },
+        //     { label: "X-Ray / USG", href: "/hospital/attendance/xray-usg" },
+        //   ],
+        // },
       ],
     },
     {

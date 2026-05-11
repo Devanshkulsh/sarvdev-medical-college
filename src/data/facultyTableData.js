@@ -261,7 +261,7 @@ export const facultySections = [
       },
       {
         name: "Dr. Abhay Madhurao Kaddu",
-        designation: "Assistant Professor/Lecturer",
+        designation: "Professor/Lecturer",
         department: "Rasa Shastra & Bhaishajya Kalpana",
         teacherCode: "AYRB01235",
         qualification: "B.A.M.S , Ayurveda Vachaspati M.D ( Rasa Shastra )",
