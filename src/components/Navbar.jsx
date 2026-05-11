@@ -87,8 +87,8 @@ export function Navbar() {
         {
           label: "Monthly Patient Attendance",
           children: [
-            { label: "OPD", href: "/hospital/attendance/opd" },
-            { label: "IPD", href: "/hospital/attendance/ipd" },
+            { label: "OPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
+            { label: "IPD", href: "https://softitlab.com/sarvaonline/home.php?year=2026" },
             {
               label: "Panchakarma",
               href: "/hospital/attendance/patient-monthly-attendance",
@@ -154,6 +154,7 @@ export function Navbar() {
   const navText = "text-[var(--text-primary)]";
 
   const isActive = (href) => location.pathname === href;
+  const isExternalHref = (href = "") => /^https?:\/\//i.test(href);
 
   const isChildActive = (children = []) =>
     children.some(
@@ -189,14 +190,23 @@ export function Navbar() {
               {navItems.map((item, i) => (
                 <li key={i} className="relative group">
                   {item.href ? (
-                    <Link
-                      to={item.href}
-                      className={`px-3 py-2 rounded-md text-sm font-medium ${navText} ${
-                        isActive(item.href) ? `${mutedBg} ${primaryText}` : ""
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
+                    isExternalHref(item.href) ? (
+                      <a
+                        href={item.href}
+                        className={`px-3 py-2 rounded-md text-sm font-medium ${navText}`}
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={`px-3 py-2 rounded-md text-sm font-medium ${navText} ${
+                          isActive(item.href) ? `${mutedBg} ${primaryText}` : ""
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ) : (
                     <span
                       className={`px-3 py-2 text-sm font-medium cursor-pointer inline-flex items-center gap-1 ${
@@ -213,16 +223,25 @@ export function Navbar() {
                       {item.children.map((sub, j) => (
                         <li key={j} className="relative group/sub">
                           {sub.href ? (
-                            <Link
-                              to={sub.href}
-                              className={`flex items-center justify-between px-4 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
-                                isActive(sub.href)
-                                  ? `${mutedBg} ${primaryText}`
-                                  : ""
-                              }`}
-                            >
-                              {sub.label}
-                            </Link>
+                            isExternalHref(sub.href) ? (
+                              <a
+                                href={sub.href}
+                                className="flex items-center justify-between px-4 py-2 text-sm hover:bg-(--brand-secondary)/15"
+                              >
+                                {sub.label}
+                              </a>
+                            ) : (
+                              <Link
+                                to={sub.href}
+                                className={`flex items-center justify-between px-4 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
+                                  isActive(sub.href)
+                                    ? `${mutedBg} ${primaryText}`
+                                    : ""
+                                }`}
+                              >
+                                {sub.label}
+                              </Link>
+                            )
                           ) : (
                             <>
                               <span className="flex items-center justify-between px-4 py-2 text-sm cursor-pointer hover:bg-(--brand-secondary)/15">
@@ -234,16 +253,25 @@ export function Navbar() {
                                 <ul className="hidden group-hover/sub:block bg-white border-t">
                                   {sub.children.map((child, k) => (
                                     <li key={k}>
-                                      <Link
-                                        to={child.href}
-                                        className={`block px-8 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
-                                          isActive(child.href)
-                                            ? `${mutedBg} ${primaryText}`
-                                            : ""
-                                        }`}
-                                      >
-                                        {child.label}
-                                      </Link>
+                                      {isExternalHref(child.href) ? (
+                                        <a
+                                          href={child.href}
+                                          className="block px-8 py-2 text-sm hover:bg-(--brand-secondary)/15"
+                                        >
+                                          {child.label}
+                                        </a>
+                                      ) : (
+                                        <Link
+                                          to={child.href}
+                                          className={`block px-8 py-2 text-sm hover:bg-(--brand-secondary)/15 ${
+                                            isActive(child.href)
+                                              ? `${mutedBg} ${primaryText}`
+                                              : ""
+                                          }`}
+                                        >
+                                          {child.label}
+                                        </Link>
+                                      )}
                                     </li>
                                   ))}
                                 </ul>
@@ -296,13 +324,23 @@ export function Navbar() {
               return (
                 <li key={i}>
                   {item.href ? (
-                    <Link
-                      to={item.href}
-                      onClick={closeMobileMenu}
-                      className="block px-3 py-2 text-sm font-medium"
-                    >
-                      {item.label}
-                    </Link>
+                    isExternalHref(item.href) ? (
+                      <a
+                        href={item.href}
+                        onClick={closeMobileMenu}
+                        className="block px-3 py-2 text-sm font-medium"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        onClick={closeMobileMenu}
+                        className="block px-3 py-2 text-sm font-medium"
+                      >
+                        {item.label}
+                      </Link>
+                    )
                   ) : (
                     <button
                       onClick={() => setOpenMobileMenu(isOpen ? null : i)}
@@ -320,13 +358,23 @@ export function Navbar() {
                       {item.children.map((child, j) => (
                         <li key={j}>
                           {child.href ? (
-                            <Link
-                              to={child.href}
-                              onClick={closeMobileMenu}
-                              className="block px-3 py-2 text-sm"
-                            >
-                              {child.label}
-                            </Link>
+                            isExternalHref(child.href) ? (
+                              <a
+                                href={child.href}
+                                onClick={closeMobileMenu}
+                                className="block px-3 py-2 text-sm"
+                              >
+                                {child.label}
+                              </a>
+                            ) : (
+                              <Link
+                                to={child.href}
+                                onClick={closeMobileMenu}
+                                className="block px-3 py-2 text-sm"
+                              >
+                                {child.label}
+                              </Link>
+                            )
                           ) : (
                             <button
                               onClick={() =>
@@ -348,13 +396,23 @@ export function Navbar() {
                               <ul className="ml-4 border-l pl-3">
                                 {child.children.map((sub, k) => (
                                   <li key={k}>
-                                    <Link
-                                      to={sub.href}
-                                      onClick={closeMobileMenu}
-                                      className="block px-3 py-2 text-sm"
-                                    >
-                                      {sub.label}
-                                    </Link>
+                                    {isExternalHref(sub.href) ? (
+                                      <a
+                                        href={sub.href}
+                                        onClick={closeMobileMenu}
+                                        className="block px-3 py-2 text-sm"
+                                      >
+                                        {sub.label}
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        to={sub.href}
+                                        onClick={closeMobileMenu}
+                                        className="block px-3 py-2 text-sm"
+                                      >
+                                        {sub.label}
+                                      </Link>
+                                    )}
                                   </li>
                                 ))}
                               </ul>
@@ -374,3 +432,4 @@ export function Navbar() {
 }
 
 export default Navbar;
+
